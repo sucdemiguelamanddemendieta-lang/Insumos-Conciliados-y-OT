@@ -1,0 +1,582 @@
+<title>Conciliación Siembra Asociada ADM 26-27</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f1;
+    --surface:#ffffff;
+    --surface-2:#eef0e7;
+    --ink:#242820;
+    --ink-soft:#4b5044;
+    --muted:#767c6b;
+    --line:#dde1d3;
+    --line-strong:#c7cdb8;
+    --accent:#4a6b3d;
+    --accent-ink:#2f4527;
+    --accent-soft:#e3ead9;
+    --ok-bg:#e2efe1; --ok-ink:#2e6b3e; --ok-line:#b7dabb;
+    --warn-bg:#faf0da; --warn-ink:#93641a; --warn-line:#e9cf98;
+    --bad-bg:#fbe6e1; --bad-ink:#a3402c; --bad-line:#eab9ab;
+    --unk-bg:#eceae4; --unk-ink:#6a6657; --unk-line:#d4d0c3;
+    --shadow: 0 1px 2px rgba(36,40,32,0.06), 0 6px 20px -8px rgba(36,40,32,0.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#181a15;
+      --surface:#20231c;
+      --surface-2:#262a20;
+      --ink:#eceee4;
+      --ink-soft:#c7cbb9;
+      --muted:#93987f;
+      --line:#343829;
+      --line-strong:#454b34;
+      --accent:#8fbf7a;
+      --accent-ink:#bfe0ac;
+      --accent-soft:#2b3624;
+      --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+      --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+      --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+      --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 6px 24px -8px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#181a15;
+    --surface:#20231c;
+    --surface-2:#262a20;
+    --ink:#eceee4;
+    --ink-soft:#c7cbb9;
+    --muted:#93987f;
+    --line:#343829;
+    --line-strong:#454b34;
+    --accent:#8fbf7a;
+    --accent-ink:#bfe0ac;
+    --accent-soft:#2b3624;
+    --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+    --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+    --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+    --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 6px 24px -8px rgba(0,0,0,0.5);
+  }
+
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px 96px;}
+
+  header.hero{
+    padding:56px 0 32px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:40px;
+  }
+  .eyebrow{
+    font-family:"IBM Plex Mono", ui-monospace, monospace;
+    font-size:12.5px;
+    letter-spacing:0.09em;
+    text-transform:uppercase;
+    color:var(--accent-ink);
+    background:var(--accent-soft);
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:4px;
+    margin-bottom:18px;
+  }
+  h1{
+    font-family:"Fraunces", Georgia, serif;
+    font-optical-sizing:auto;
+    font-weight:600;
+    font-size:clamp(30px, 4.4vw, 44px);
+    line-height:1.08;
+    letter-spacing:-0.01em;
+    margin:0 0 14px;
+    text-wrap:balance;
+    color:var(--ink);
+  }
+  .dek{
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:62ch;
+    margin:0 0 20px;
+  }
+  .meta-row{
+    display:flex; flex-wrap:wrap; gap:8px 18px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px;
+    color:var(--muted);
+  }
+  .meta-row span b{color:var(--ink-soft); font-weight:600;}
+
+  section{margin-bottom:52px;}
+  h2{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    font-size:24px;
+    letter-spacing:-0.005em;
+    margin:0 0 6px;
+    color:var(--ink);
+    text-wrap:balance;
+  }
+  h3{
+    font-family:"IBM Plex Sans", sans-serif;
+    font-weight:600;
+    font-size:15px;
+    margin:0 0 10px;
+    color:var(--ink);
+  }
+  .section-note{
+    color:var(--muted);
+    font-size:14.5px;
+    margin:0 0 22px;
+    max-width:68ch;
+  }
+  p{margin:0 0 14px; color:var(--ink-soft); max-width:70ch;}
+  p:last-child{margin-bottom:0;}
+  strong{color:var(--ink); font-weight:600;}
+
+  /* stat strip */
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin-bottom:8px;
+  }
+  .stat{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 16px 14px;
+    box-shadow:var(--shadow);
+  }
+  .stat .n{
+    font-family:"Fraunces", serif;
+    font-weight:600;
+    font-size:30px;
+    line-height:1;
+    font-variant-numeric:tabular-nums;
+  }
+  .stat .l{
+    font-size:12.5px;
+    color:var(--muted);
+    margin-top:6px;
+  }
+  .stat.ok .n{color:var(--ok-ink);}
+  .stat.bad .n{color:var(--bad-ink);}
+  .stat.warn .n{color:var(--warn-ink);}
+  .stat.unk .n{color:var(--unk-ink);}
+
+  /* callouts */
+  .callout{
+    border:1px solid var(--line-strong);
+    background:var(--surface);
+    border-radius:10px;
+    padding:20px 22px;
+    box-shadow:var(--shadow);
+  }
+  .callout.warn{background:var(--warn-bg); border-color:var(--warn-line);}
+  .callout.bad{background:var(--bad-bg); border-color:var(--bad-line);}
+  .callout .tag{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    font-weight:600;
+    margin-bottom:8px;
+    display:block;
+  }
+  .callout.warn .tag{color:var(--warn-ink);}
+  .callout.bad .tag{color:var(--bad-ink);}
+  .callout p{color:var(--ink-soft);}
+  .callout p:first-of-type{margin-top:0;}
+
+  /* tables */
+  .table-scroll{
+    overflow-x:auto;
+    border:1px solid var(--line);
+    border-radius:10px;
+    box-shadow:var(--shadow);
+    background:var(--surface);
+  }
+  table{
+    border-collapse:collapse;
+    width:100%;
+    min-width:640px;
+    font-size:13.8px;
+  }
+  th,td{
+    text-align:left;
+    padding:10px 14px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  thead th{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--muted);
+    background:var(--surface-2);
+    white-space:nowrap;
+    border-bottom:1px solid var(--line-strong);
+  }
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:var(--surface-2);}
+  td.num, th.num{
+    font-family:"IBM Plex Mono", monospace;
+    font-variant-numeric:tabular-nums;
+    text-align:right;
+    white-space:nowrap;
+  }
+  td.mono{font-family:"IBM Plex Mono", monospace; font-size:13px; white-space:nowrap;}
+
+  .pill{
+    display:inline-block;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.02em;
+    padding:3px 9px;
+    border-radius:100px;
+    white-space:nowrap;
+    border:1px solid transparent;
+  }
+  .pill.ok{background:var(--ok-bg); color:var(--ok-ink); border-color:var(--ok-line);}
+  .pill.bad{background:var(--bad-bg); color:var(--bad-ink); border-color:var(--bad-line);}
+  .pill.warn{background:var(--warn-bg); color:var(--warn-ink); border-color:var(--warn-line);}
+  .pill.unk{background:var(--unk-bg); color:var(--unk-ink); border-color:var(--unk-line);}
+
+  .small-note{font-size:12.5px; color:var(--muted); margin-top:10px;}
+
+  /* checklist for verification */
+  .verify-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px;}
+  .verify-list li{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:16px 18px;
+    box-shadow:var(--shadow);
+  }
+  .verify-list .pass-label{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--accent-ink);
+    display:block;
+    margin-bottom:6px;
+  }
+  .verify-list p{margin:0; color:var(--ink-soft); font-size:14.5px;}
+
+  /* pending questions */
+  .questions{
+    list-style:none;
+    counter-reset:q;
+    margin:0; padding:0;
+    display:flex; flex-direction:column; gap:12px;
+  }
+  .questions li{
+    counter-increment:q;
+    position:relative;
+    background:var(--surface);
+    border:1px solid var(--line-strong);
+    border-left:3px solid var(--accent);
+    border-radius:8px;
+    padding:14px 18px 14px 52px;
+    box-shadow:var(--shadow);
+  }
+  .questions li::before{
+    content:counter(q);
+    position:absolute;
+    left:16px; top:14px;
+    font-family:"Fraunces", serif;
+    font-weight:600;
+    font-size:17px;
+    color:var(--accent-ink);
+  }
+  .questions p{margin:0; color:var(--ink); font-size:15px;}
+
+  ul.plain{margin:0; padding-left:20px; color:var(--ink-soft);}
+  ul.plain li{margin-bottom:8px;}
+  ul.plain li:last-child{margin-bottom:0;}
+
+  footer{
+    margin-top:64px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    font-size:12.5px;
+    color:var(--muted);
+  }
+
+  @media (max-width:640px){
+    .stats{grid-template-columns:repeat(2,1fr);}
+    header.hero{padding-top:36px;}
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">Conciliación C2 · Remitido vs. Aplicado</span>
+    <h1>Siembra Asociada ADM 26-27</h1>
+    <p class="dek">Cruce de insumos agroquímicos remitidos por Rindes y Cultivos DAS contra lo aplicado en Órdenes de Trabajo por ADM, agrupado por principio activo, actividad (52) — desde el 1&nbsp;de&nbsp;abril de 2026.</p>
+    <div class="meta-row">
+      <span><b>Sucesores de Miguel Amand de Mendieta SRL</b></span>
+      <span>45 documentos primarios revisados</span>
+      <span>Doble rechequeo aplicado</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="stats">
+      <div class="stat bad">
+        <div class="n">1</div>
+        <div class="l">Principio activo negativo (aplicado &gt; remitido)</div>
+      </div>
+      <div class="stat warn">
+        <div class="n">6</div>
+        <div class="l">Sobrante sin remito de devolución</div>
+      </div>
+      <div class="stat unk">
+        <div class="n">2</div>
+        <div class="l">Sin datos suficientes (OT faltantes)</div>
+      </div>
+      <div class="stat ok">
+        <div class="n">1</div>
+        <div class="l">Dentro de tolerancia (Saflufenacil)</div>
+      </div>
+    </div>
+    <p class="small-note">Tolerancia aplicada: hasta la capacidad de un envase abierto del producto en cuestión (definida por el dueño de la empresa). Ningún principio activo cerró en cero salvo el marcado OK.</p>
+  </section>
+
+  <section>
+    <h2>Hallazgo estructural</h2>
+    <p class="section-note">Antes de leer la tabla, esto condiciona buena parte del resultado.</p>
+    <div class="callout warn">
+      <span class="tag">No confirmado</span>
+      <p>El costeo ya validado de la actividad (13/jun–29/jul/2026, $213.050.721,25 / US$145.380,50) <strong>no incluye, o no se pudo confirmar que incluya</strong>, un bloque de 9 remitos físicos de Rindes y Cultivos DAS fechados en <strong>mayo de 2026</strong> (11533 a 11728), presentes en la carpeta de documentos. La correspondencia entre esos remitos de mayo y los comprobantes de junio que sí están en el costeo es parcial: cierra para los bioinsumos (Compinche, Vitagrow) pero no para el resto — por ejemplo, el comprobante 11754 incluye una línea de Pyroxasulfone que no aparece en ninguno de los tres remitos de mayo asociados a él.</p>
+      <p>Se trató este bloque de mayo como <strong>remitido adicional</strong> en la tabla siguiente, con esta salvedad explícita. Es la pregunta con mayor impacto en el resultado final (ver preguntas pendientes, ítem 1).</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Por principio activo</h2>
+    <p class="section-note">Remitido total = costeo validado + bloque de mayo (no confirmado) + remitos propios de ADM. Aplicado = suma de OT leídas. Tolerancia = capacidad de un envase del producto.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Principio activo</th>
+            <th class="num">Remitido</th>
+            <th class="num">Aplicado</th>
+            <th class="num">Diferencia</th>
+            <th class="num">Tolerancia</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Glifosato sal dimetilamina 60,8% <span style="color:var(--muted)">(Panzer Gold)</span></td>
+            <td class="num">1.740,00 L</td>
+            <td class="num">1.315,86 L</td>
+            <td class="num">+424,14 L</td>
+            <td class="num">20 L</td>
+            <td><span class="pill warn">Sobrante sin RD</span></td>
+          </tr>
+          <tr>
+            <td>2,4-D etilhexílico 97% <span style="color:var(--muted)">(Herbifen Advance)</span></td>
+            <td class="num">360,00 L</td>
+            <td class="num">319,00 L</td>
+            <td class="num">+41,00 L</td>
+            <td class="num">20 L</td>
+            <td><span class="pill warn">Sobrante leve</span></td>
+          </tr>
+          <tr>
+            <td>2,4-D sal colina 66,9% <span style="color:var(--muted)">(Enlist / Colex-D)</span></td>
+            <td class="num">40,00 L</td>
+            <td class="num">110,32 L</td>
+            <td class="num" style="color:var(--bad-ink); font-weight:600;">−70,32 L</td>
+            <td class="num">20 L</td>
+            <td><span class="pill bad">Negativo</span></td>
+          </tr>
+          <tr>
+            <td>Cletodim 24% <span style="color:var(--muted)">(remitido SinoAgri/Arrow vs. aplicado Eudor Helm)</span></td>
+            <td class="num">660,00 L</td>
+            <td class="num">325,40 L</td>
+            <td class="num">+334,60 L</td>
+            <td class="num">20 L</td>
+            <td><span class="pill warn">Sobrante sin RD</span></td>
+          </tr>
+          <tr>
+            <td>Saflufenacil 70% <span style="color:var(--muted)">(Veltroma/Heat)</span></td>
+            <td class="num">8,40 kg</td>
+            <td class="num">8,225 kg</td>
+            <td class="num">+0,175 kg</td>
+            <td class="num">0,35 kg</td>
+            <td><span class="pill ok">OK</span></td>
+          </tr>
+          <tr>
+            <td>Flurocloridona <span style="color:var(--muted)">(remitido Rainbow vs. aplicado Angol)</span></td>
+            <td class="num">1.120,00 L</td>
+            <td class="num">694,13 L</td>
+            <td class="num">+425,87 L</td>
+            <td class="num">20 L</td>
+            <td><span class="pill warn">Sobrante sin RD</span></td>
+          </tr>
+          <tr>
+            <td>Paraquat <span style="color:var(--muted)">(Sigma + Ruralco)</span></td>
+            <td class="num">1.120,00 L</td>
+            <td class="num">668,00 L</td>
+            <td class="num">+452,00 L</td>
+            <td class="num">20 L</td>
+            <td><span class="pill warn">Sobrante sin RD</span></td>
+          </tr>
+          <tr>
+            <td>Pyroxasulfone 85% <span style="color:var(--muted)">(Paramer)</span></td>
+            <td class="num">15,00 kg</td>
+            <td class="num">0,00 kg</td>
+            <td class="num">+15,00 kg</td>
+            <td class="num">5 kg</td>
+            <td><span class="pill unk">Sin datos</span></td>
+          </tr>
+          <tr>
+            <td>Diflufenican 50% <span style="color:var(--muted)">(Legacy)</span></td>
+            <td class="num">18,00 L</td>
+            <td class="num">0,00 L</td>
+            <td class="num">+18,00 L</td>
+            <td class="num">5 L</td>
+            <td><span class="pill unk">Sin datos</span></td>
+          </tr>
+          <tr>
+            <td style="color:var(--muted)">Coadyuvante TTM <span style="color:var(--muted)">(informativo, sin PA agroquímico)</span></td>
+            <td class="num">340,00 L</td>
+            <td class="num">222,94 L</td>
+            <td class="num">+117,06 L</td>
+            <td class="num">10 L</td>
+            <td><span class="pill warn">Sobrante sin RD</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lectura crítica de los sobrantes</h2>
+    <p>Las OT&nbsp;745, 746 y 747 —que tienen remitos asociados en la carpeta (RyC 202-12006, Propio 375, Cuthill 2344) pero cuyo documento de OT no está— aportan volumen del lado "remitido" sin contraparte de "aplicado": 100&nbsp;L Herbifen, 220&nbsp;L Cletodim, 140&nbsp;L Panzer Gold, 30&nbsp;L Coadyuvante TTM, 15&nbsp;L Diflufenican y 2,10&nbsp;kg Veltroma. Si se asume que esas OT consumieron íntegramente lo remitido, el cuadro cambia así:</p>
+    <ul class="plain">
+      <li><strong>Panzer Gold</strong> — el sobrante baja a ≈84&nbsp;L; se explica en gran parte por la OT faltante.</li>
+      <li><strong>Herbifen</strong> — el sobrante de 41&nbsp;L se revierte a negativo si esas OT consumieron los 100&nbsp;L remitidos.</li>
+      <li><strong>Cletodim</strong> — el sobrante remanente sigue siendo alto, ≈115&nbsp;L.</li>
+      <li><strong>Flurocloridona y Paraquat</strong> — no están vinculados a ningún remito de las OT faltantes: su sobrante (≈426&nbsp;L y ≈452&nbsp;L) <strong>no se explica por esta causa</strong> y es un hallazgo genuino a investigar.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Detalle por OT</h2>
+    <p class="section-note">Cruce entre cada Orden de Trabajo y su(s) remito(s) referenciado(s). Las celdas en rojo marcan lo que no se pudo cruzar.</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>OT</th>
+            <th>Establecimiento / lote</th>
+            <th>Fecha</th>
+            <th>Aplicado</th>
+            <th>Remito(s) referenciado(s)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">735</td><td>Ciervo Blanco (manchoneo, 10 ha)</td><td class="mono">06/05</td><td>Herbifen 10&nbsp;L · Panzer Gold 22&nbsp;L · Veltroma 0,30&nbsp;kg · Coad.TTM 2&nbsp;L</td><td>11629 · <span style="color:var(--bad-ink)">"Remito Propio 369" no está en la carpeta</span></td></tr>
+          <tr><td class="mono">722</td><td>La Manga (157 ha)</td><td class="mono">12/05*</td><td>Enlist Colex-D 110,32&nbsp;L · Panzer Gold 267,92&nbsp;L · Coad.TTM 31,52&nbsp;L</td><td><span style="color:var(--bad-ink)">"Recibo 533/534" — numeración no identificada</span></td></tr>
+          <tr><td class="mono">723</td><td>Don Federico L1 (125 ha)</td><td class="mono">12/05</td><td>Herbifen 62,50&nbsp;L · Eudor Cletodim Helm 87,50&nbsp;L · Panzer Gold 187,50&nbsp;L · Coad.TTM 25&nbsp;L</td><td><span style="color:var(--bad-ink)">"Recibo 533/534" — no identificado</span></td></tr>
+          <tr><td class="mono">724</td><td>Don Federico L2 (105 ha)</td><td class="mono">12/05</td><td>Herbifen 105&nbsp;L · Eudor Cletodim Helm 120&nbsp;L · Panzer Gold 231&nbsp;L · Saflufenacil 3,675&nbsp;kg · Coad.TTM 21&nbsp;L</td><td><span style="color:var(--bad-ink)">"Recibo 533/534" — no identificado</span></td></tr>
+          <tr><td class="mono">727</td><td>Ciervo Blanco L7 (42 ha)</td><td class="mono">21/05–27/06</td><td>Herbifen 42&nbsp;L · Panzer Gold 92,40&nbsp;L · Saflufenacil 1,26&nbsp;kg · Coad.TTM 8,40&nbsp;L</td><td>11629 (coincide)</td></tr>
+          <tr><td class="mono">729</td><td>La Manga L10 (27 ha)</td><td class="mono">08/06</td><td>Eudor Cletodim Helm 32,40&nbsp;L · Panzer Gold 40,50&nbsp;L · Coad.TTM 5,40&nbsp;L</td><td>Nota: "se usó producto en stock"</td></tr>
+          <tr><td class="mono">730</td><td>La Manga (3 lotes, 84,9 ha)</td><td class="mono">01–03/06</td><td>Flurocloridona 67,92&nbsp;L · Panzer Gold 84,90&nbsp;L · Coad.TTM 16,98&nbsp;L</td><td>Propio 370 + RyC 11682</td></tr>
+          <tr><td class="mono">731</td><td>La Manga (3 lotes, 72,7 ha)</td><td class="mono">08–11/06</td><td>Flurocloridona 94,51&nbsp;L · Panzer Gold 87,24&nbsp;L · Coad.TTM 14,54&nbsp;L</td><td>(comparte lote OT730-731-732)</td></tr>
+          <tr><td class="mono">732</td><td>Don Federico (2 lotes, 230 ha)</td><td class="mono">14–19/06</td><td>Flurocloridona 299&nbsp;L · Paraquat 460&nbsp;L · Coad.TTM 46&nbsp;L</td><td>(comparte lote OT730-731-732)</td></tr>
+          <tr><td class="mono">737</td><td>Ciervo Blanco / La Celina (99,5 ha)</td><td class="mono">12–19/06</td><td>Herbifen 99,50&nbsp;L · Panzer Gold 216,90&nbsp;L · Veltroma 2,99&nbsp;kg · Coad.TTM 19,90&nbsp;L</td><td><span style="color:var(--bad-ink)">sin remito legible</span></td></tr>
+          <tr><td class="mono">741</td><td>Ciervo Blanco (104 ha)</td><td class="mono">19/06</td><td>Flurocloridona (Angol) 135,20&nbsp;L · Paraquat 208&nbsp;L · Coad.TTM 20,80&nbsp;L</td><td>RyC 202-11817 + Propio 373 + <span style="color:var(--bad-ink)">"Cuthill R-8-2322" no está en la carpeta</span></td></tr>
+          <tr><td class="mono">742</td><td>La Celina (76 ha)</td><td class="mono">19/06</td><td>Flurocloridona (Rainbow) ≈97,50&nbsp;L · <span style="color:var(--bad-ink)">Panzer Gold y Coad.TTM ilegibles</span></td><td>RyC 202-11817 (coincide)</td></tr>
+          <tr><td class="mono">743</td><td>La Celina L2 (57 ha, real 59 ha)</td><td class="mono">29/06</td><td>Eudor Cletodim Helm 85,5&nbsp;L (real ~90&nbsp;L) · Panzer Gold 85,5&nbsp;L (real ~90&nbsp;L) · Coad.TTM 11,4&nbsp;L (real ~19&nbsp;L)</td><td>202-11844 + 202-11889 + Cuthill 3,60&nbsp;L</td></tr>
+          <tr><td class="mono">745–747</td><td><span style="color:var(--bad-ink)">Sin OT en la carpeta</span></td><td class="mono">15–16/07</td><td>—</td><td>RyC 202-12006 · Propio 375 · Cuthill 2344</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small-note">* OT 722: fecha contradictoria entre "18/4/26" manuscrito y "12 may 26" impreso — ambas caen dentro del rango pedido, pero la trazabilidad temporal exacta queda sin resolver.</p>
+  </section>
+
+  <section>
+    <div class="callout bad">
+      <span class="tag">Caso negativo destacado</span>
+      <p><strong>2,4-D sal colina 66,9% (Enlist / Colex-D):</strong> la OT&nbsp;722 aplicó 110,32&nbsp;L en La Manga (157&nbsp;ha, 6 lotes), pero solo hay <strong>40&nbsp;L</strong> documentados como remitidos de ese producto en toda la carpeta (20&nbsp;L en el remito de mayo 11567 + 20&nbsp;L en el remito de junio 11805). Faltan <strong>70,32&nbsp;L sin respaldo de remito</strong>, y la propia OT&nbsp;722 no cita un número de remito identificable (solo la anotación ilegible "huds 533/534").</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Remitos de devolución (RD)</h2>
+    <p>No se encontró ningún remito de devolución explícito entre los 45 documentos. El remito Cuthill 0008-00002344 trae impresa la nota "Sobrante 3,8 litros", pero es el remanente de una entrega anterior que llega <em>con</em> el bidón entregado — no un remito hacia el proveedor — y no reduce el remitido neto según el criterio que definiste. La OT&nbsp;743 registra consumo real por encima de la dosis planificada (aplicado &gt; plan), que es la dirección opuesta a una devolución.</p>
+    <p>Conclusión: ninguno de los sobrantes de la tabla está justificado por un RD documentado. Son sobrantes genuinos a investigar, o corresponden a stock de galpón remitido de forma no formalizada.</p>
+  </section>
+
+  <section>
+    <h2>Documentos ilegibles o faltantes</h2>
+    <ul class="plain">
+      <li><strong>OT 742</strong> — cantidades de Panzer Gold y Coadyuvante TTM ilegibles (la foto mezcla el final de la OT 741 con el inicio de la 742).</li>
+      <li><strong>OT 722</strong> — fecha contradictoria (18/4 manuscrito vs. 12/5 impreso).</li>
+      <li><strong>"Recibo/huds 533/534"</strong> (OT 723, 724, 722) — no coincide con ninguna numeración RyC, Propio o Cuthill presente en la carpeta.</li>
+      <li><strong>"Remito Propio 369"</strong> (OT 735) y <strong>"Remito Cuthill R-8-2322"</strong> (OT 741) — mencionados a mano, no están en la carpeta.</li>
+      <li><strong>OT 745, 746, 747</strong> (y probablemente 739, 740, 744) — no están en la carpeta pese a tener remitos asociados explícitos.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Verificación — doble rechequeo</h2>
+    <ul class="verify-list">
+      <li>
+        <span class="pass-label">Pasada 1 — por producto agregado</span>
+        <p>Suma de cada línea de remito por producto (32 líneas del costeo validado, cuadran con el total certificado $213.050.721,25 / US$145.380,50) más el bloque de mayo (17 líneas de 5 remitos físicos).</p>
+      </li>
+      <li>
+        <span class="pass-label">Pasada 2 — por documento individual</span>
+        <p>Conteo independiente por comprobante (32 líneas en 12 comprobantes de junio-julio; 17 líneas en 5 remitos de mayo) y por OT (43 líneas de aplicado en 13 OT con datos utilizables). Coincide con la pasada 1, sin diferencias.</p>
+      </li>
+      <li>
+        <span class="pass-label">Pasada 3 — revisión crítica</span>
+        <p><strong>Duplicado corregido:</strong> el remito Cuthill 0008-00002344 estaba fotografiado dos veces como archivos distintos; se contó una sola vez (100&nbsp;L de NPA). <strong>Inconsistencia no resuelta:</strong> "Cletodim 24% Sino Agri" / "Cletodim Arrow" (remitos) vs. "Eudor Cletodim Helm" (OT) — tres nombres comerciales que nunca coinciden en un mismo documento; mismo problema entre "Flurocloridona Rainbow" (remitos) y "Flurocloridona Angol" (OT 741). Unidades y rango de fechas (3/abr–15/jul/2026) verificados sin hallazgos adicionales.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Segundo control mencionado — aplicado vs. consumido real</h2>
+    <p>Señalado, no resuelto en esta pasada: la OT&nbsp;743 es el único caso con evidencia explícita de esta brecha. La dosis calculada (Cletodim 85,5&nbsp;L, Panzer Gold 85,5&nbsp;L, Coadyuvante 11,4&nbsp;L para 57&nbsp;ha) tiene al lado una anotación manuscrita de consumo real — 90&nbsp;L, 90&nbsp;L y 19&nbsp;L — por haberse tratado 59&nbsp;ha reales y por manchoneo sobre una franja ya pulverizada. Confirma que el fenómeno existe y es rastreable si se decide abordarlo en una próxima pasada.</p>
+  </section>
+
+  <section>
+    <h2>Preguntas pendientes</h2>
+    <p class="section-note">Después de dos rechequeos completos, esto es lo que no se puede cerrar sin tu confirmación.</p>
+    <ol class="questions">
+      <li><p>¿Los 9 remitos de mayo/2026 (11533 a 11728) ya están incluidos en el total validado de $213.050.721,25 / US$145.380,50, o son remitido adicional no contemplado en ese costeo? Es la respuesta que más cambia el resultado.</p></li>
+      <li><p>¿Dónde están las OT 745, 746 y 747 (y posiblemente 739, 740, 744)? Tienen remitos asociados pero no aparecen en la carpeta — sin ellas no se puede cerrar Pyroxasulfone ni Diflufenican, y quedan en duda Herbifen y Cletodim.</p></li>
+      <li><p>¿"Eudor Cletodim Helm" (aplicado) y "Cletodim 24% Sino Agri" / "Cletodim Arrow" (remitido) son el mismo producto? Misma pregunta para "Flurocloridona Rainbow" (remitido) vs. "Flurocloridona Angol" (aplicado en OT 741).</p></li>
+      <li><p>¿Qué son los remitos "533/534" citados a mano en las OT 722, 723 y 724? No coinciden con ninguna numeración RyC, Propio ni Cuthill vista en el resto de la carpeta.</p></li>
+      <li><p>¿Existen "Remito Propio 369" y "Remito Cuthill R-8-2322"? Se mencionan a mano en OT 735 y OT 741 pero no están en la carpeta.</p></li>
+      <li><p>¿La OT 726 (La Palma, Verdeo invierno, proveedor Guerra Diego) pertenece a la actividad 52, o es de otra actividad? Se excluyó del cruce por prudencia — si corresponde, el cuadro debe recalcularse.</p></li>
+      <li><p>¿Existe algún RD real en el sistema para esta actividad? No se encontró ninguno en los 45 documentos, y el sobrante de Flurocloridona y Paraquat —los dos casos que no se explican por las OT 745-747 faltantes— sigue sin justificación documental.</p></li>
+    </ol>
+  </section>
+
+  <footer>
+    Conciliación C2 (Remitido vs. Aplicado) según el instructivo interno de control unificado de insumos · Actividad (52) Siembra Asociada ADM 26-27 · Ningún documento de Drive fue editado — trabajo de solo lectura y diagnóstico.
+  </footer>
+
+</div>
