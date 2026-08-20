@@ -55,5 +55,6 @@ Cada corrida produce:
 | Fecha | Actividad | Resultado | Preguntas abiertas |
 |---|---|---|---|
 | 19/08/2026 | (52) Siembra Asociada ADM 26-27 | 1 principio activo OK, 1 negativo, 6 sobrante sin RD, 2 sin datos suficientes | Remitos de mayo (¿incluidos o adicionales?), OT 745-747 faltantes, remitos "533/534" sin cargar — ver `pedidos/2026-08-19_pedido_betiana.docx` |
+| 20/08/2026 | (52) Siembra Asociada ADM 26-27 | 4 PA dentro de tolerancia (Diflufenican exacto en 0); negativos concentrados en OT 722/723/724; resto de la campaña cierra | Match remitos internos ↔ RD no da (0 de 11); faltan RE de OT 722/723/724; 11533/11534 sin DC de reversa — ver `reportes/2026-08-20_...v2.html` |
 
 Actualizar esta tabla en cada corrida (cada 10 días) para tener trazabilidad de si las diferencias se van cerrando o se repiten — si un mismo principio activo queda con diferencia abierta en dos corridas consecutivas, corresponde escalar a Mercedes según el punto 8 del instructivo general.
