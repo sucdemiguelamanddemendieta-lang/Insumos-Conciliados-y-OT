@@ -31,6 +31,8 @@ Regla de oro heredada del instructivo, no se cambia acá: *una diferencia en C3 
 3. **Sumar lo aplicado por producto**, leyendo cada OT (dosis × hectáreas, o cantidad total anotada) desde el documento primario, no desde el plan/presupuesto.
 4. **Convertir ambos lados a Principio Activo** con el mapeo del paso 1. Productos con nombre comercial distinto pero mismo principio activo y concentración se suman juntos (confirmar la equivalencia contra la ficha técnica o con Betiana/Mercedes si hay duda — no asumir por similitud de nombre).
 5. **Calcular diferencia = Remitido neto − Aplicado**, por principio activo.
+5.b **Aplicación selectiva (Weed-It).** Cuando la fumigación es selectiva, el consumo real NO es el plan impreso (dosis × ha): la máquina detecta clorofila y trata solo la fracción con maleza, con ahorros de hasta el 95%. El plan impreso sobreestima el consumo. Cómo detectarlo y validarlo: calcular el cociente consumo/plan producto por producto dentro de una misma OT — si la aplicación fue selectiva, **el porcentaje es idéntico para todos los productos de esa OT** (es una fracción de superficie, no un ajuste de dosis). Coberturas ya observadas: OT 722 = 34,9%, OT 723 = 24,0%, OT 724 = 100% (completa). Nunca imputar el plan como consumo en una OT selectiva sin pedir el porcentaje real.
+
 6. **Aplicar tolerancia:** el margen de error aceptable es la capacidad de **un envase abierto** del producto en cuestión (ej. 20 L para un producto envasado en bidones de 20 L), no cero absoluto. Si el principio activo agrupa productos con distinto tamaño de envase, no promediar — aclarar cuál envase se está usando de referencia.
 7. **Clasificar cada principio activo:**
    - **OK** — diferencia dentro de tolerancia.
@@ -56,5 +58,6 @@ Cada corrida produce:
 |---|---|---|---|
 | 19/08/2026 | (52) Siembra Asociada ADM 26-27 | 1 principio activo OK, 1 negativo, 6 sobrante sin RD, 2 sin datos suficientes | Remitos de mayo (¿incluidos o adicionales?), OT 745-747 faltantes, remitos "533/534" sin cargar — ver `pedidos/2026-08-19_pedido_betiana.docx` |
 | 20/08/2026 | (52) Siembra Asociada ADM 26-27 | 4 PA dentro de tolerancia (Diflufenican exacto en 0); negativos concentrados en OT 722/723/724; resto de la campaña cierra | Match remitos internos ↔ RD no da (0 de 11); faltan RE de OT 722/723/724; 11533/11534 sin DC de reversa — ver `reportes/2026-08-20_conciliacion_ADM_26-27_v2.html` y `pedidos/2026-08-20_pedido_betiana_2.docx` |
+| 21/08/2026 | (52) Siembra Asociada ADM 26-27 | Weed-It verificado (dispersión 0,0) explica las OT 722/723/724; 5 PA en tolerancia; sobrantes de Enlist, TTM y Paramer cierran dentro de 2 unidades | Falta consumo real de OT 727/729/735/737/739; Herbifen −140 L no se explica por selectiva (¿remito sin cargar?) — ver `reportes/2026-08-21_conciliacion_ADM_26-27_v3.html` |
 
 Actualizar esta tabla en cada corrida (cada 10 días) para tener trazabilidad de si las diferencias se van cerrando o se repiten — si un mismo principio activo queda con diferencia abierta en dos corridas consecutivas, corresponde escalar a Mercedes según el punto 8 del instructivo general.
