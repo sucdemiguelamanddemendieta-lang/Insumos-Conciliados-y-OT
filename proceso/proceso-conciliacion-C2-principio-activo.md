@@ -1,7 +1,7 @@
 # Proceso — Conciliación C2 por Principio Activo (Remitido vs. Aplicado)
 
 **Actividad piloto:** (52) Siembra Asociada ADM 26-27
-**Cadencia:** cada 10 días
+**Cadencia:** miércoles y viernes a las 16:00 (rutina automática)
 **Responsable de ejecución:** Betiana (carga y corrección de RE/OT) · Responsable de validación: Mercedes
 **Encaja dentro del control interno existente:** `Instructivo — Control unificado de insumos` (C1 Entradas, C2 Consumos, C3 Saldo). Este documento agrega el detalle operativo para hacer C2 **por principio activo** en vez de por producto comercial, que es el nivel que realmente importa cuando dos marcas distintas son el mismo agroquímico.
 
@@ -66,4 +66,4 @@ Cada corrida produce:
 
 **Criterio para la próxima corrida:** si esos tres siguen abiertos y ya llegó respuesta al pedido del 21/08 —o si pasó otra corrida sin respuesta— corresponde escalar a Mercedes con el detalle de lo ya intentado.
 
-Actualizar esta tabla en cada corrida (cada 10 días) para tener trazabilidad de si las diferencias se van cerrando o se repiten — si un mismo principio activo queda con diferencia abierta en dos corridas consecutivas, corresponde escalar a Mercedes según el punto 8 del instructivo general.
+Actualizar esta tabla en cada corrida (miércoles y viernes) para tener trazabilidad de si las diferencias se van cerrando o se repiten — si un mismo principio activo queda con diferencia abierta en dos corridas consecutivas, corresponde escalar a Mercedes según el punto 8 del instructivo general.
