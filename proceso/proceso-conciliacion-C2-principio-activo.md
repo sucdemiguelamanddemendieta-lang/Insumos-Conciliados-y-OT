@@ -38,6 +38,7 @@ Regla de oro heredada del instructivo, no se cambia acá: *una diferencia en C3 
    - **OK** — diferencia dentro de tolerancia.
    - **NEGATIVO** — aplicado > remitido, fuera de tolerancia. Prioridad alta: revisar primero si falta cargar un remito antes de tocar la OT.
    - **SOBRANTE SIN RD** — remitido > aplicado, fuera de tolerancia, sin remito de devolución que lo justifique.
+   - **EN TRÁNSITO** — la diferencia se explica por documentación que todavía no llegó, no por un problema real. Ver la sección 2.bis.
    - **SIN DATOS SUFICIENTES** — falta un documento (OT o remito) para poder concluir.
 8. **Doble rechequeo obligatorio antes de reportar:**
    - Pasada 1: agregado por producto.
@@ -45,9 +46,40 @@ Regla de oro heredada del instructivo, no se cambia acá: *una diferencia en C3 
    - Pasada 3: revisión crítica — duplicados (mismo remito fotografiado/contado dos veces), nombres comerciales que nunca coinciden entre remito y OT, unidades mezcladas, fechas fuera de rango, remitos u OT mencionados pero no presentes en la carpeta.
 9. **Lo que no cierra después de las 3 pasadas se documenta como pregunta puntual** (a quién preguntar, qué dato falta) — no se fuerza un cierre en cero con datos que no lo permiten. Ver `pedidos/` para el formato de estas preguntas cuando van dirigidas a Betiana.
 
+## 2.bis. Campaña en curso: OT y remitos que siguen llegando
+
+La campaña está activa y se agregan OT y remitos con el correr de los días. Eso cambia cómo hay que leer una diferencia: **no toda diferencia es un problema; muchas son un desfasaje temporal entre los dos lados del cruce.**
+
+### Fecha de corte
+
+Cada corrida fija una **fecha de corte** (por defecto, el día de la corrida) y la deja escrita en el reporte. Solo se computan OT y remitos con fecha *anterior o igual* al corte. Sin corte explícito, dos corridas no son comparables y el historial pierde sentido.
+
+### Diferencia real vs. diferencia por documentación en tránsito
+
+Antes de marcar algo como NEGATIVO o SOBRANTE, verificar si la diferencia se explica por un desfasaje:
+
+- **Una OT aplicada cuyo remito todavía no se cargó** aparece como negativo, y no lo es: el producto salió, el papel no llegó.
+- **Un remito cargado cuya OT todavía no se emitió o no pasó a REAL** aparece como sobrante, y tampoco lo es.
+
+Regla práctica: si la diferencia de un principio activo es del orden de lo que mueve **una sola OT o un solo remito reciente** (últimos 7-10 días antes del corte), clasificarla **EN TRÁNSITO** y no como problema. Se deja anotada para seguirla, sin generar pedido ni contar para escalamiento.
+
+Una diferencia es **real** cuando sobrevive a que la documentación del período se complete: sigue abierta después de que llegaron los documentos de esas fechas, o su magnitud excede largamente lo que cualquier documento pendiente podría explicar.
+
+### Efecto sobre el escalamiento
+
+Un principio activo **solo suma corridas consecutivas para escalamiento si entre una corrida y la otra no llegó documentación nueva que lo afecte.** Si llegaron OT o remitos de ese producto, el contador se reinicia: la foto cambió, todavía no es una diferencia que persiste. Sin esta salvedad, una campaña en crecimiento escalaría permanentemente y el escalamiento perdería valor.
+
+### Mantenimiento incremental
+
+- **Productos nuevos:** cada OT o remito puede traer un producto que no está en `mapeos/agroquimicos_pa.csv`. Agregarlo con su principio activo real (de la ficha técnica o preguntando). Nunca inferirlo por parecido de nombre — el nombre comercial no determina la sal ni la concentración.
+- **OT de fumigación nuevas:** hay que saber si fueron selectivas y con qué cobertura (ver paso 5.b). Es un dato recurrente, no una pregunta de una sola vez. **Lo más eficiente es que el porcentaje de cobertura quede anotado en la OT al momento de cerrarla**, junto al consumo real; así deja de ser una consulta en cada corrida.
+- **Tolerancia:** es por producto y por envase, no acumulativa por campaña. Que haya más OT no agranda el margen aceptable de cada principio activo.
+
 ## 3. Formato de reporte
 
 Cada corrida produce:
+- La **fecha de corte** usada, explícita.
+- Qué documentación nueva entró desde la corrida anterior (OT y remitos), para poder leer los cambios del cuadro.
 - Una tabla por Principio Activo (Remitido / Aplicado / Diferencia / Tolerancia / Estado).
 - Un detalle por OT con su cruce de remito(s) y qué quedó sin poder cruzar.
 - La lista de preguntas pendientes, si las hay, con destinatario sugerido (Betiana para carga/datos operativos, Mercedes para excepciones o escalamiento según el punto 8 del instructivo general).
