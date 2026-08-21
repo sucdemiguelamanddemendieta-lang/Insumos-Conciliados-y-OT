@@ -60,4 +60,10 @@ Cada corrida produce:
 | 20/08/2026 | (52) Siembra Asociada ADM 26-27 | 4 PA dentro de tolerancia (Diflufenican exacto en 0); negativos concentrados en OT 722/723/724; resto de la campaña cierra | Match remitos internos ↔ RD no da (0 de 11); faltan RE de OT 722/723/724; 11533/11534 sin DC de reversa — ver `reportes/2026-08-20_conciliacion_ADM_26-27_v2.html` y `pedidos/2026-08-20_pedido_betiana_2.docx` |
 | 21/08/2026 | (52) Siembra Asociada ADM 26-27 | Weed-It verificado (dispersión 0,0) explica las OT 722/723/724; 5 PA en tolerancia; sobrantes de Enlist, TTM y Paramer cierran dentro de 2 unidades | Falta consumo real de OT 727/729/735/737/739; Herbifen −140 L no se explica por selectiva (¿remito sin cargar?) — ver `reportes/2026-08-21_conciliacion_ADM_26-27_v3.html` |
 
+### Estado de escalamiento (actualizar cada corrida)
+
+**Glifosato, cletodim y 2,4-D Herbifen llevan dos corridas consecutivas con diferencia fuera de tolerancia** (20/08 y 21/08). Por la regla del punto 8 del instructivo general eso dispararía escalamiento a Mercedes, pero **se mantiene en espera deliberadamente**: la causa está identificada (falta el consumo real de las OT 727/729/735/737/739) y el pedido correspondiente recién salió el 21/08. La regla apunta a diferencias que persisten *después* de aplicar el catálogo, y acá el remedio todavía no tuvo tiempo de aplicarse.
+
+**Criterio para la próxima corrida:** si esos tres siguen abiertos y ya llegó respuesta al pedido del 21/08 —o si pasó otra corrida sin respuesta— corresponde escalar a Mercedes con el detalle de lo ya intentado.
+
 Actualizar esta tabla en cada corrida (cada 10 días) para tener trazabilidad de si las diferencias se van cerrando o se repiten — si un mismo principio activo queda con diferencia abierta en dos corridas consecutivas, corresponde escalar a Mercedes según el punto 8 del instructivo general.
