@@ -16,8 +16,11 @@ Regla de oro heredada del instructivo, no se cambia acá: *una diferencia en C3 
 | Mapeo Producto → Principio Activo | Agrupa productos comerciales distintos que son el mismo agroquímico | `mapeos/agroquimicos_pa.csv` (145 productos, desde la hoja `InsumosLabores` de la planilla maestra de GestorMax) |
 | Reporte de costeo de actividad | Cantidad remitida por producto, imputada a la actividad, con comprobante y fecha | Export "Costeo de Actividad" desde GestorMax (Fecha, Comprobante, Código, Artículo, Cantidad, Pesos, Dólares) |
 | Administrador de Remitos | Confirma comprobantes de remito (físicos RSI y de valorización RVI) por depósito/actividad | Export "Administrador de Remitos — Negocios Especiales" desde GestorMax |
-| Documentos primarios (OT y remitos escaneados) | Detalle real por Orden de Trabajo, con anotaciones del operario; remitos de RyC, remitos propios de ADM (stock de galpón) y de terceros (ej. Cuthill) | Carpeta de Drive de la actividad — un PDF/JPEG por OT y por remito, con el/los número(s) de OT en el nombre del archivo cuando aplica |
+| Documentos primarios — **carpeta de conciliación** | OT escaneadas con las anotaciones del operario (consumo real, cobertura, sobrantes) y los remitos que las respaldan: RyC, remitos propios de ADM (stock de galpón) y de terceros (Cuthill) | Drive `10VirYUGQKUyHwkcU_VtHymV8ddYksssx` — un PDF/JPEG por OT y por remito, con el/los número(s) de OT en el nombre del archivo |
+| Documentos primarios — **carpeta de OT emitidas** | La OT tal como sale del Gestor, con el plan impreso, *antes* de volver anotada del campo. Es la única fuente que dice qué OT existen | Drive `15RgLh8xkYK7uXafxTqfs_7wzF-FYx0Ov` — `OT 00000NNN <CAMPO> <proveedor>.pdf` |
 | Google Sheet "Base" de GestorMax (pestaña con movimientos) | Fuente potencial más completa/automatizada — **hoy bloqueada**: el archivo es demasiado grande para las herramientas de lectura disponibles (más de 25 pestañas, la primera —"Imputador"— agota el presupuesto de lectura antes de llegar a la pestaña de movimientos). Mientras no se resuelva el acceso, se trabaja con los exports manuales de arriba. | — |
+
+**Las dos carpetas de Drive no son intercambiables y hay que barrer las dos en cada corrida.** La de conciliación solo tiene las OT que ya volvieron anotadas; la de OT emitidas tiene todas las que existen. Mirar solo la primera hace que una OT emitida y ejecutada, cuya hoja todavía no volvió del campo, sea invisible para el control — el consumo ocurrió y el cruce no lo ve. Así se pasaron por alto las OT 752 a 760 hasta la corrida del 31/08. El barrido correcto es: listar la carpeta de OT emitidas, y para cada número buscar su par anotado en la carpeta de conciliación; las que no tienen par van al bloque abierto (ver 2.bis).
 
 **Importante:** los exports de "costeo de actividad" y "administrador de remitos" reflejan lo *cargado/imputado*, no necesariamente lo *retirado físicamente* si hay remitos pendientes de cargar. Por eso el cruce contra los documentos primarios (remitos escaneados y OT) es imprescindible, no un paso opcional.
 
@@ -53,6 +56,17 @@ La campaña está activa y se agregan OT y remitos con el correr de los días. E
 ### Fecha de corte
 
 Cada corrida fija una **fecha de corte** (por defecto, el día de la corrida) y la deja escrita en el reporte. Solo se computan OT y remitos con fecha *anterior o igual* al corte. Sin corte explícito, dos corridas no son comparables y el historial pierde sentido.
+
+### El corte no es uno solo: bloque cerrado y bloque abierto
+
+Fijar un único corte en el día de la corrida no alcanza, porque los dos lados del cruce avanzan a distinta velocidad: las OT se emiten el día que se aplica, y el costeo se exporta cada tantos días. Si el corte cae en medio de esa ventana, aparecen negativos enormes que solo miden el atraso del export.
+
+Por eso cada corrida parte el período en dos:
+
+- **Bloque cerrado** — hasta la fecha del último export de costeo disponible *menos* los días que tarda en cargarse un remito. Acá los dos lados están completos y una diferencia significa algo. Es el bloque que se concilia, se reporta y cuenta para escalamiento.
+- **Bloque abierto** — de ahí hasta el día de la corrida. Acá hay OT emitidas cuyos remitos todavía no están en el costeo. **No se computa como negativo**: se lista aparte, con las OT y los remitos que sí llegaron, y su única salida es pedir el export de costeo actualizado.
+
+La frontera se determina mirando el propio export: la fecha del último remito cargado. Si el costeo llega al 18/08 y hay OT del 19/08, el bloque cerrado termina antes, no después.
 
 ### Diferencia real vs. diferencia por documentación en tránsito
 
@@ -93,11 +107,16 @@ Cada corrida produce:
 | 21/08/2026 | (52) Siembra Asociada ADM 26-27 | Weed-It verificado (dispersión 0,0) explica las OT 722/723/724; 5 PA en tolerancia; sobrantes de Enlist, TTM y Paramer cierran dentro de 2 unidades | Falta consumo real de OT 727/729/735/737/739; Herbifen −140 L no se explica por selectiva (¿remito sin cargar?) — ver `reportes/2026-08-21_conciliacion_ADM_26-27_v3.html` |
 | 26/08/2026 | (52) Siembra Asociada ADM 26-27 | Corte 26/08. Sin documentación nueva desde el 21/08 (solo renombre de la OT 740, contenido idéntico) y sin respuesta al pedido. No se rehizo la conciliación: sigue vigente la del 21/08 | **ESCALADO A MERCEDES** — glifosato, cletodim y Herbifen con diferencia en dos cierres consecutivos sin documentación nueva que los afecte. Ver `pedidos/2026-08-26_escalamiento_mercedes.docx` |
 | 27/08/2026 | (52) Siembra Asociada ADM 26-27 | Corte 27/08. Betiana aportó las coberturas de las 5 OT pendientes. Todos los negativos bajaron (glifosato −324,66 → −219,00) pero ninguno llegó a tolerancia: 3 de las 5 OT resultaron no selectivas | Remitos Cuthill 8-2332 y R-8-2322 citados como fuente pero ausentes en Drive — canal de provisión no contabilizado. El respaldo documental del 2,4-D sigue sin responder. Ver `reportes/2026-08-27_conciliacion_ADM_26-27_v4.html` |
+| 31/08/2026 | (52) Siembra Asociada ADM 26-27 | Corte partido: **bloque cerrado al 12/08** (sin cambios: siguen los 5 negativos del 27/08) y **bloque abierto 13/08→31/08** con 9 OT sin remitos cargados. Llegaron los remitos Cuthill: son **antideriva**, no glifosato — cierran el punto del antideriva sin respaldo (40 L remitidos vs 36,45 aplicados) pero no tocan los negativos. Solmix cierra con +2.897 kg sobre 145.880 (2,0%) | Falta el export de costeo posterior al 19/08 para poder conciliar las OT 752-760; sigue sin responder el respaldo documental del 2,4-D; producto nuevo Flumioxazin sin mapeo ni remito |
 
 ### Estado de escalamiento (actualizar cada corrida)
 
-**Escalado el 26/08/2026, en revisión.** El escalamiento a Mercedes quedó preparado y enviado al dueño para su revisión previa; todavía no salió a Mercedes. El 27/08 Betiana respondió con las coberturas que faltaban, así que **llegó documentación nueva que afecta a los tres principios activos escalados**: por la salvedad de 2.bis el contador de corridas consecutivas se reinicia. Los tres siguen negativos pero con cifras nuevas y una causa distinta a la que motivó el escalamiento.
+**Escalado el 26/08/2026, todavía no enviado a Mercedes.** Quedó preparado y revisado por el dueño; la dirección de Mercedes sigue sin confirmar y no se envía a una dirección inferida.
 
-**Criterio para la próxima corrida:** el escalamiento sigue vigente en su motivo de fondo (diferencias grandes sin respaldo), pero conviene actualizarlo con las cifras del 27/08 y la pista de los remitos Cuthill antes de elevarlo. Si aparecen los Cuthill 8-2332 y R-8-2322 y cierran las diferencias, el escalamiento se retira; si no aparecen o no alcanzan, se eleva con esa evidencia agregada.
+**Situación al 31/08.** Llegaron los dos remitos Cuthill que se venían pidiendo (8-2332 del 22/06 y 8-2344 del 16/07) y la factura que los cubre (0009-00001722 del 03/08). Contienen **NPA 15 Full — antideriva**, no glifosato ni cletodim ni 2,4-D. Es decir: la pista Cuthill se agotó como explicación de los negativos, aunque resolvió por completo otro punto abierto (el antideriva aplicado sin respaldo documental). Los cinco principios activos negativos del bloque cerrado **no recibieron documentación nueva que los afecte**, así que por 2.bis el contador vuelve a correr: esta es la primera corrida consecutiva desde el reinicio del 27/08.
+
+**Criterio para la próxima corrida (miércoles 02/09):** si sigue sin llegar documentación que afecte a glifosato, cletodim o 2,4-D, se cumplen dos corridas consecutivas y el escalamiento se eleva — actualizado con las cifras del bloque cerrado al 12/08 y con el resultado Cuthill, que ahora descarta una hipótesis en vez de dejarla abierta.
+
+**No confundir con el bloque abierto.** Las diferencias de las OT 752-760 son grandes (glifosato −602 L, Herbifen −328,60 L) pero **no cuentan para escalamiento**: miden el atraso del export de costeo, no un faltante. Escalar por ellas sería exactamente el error que 2.bis previene.
 
 Actualizar esta tabla en cada corrida (miércoles y viernes) para tener trazabilidad de si las diferencias se van cerrando o se repiten — si un mismo principio activo queda con diferencia abierta en dos corridas consecutivas, corresponde escalar a Mercedes según el punto 8 del instructivo general.

@@ -1,0 +1,268 @@
+<title>Conciliación Siembra Asociada ADM 26-27</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f1; --surface:#ffffff; --surface-2:#eef0e7;
+    --ink:#242820; --ink-soft:#4b5044; --muted:#767c6b;
+    --line:#dde1d3; --line-strong:#c7cdb8;
+    --accent:#4a6b3d; --accent-ink:#2f4527; --accent-soft:#e3ead9;
+    --ok-bg:#e2efe1; --ok-ink:#2e6b3e; --ok-line:#b7dabb;
+    --warn-bg:#faf0da; --warn-ink:#93641a; --warn-line:#e9cf98;
+    --bad-bg:#fbe6e1; --bad-ink:#a3402c; --bad-line:#eab9ab;
+    --unk-bg:#eceae4; --unk-ink:#6a6657; --unk-line:#d4d0c3;
+    --shadow: 0 1px 2px rgba(36,40,32,.06), 0 6px 20px -8px rgba(36,40,32,.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+      --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+      --line:#343829; --line-strong:#454b34;
+      --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+      --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+      --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+      --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+      --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+    --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+    --line:#343829; --line-strong:#454b34;
+    --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+    --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+    --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+    --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+    --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height:1.5;
+    -webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001ms !important; transition-duration:.001ms !important;}}
+  .wrap{max-width:980px; margin:0 auto; padding:0 24px 96px;}
+  header.hero{padding:56px 0 32px; border-bottom:1px solid var(--line); margin-bottom:40px;}
+  .eyebrow{font-family:"IBM Plex Mono", monospace; font-size:12.5px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent-ink); background:var(--accent-soft);
+    display:inline-block; padding:4px 10px; border-radius:4px; margin-bottom:18px;}
+  h1{font-family:"Fraunces", Georgia, serif; font-optical-sizing:auto; font-weight:600;
+    font-size:clamp(30px,4.4vw,44px); line-height:1.08; letter-spacing:-.01em;
+    margin:0 0 14px; text-wrap:balance;}
+  .dek{font-size:17px; color:var(--ink-soft); max-width:64ch; margin:0 0 20px;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:8px 18px; font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px; color:var(--muted);}
+  .meta-row b{color:var(--ink-soft); font-weight:600;}
+  section{margin-bottom:52px;}
+  h2{font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:24px;
+    letter-spacing:-.005em; margin:0 0 6px; text-wrap:balance;}
+  h3{font-weight:600; font-size:15px; margin:26px 0 10px;}
+  .section-note{color:var(--muted); font-size:14.5px; margin:0 0 22px; max-width:70ch;}
+  p{margin:0 0 14px; color:var(--ink-soft); max-width:72ch;}
+  p:last-child{margin-bottom:0;}
+  strong{color:var(--ink); font-weight:600;}
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:16px; box-shadow:var(--shadow);}
+  .stat .n{font-family:"Fraunces",serif; font-weight:600; font-size:30px; line-height:1;
+    font-variant-numeric:tabular-nums;}
+  .stat .l{font-size:12.5px; color:var(--muted); margin-top:6px;}
+  .stat.ok .n{color:var(--ok-ink);} .stat.bad .n{color:var(--bad-ink);}
+  .stat.warn .n{color:var(--warn-ink);} .stat.unk .n{color:var(--unk-ink);}
+  .callout{border:1px solid var(--line-strong); background:var(--surface); border-radius:10px;
+    padding:20px 22px; box-shadow:var(--shadow);}
+  .callout + .callout{margin-top:14px;}
+  .callout.warn{background:var(--warn-bg); border-color:var(--warn-line);}
+  .callout.bad{background:var(--bad-bg); border-color:var(--bad-line);}
+  .callout.ok{background:var(--ok-bg); border-color:var(--ok-line);}
+  .callout .tag{font-family:"IBM Plex Mono",monospace; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:.08em; font-weight:600; margin-bottom:8px; display:block;}
+  .callout.warn .tag{color:var(--warn-ink);} .callout.bad .tag{color:var(--bad-ink);}
+  .callout.ok .tag{color:var(--ok-ink);}
+  .table-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    box-shadow:var(--shadow); background:var(--surface); margin-bottom:10px;}
+  table{border-collapse:collapse; width:100%; min-width:640px; font-size:13.8px;}
+  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+  thead th{font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--muted); background:var(--surface-2); white-space:nowrap;
+    border-bottom:1px solid var(--line-strong);}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:var(--surface-2);}
+  td.num, th.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+    text-align:right; white-space:nowrap;}
+  td.mono{font-family:"IBM Plex Mono",monospace; font-size:13px; white-space:nowrap;}
+  .pill{display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    font-weight:600; padding:3px 9px; border-radius:100px; white-space:nowrap;
+    border:1px solid transparent;}
+  .pill.ok{background:var(--ok-bg); color:var(--ok-ink); border-color:var(--ok-line);}
+  .pill.bad{background:var(--bad-bg); color:var(--bad-ink); border-color:var(--bad-line);}
+  .pill.warn{background:var(--warn-bg); color:var(--warn-ink); border-color:var(--warn-line);}
+  .pill.unk{background:var(--unk-bg); color:var(--unk-ink); border-color:var(--unk-line);}
+  .neg{color:var(--bad-ink); font-weight:600;}
+  .pos{color:var(--ok-ink); font-weight:600;}
+  .small-note{font-size:12.5px; color:var(--muted); margin-top:2px;}
+  ul.plain{margin:0; padding-left:20px; color:var(--ink-soft);}
+  ul.plain li{margin-bottom:8px;} ul.plain li:last-child{margin-bottom:0;}
+  .questions{list-style:none; counter-reset:q; margin:0; padding:0; display:flex;
+    flex-direction:column; gap:12px;}
+  .questions li{counter-increment:q; position:relative; background:var(--surface);
+    border:1px solid var(--line-strong); border-left:3px solid var(--accent);
+    border-radius:8px; padding:14px 18px 14px 52px; box-shadow:var(--shadow);}
+  .questions li::before{content:counter(q); position:absolute; left:16px; top:14px;
+    font-family:"Fraunces",serif; font-weight:600; font-size:17px; color:var(--accent-ink);}
+  .questions p{margin:0; color:var(--ink); font-size:15px;}
+  .resolved{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+  .resolved li{background:var(--surface); border:1px solid var(--line);
+    border-left:3px solid var(--ok-line); border-radius:8px; padding:13px 16px;
+    font-size:14.5px; color:var(--ink-soft);}
+  footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
+    font-size:12.5px; color:var(--muted);}
+  @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr);} header.hero{padding-top:36px;}}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Conciliación C2 · 5ª corrida · 31 ago 2026</span>
+  <h1>Siembra Asociada ADM 26-27</h1>
+  <p class="dek">Insumos remitidos por Rindes y Cultivos DAS y aportados de stock de galpón por ADM, contra lo aplicado en Órdenes de Trabajo, por principio activo. Esta corrida cierra la pista Cuthill y corrige un punto ciego del propio control.</p>
+  <div class="meta-row">
+    <span><b>Sucesores de Miguel Amand de Mendieta SRL</b></span>
+    <span>Bloque cerrado al 12/08 · bloque abierto 13/08 → 31/08</span>
+    <span>Actividad (52) · desde 1 abr 2026</span>
+  </div>
+</header>
+
+<section>
+  <div class="stats">
+    <div class="stat ok"><div class="n">40 L</div><div class="l">Antideriva Cuthill, ahora documentado y cerrado</div></div>
+    <div class="stat unk"><div class="n">9</div><div class="l">OT que el control no estaba viendo</div></div>
+    <div class="stat bad"><div class="n">5</div><div class="l">Negativos del bloque cerrado, sin cambios</div></div>
+    <div class="stat warn"><div class="n">0</div><div class="l">Litros de glifosato que aportó Cuthill</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Los remitos Cuthill llegaron — y son antideriva</h2>
+  <p class="section-note">Es la respuesta a la pregunta del 27/08. Cierra un punto, pero no el que se esperaba.</p>
+
+  <div class="callout bad">
+    <span class="tag">La hipótesis queda descartada</span>
+    <p>El remito <strong>Cuthill 8-2332</strong> apareció en Drive el 27/08. Entrega <strong>NPA 15 Full — antideriva</strong>, igual que el 8-2344 que ya conocíamos. <strong>No contiene glifosato, cletodim ni 2,4-D.</strong> El canal Cuthill provee un solo producto y no explica ninguno de los tres negativos grandes.</p>
+    <p>Esto no es un resultado vacío: la pista más concreta que quedaba abierta ahora está cerrada, y el faltante de glifosato, cletodim y 2,4-D queda sin ninguna explicación operativa disponible.</p>
+  </div>
+
+  <div class="callout ok">
+    <span class="tag">Lo que sí resolvió — y cierra exacto</span>
+    <p>El antideriva venía apareciendo como consumo aplicado sin ningún respaldo documental. Con los dos remitos, el circuito cierra completo:</p>
+  </div>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Comprobante</th><th>Fecha</th><th class="num">Remitido</th><th>Aplicado según anotación del operario</th><th class="num">Dif.</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">Cuthill 8-2332</td><td>22/06/2026</td><td class="num">20,00 L</td><td>OT 739 · 7,80 &nbsp;| &nbsp;OT 741 · 5,20 &nbsp;| &nbsp;OT 742 · 3,75 &nbsp;| &nbsp;OT 743 · 3,60 = <b>20,35 L</b></td><td class="num">−0,35</td></tr>
+        <tr><td class="mono">Cuthill 8-2344</td><td>16/07/2026</td><td class="num">20,00 L</td><td>OT 745 · 2,10 &nbsp;| &nbsp;OT 746 · 7,20 &nbsp;| &nbsp;OT 747 · 6,80 = <b>16,10 L</b> + sobrante declarado 3,80</td><td class="num pos">+0,10</td></tr>
+        <tr><td class="mono"><b>Total</b></td><td></td><td class="num"><b>40,00 L</b></td><td><b>36,45 L aplicados + 3,80 L sobrantes</b></td><td class="num pos"><b>−0,25</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small-note">La factura Cuthill A 0009-00001722 del 03/08 tiene dos líneas de 20,00 — es la factura de estos dos remitos, no entrega adicional. No se suma.</p>
+</section>
+
+<section>
+  <h2>El control tenía un punto ciego</h2>
+  <p class="section-note">Hallazgo de esta corrida, y el más importante de los dos.</p>
+
+  <div class="callout warn">
+    <span class="tag">Hay dos carpetas de OT, no una</span>
+    <p>El control venía leyendo la carpeta donde vuelven las OT escaneadas con las anotaciones del operario. Existe además una segunda carpeta, donde el Gestor deposita <strong>la OT tal como se emite</strong>. Ahí hay <strong>nueve OT — de la 752 a la 760</strong> — emitidas entre el 13 y el 19 de agosto, que ninguna corrida anterior vio.</p>
+    <p>Esto significa que las corridas del 21, 26 y 27 de agosto estaban calculando sobre un conjunto de OT incompleto. La consecuencia va en el sentido menos intuitivo: <strong>los negativos reportados estaban subestimados</strong>, no inflados, porque faltaba consumo del lado aplicado.</p>
+  </div>
+  <p class="small-note">Corregido en el proceso: a partir de ahora cada corrida barre las dos carpetas y cruza número por número. Ninguna OT emitida puede quedar invisible porque su hoja todavía no volvió del campo.</p>
+</section>
+
+<section>
+  <h2>Por qué el período se parte en dos</h2>
+  <p class="section-note">Y por qué esas nueve OT no se pueden conciliar todavía.</p>
+  <p>Los dos lados del cruce avanzan a distinta velocidad. Las OT se emiten el día que se aplica; el costeo se exporta cada tantos días. El export más nuevo que existe es del <strong>19/08 y su último remito cargado es del 18/08</strong>. Las OT 755 a 760 son del 19/08. Medirlas contra un costeo que no alcanzó a incluir sus remitos no mide un faltante: mide el atraso del export.</p>
+  <p>Por eso esta corrida reporta dos bloques separados. El <strong>bloque cerrado</strong> —hasta el 12/08— tiene los dos lados completos y es el único que cuenta para escalamiento. El <strong>bloque abierto</strong> se lista para seguimiento y su única salida es pedir el costeo actualizado.</p>
+</section>
+
+<section>
+  <h2>Bloque cerrado · corte 12/08/2026</h2>
+  <p class="section-note">Sin cambios respecto del 27/08: no llegó documentación que afecte a estos principios activos. Se suman dos líneas nuevas, ambas cerradas.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Principio activo</th><th class="num">Remitido</th><th class="num">Aplicado</th><th class="num">Diferencia</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Antideriva NPA 15 Full <span class="mono" style="opacity:.6">nuevo</span></td><td class="num">40,00 L</td><td class="num">36,45 L</td><td class="num pos">+3,55</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Solmix 28-0-0-5,2 <span class="mono" style="opacity:.6">nuevo</span></td><td class="num">145.880 kg</td><td class="num">142.983 kg</td><td class="num pos">+2.897</td><td><span class="pill ok">OK · 2,0 %</span></td></tr>
+        <tr><td>Diflufenican</td><td class="num">18,00 L</td><td class="num">18,00 L</td><td class="num pos">0,00</td><td><span class="pill ok">Exacto</span></td></tr>
+        <tr><td>Flurocloridona</td><td class="num">700,00 L</td><td class="num">694,13 L</td><td class="num">+5,87</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td>Paraquat</td><td class="num">660,00 L</td><td class="num">668,00 L</td><td class="num">−8,00</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td>Pyroxasulfone</td><td class="num">10,00 kg</td><td class="num">7,15 kg</td><td class="num">+2,85</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td>2,4-D sal colina (Enlist)</td><td class="num">60,00 L</td><td class="num">38,50 L</td><td class="num">+21,50</td><td><span class="pill ok">Sobrante</span></td></tr>
+        <tr><td>Saflufenacil (Veltroma)</td><td class="num">7,00 kg</td><td class="num">8,87 kg</td><td class="num neg">−1,87</td><td><span class="pill warn">Cerca</span></td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">210,00 L</td><td class="num">221,26 L</td><td class="num neg">−11,26</td><td><span class="pill warn">Cerca</span></td></tr>
+        <tr><td>2,4-D etilhexílico (Herbifen)</td><td class="num">220,00 L</td><td class="num">322,70 L</td><td class="num neg">−102,70</td><td><span class="pill bad">Negativo</span></td></tr>
+        <tr><td>Cletodim</td><td class="num">460,00 L</td><td class="num">589,62 L</td><td class="num neg">−129,62</td><td><span class="pill bad">Negativo</span></td></tr>
+        <tr><td>Glifosato (Panzer + Round Up)</td><td class="num">1.120,00 L</td><td class="num">1.339,00 L</td><td class="num neg">−219,00</td><td><span class="pill bad">Negativo</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small-note">Agrupando Herbifen y Enlist como un solo 2,4-D, según lo indicado por Betiana: remitido 280,00 L contra aplicado 361,20 L, diferencia −81,20 L. Sigue fuera de tolerancia.</p>
+</section>
+
+<section>
+  <h2>Bloque abierto · 13/08 → 31/08</h2>
+  <p class="section-note">Nueve OT emitidas, ninguna con consumo real anotado, y un solo remito cargado contra ellas. <strong>No son faltantes.</strong></p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Principio activo</th><th class="num">Plan de las OT</th><th class="num">Remitido cargado</th><th class="num">Sin respaldo aún</th></tr></thead>
+      <tbody>
+        <tr><td>Glifosato (Panzer Gold)</td><td class="num">602,00 L</td><td class="num">—</td><td class="num neg">−602,00</td></tr>
+        <tr><td>2,4-D etilhexílico (Herbifen)</td><td class="num">328,60 L</td><td class="num">—</td><td class="num neg">−328,60</td></tr>
+        <tr><td>Pinoxaden (Axial / Pinxit)</td><td class="num">333,96 L</td><td class="num">140,00 L</td><td class="num neg">−193,96</td></tr>
+        <tr><td>MCPA 75 %</td><td class="num">335,70 L</td><td class="num">200,00 L</td><td class="num neg">−135,70</td></tr>
+        <tr><td>Bromoxinil</td><td class="num">362,96 L</td><td class="num">240,00 L</td><td class="num neg">−122,96</td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">175,05 L</td><td class="num">80,00 L</td><td class="num neg">−95,05</td></tr>
+        <tr><td>Diflufenican</td><td class="num">54,90 L</td><td class="num">—</td><td class="num neg">−54,90</td></tr>
+        <tr><td>Vitagrow Rizobacter</td><td class="num">41,59 kg</td><td class="num">22,00 kg</td><td class="num neg">−19,59</td></tr>
+        <tr><td>Flumioxazin 48 % <span class="mono" style="opacity:.6">producto nuevo</span></td><td class="num">16,65 L</td><td class="num">—</td><td class="num neg">−16,65</td></tr>
+        <tr><td>Cletodim (Eudor Helm)</td><td class="num">12,60 L</td><td class="num">—</td><td class="num neg">−12,60</td></tr>
+        <tr><td>Metsulfurón</td><td class="num">0,44 kg</td><td class="num">0,30 kg</td><td class="num">−0,14</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small-note">Las cantidades del lado izquierdo son <strong>plan impreso</strong>, no consumo real: ninguna de las nueve OT volvió anotada. Si alguna fue selectiva, el consumo real será bastante menor.</p>
+
+  <div class="callout">
+    <span class="tag">Un error de dosis detectado de paso</span>
+    <p>La OT 752 lleva escrito por el propio sistema <em>«la dosis de metsulfurón son 5 gramos/ha»</em>, pero el plan la calcula a 10 g/ha. A la dosis correcta el consumo sería 0,22 kg contra 0,30 remitidos, y la línea cierra. Conviene corregir la dosis cargada en el Gestor antes de que se repita en las próximas OT de cebada.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Lo que falta para cerrar</h2>
+  <ol class="questions">
+    <li><p><strong>El export de costeo posterior al 19/08.</strong> Es lo único que permite conciliar las OT 752 a 760. Sin él, nueve OT quedan fuera del control por tiempo indefinido, y son las de mayor volumen de la campaña hasta ahora.</p></li>
+    <li><p><strong>El respaldo documental del glifosato, el cletodim y el 2,4-D.</strong> Con Cuthill descartado, no queda ninguna explicación operativa. Faltan 219,00 L de glifosato, 129,62 L de cletodim y 81,20 L de 2,4-D —tomando Herbifen y Enlist juntos— sin comprobante que los respalde. La pregunta vuelve a ser la misma: ¿hay remitos sin cargar, o salió producto de galpón sin remito propio emitido?</p></li>
+    <li><p><strong>El consumo real de las OT 752 a 760.</strong> Cuando vuelvan anotadas, con la cobertura de las que hayan sido selectivas. Si el porcentaje queda escrito en la OT al cerrarla, deja de ser una consulta en cada corrida.</p></li>
+    <li><p><strong>Flumioxazin 48 %:</strong> producto nuevo en la campaña, sin remito asociado. Y el cletodim de la OT 760 viene con otra marca (Eudor Helm, antes Sino Agri): confirmar que la concentración es la misma 24 % antes de sumarlos como un solo principio activo.</p></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Verificación</h2>
+  <p>El antideriva se verificó por dos caminos independientes que coinciden. Primero, la cantidad: el remito 8-2332 dice 20,00 y las anotaciones del operario suman 20,35 L; el 8-2344 dice 20,00 y sus anotaciones suman 16,10 aplicados más 3,80 de sobrante declarado, o sea 19,90. Los dos cierran contra el remito con menos de medio litro de diferencia, lo que además confirma que la cantidad del comprobante está expresada en litros y no en envases. Segundo, la factura: sus dos líneas de 20,00 corresponden exactamente a los dos remitos, sin entrega adicional.</p>
+  <p>El bloque cerrado se recalculó desde el export de costeo del 19/08, comprobante por comprobante, y da los mismos totales que la corrida del 27/08 para cada principio activo: glifosato 920 L de costeo más 200 L de remitos internos, cletodim 460 L, Herbifen 220 L, coadyuvante 210 L. El export nuevo no agrega remitido de ninguno de los tres negativos.</p>
+  <p>El Solmix se cruzó remito contra OT: 12076 (29.420 kg) y 12077 (29.980) contra la OT 749, que consumió 57.730; 12157 (29.320) contra la OT 750, que consumió 28.750; 12158 (18.980) contra la OT 751, que consumió 18.323. La OT 751 tiene anotado a mano «18.580», pero el remito y el costeo coinciden en 18.980 — se tomó el dato de los dos documentos que concuerdan. La OT 748 es solo labor de rolo, sin insumo. La OT 757 está subida dos veces con distinto nombre de campo en el encabezado y el mismo contenido: se contó una sola vez.</p>
+</section>
+
+<footer>
+  Conciliación C2 (Remitido vs. Aplicado) · Actividad (52) Siembra Asociada ADM 26-27 · La Palma excluida por no integrar el convenio · Ningún archivo de Drive fue editado — trabajo de solo lectura y diagnóstico.
+</footer>
+
+</div>

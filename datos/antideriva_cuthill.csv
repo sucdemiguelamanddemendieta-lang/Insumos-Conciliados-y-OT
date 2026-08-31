@@ -1,0 +1,16 @@
+# Antideriva NPA 15 FULL - canal Cuthill (tercero, no RyC). Corrida 31/08/2026.
+# Cantidad de los remitos verificada dos veces contra las anotaciones del operario:
+#   8-2332: 7,80+5,20+3,75+3,60 = 20,35 vs 20 remitidos  -> -0,35 L
+#   8-2344: 2,10+7,20+6,80 = 16,10 + sobrante 3,80 = 19,90 vs 20 -> +0,10 L
+# La factura A 0009-00001722 (03/08/2026) tiene dos lineas de 20,00 = los dos remitos. NO sumar aparte.
+tipo,comprobante,fecha,producto,cantidad_L,ot,observacion
+remito,CUTHILL 0008-00002332,2026-06-22,NPA 15 FULL,20.00,,anotado "antideriva"
+remito,CUTHILL 0008-00002344,2026-07-16,NPA 15 FULL,20.00,,sobrante 3.8 L declarado al pie
+aplicado,,,NPA 15 FULL,7.80,739,manuscrito en remito 8-2332
+aplicado,,,NPA 15 FULL,5.20,741,manuscrito en remito 8-2332
+aplicado,,,NPA 15 FULL,3.75,742,manuscrito en remito 8-2332
+aplicado,,,NPA 15 FULL,3.60,743,manuscrito en remito 8-2332
+aplicado,,,NPA 15 FULL,2.10,745,manuscrito en remito 8-2344 (100 cm3/ha)
+aplicado,,,NPA 15 FULL,7.20,746,manuscrito en remito 8-2344 (100 cm3/ha)
+aplicado,,,NPA 15 FULL,6.80,747,manuscrito en remito 8-2344 (100 cm3/ha)
+factura,CUTHILL A 0009-00001722,2026-08-03,NPA 15 FULL,40.00,,factura de los dos remitos - no es remitido adicional
