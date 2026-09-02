@@ -1,0 +1,7 @@
+# Remito propio de ADM (stock de galpon) 0003-0000005, 18/08/2026, a nombre de Rindes y Cultivos - Siembra Asociada.
+# Cuenta como REMITIDO. Es el que hace cerrar MCPA y pinoxaden en cero exacto en el grupo OT 752/753/754.
+producto,cantidad,unidad,ot_citada
+METSULFURON,0.150,kg,752
+MCPA,30.00,L,752
+AXIAL PLUS (pinoxaden),100.00,L,752-753
+VITAGROW,3.00,kg,752
