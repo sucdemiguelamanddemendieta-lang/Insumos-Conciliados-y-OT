@@ -1,0 +1,26 @@
+# Consumo real leido de las OT reescaneadas el 03/09/2026. Reemplaza al plan x cobertura.
+ot,fecha_aplicacion,producto,plan,consumo_real,unidad,nota
+722,2026-05-18,ENLIST,110.32,38.00,L,"Weed-It; has totales aplicadas 166,68 de 157,60"
+722,2026-05-18,PANZER GOLD,267.92,93.50,L,Weed-It
+723,2026-05-21,HERBIFEN,62.50,15.00,L,"Weed-It; selectiva 19,5 ha + convencional 5 ha limpieza de alambres"
+723,2026-05-21,CLETODIM,87.50,21.00,L,marca Arrow
+723,2026-05-21,PANZER GOLD,187.50,45.00,L,Weed-It
+723,2026-05-21,COADYUVANTE TTM,25.00,6.00,L,Weed-It
+724,2026-05-19,HERBIFEN,105.00,105.00,L,no selectiva
+724,2026-05-19,CLETODIM,120.00,126.00,L,"marca Arrow; real 126 no 120"
+724,2026-05-19,PANZER GOLD,231.00,231.00,L,no selectiva
+724,2026-05-19,SAFLUFENACIL,3.675,3.68,kg,marca Veltroma
+724,2026-05-19,COADYUVANTE TTM,21.00,21.00,L,
+727,2026-05-26,HERBIFEN,42.00,10.00,L,"gasto total 10 ha de 42; el 10% daba 4,20 - incorrecto"
+727,2026-05-26,PANZER GOLD,92.40,22.00,L,"gasto total; el 10% daba 9,24 - incorrecto"
+727,2026-05-26,SAFLUFENACIL,1.26,0.300,kg,marca Paramer
+727,2026-05-26,COADYUVANTE TTM,8.40,2.00,L,
+729,2026-06-08,CLETODIM,32.40,15.00,L,"marca Sino Agri; ha real 23 de 27"
+729,2026-06-08,PANZER GOLD,40.50,18.00,L,Weed-It
+729,2026-06-08,COADYUVANTE TTM,5.40,2.50,L,
+730,2026-06-02,FLUROCLORIDONA,67.92,68.00,L,"marca Rainbow; ha real 88,60 de 84,90"
+730,2026-06-02,PANZER GOLD,84.90,85.00,L,
+730,2026-06-02,COADYUVANTE TTM,16.98,17.00,L,
+731,2026-06-08,FLUROCLORIDONA,94.51,95.00,L,"marca Rainbow; ha real 76,66 de 72,70"
+731,2026-06-08,PANZER GOLD,87.24,88.00,L,
+731,2026-06-08,COADYUVANTE TTM,14.54,15.00,L,

@@ -1,0 +1,14 @@
+# Remitos emitidos a nombre de SUCESORES DE MIGUEL AMAND DE MENDIETA S.R.L. (CUIT 30-71601823-3)
+# y luego REEMITIDOS a la Siembra Asociada con otro numero. NO son entrega adicional:
+# la mercaderia es la misma y ya esta contada una sola vez via el remito S.A.
+# Verificado por tres caminos independientes (ver reporte del 04/09).
+remito_original,fecha,remito_reemitido_SA,lineas_iguales,evidencia
+0202-00011629,2026-05-??,0202-00011795,5 de 5,"nombre del archivo en Drive 'Remito RyC 11629- 11795 S-A'; OT 729 cita 'Se uso producto en stock, retirado de Nunez. R.11629'"
+0202-00011682,2026-05-30,0202-00011801,4 de 4,"nombre del archivo 'Remito R y C 202-11682-S.A 11801'; OT 730 cita 'Recibo 11682/11801 (SA)'; OT 731 cita 'RyC 202-11682 - (11801 S-A)'"
+# Contenido comparado
+# 11629: Herbifen 20 L | Paramer 5 kg | TTM 10 L | Panzer Gold 80 L | Cletodim Sino Agri 40 L
+# 11795: Herbifen 20 L | Paramer 5 kg | TTM 10 L | Panzer Gold 80 L | Cletodim 40 L          -> identico
+# 11682: Flurocloridona 420 L | Panzer Gold 140 L | Paraquat Sigma 460 L | TTM 80 L
+# 11801: Flurocloridona 420 L | Panzer Gold 140 L | Paraquat Sigma 460 L | TTM 80 L          -> identico
+# Test cuantitativo: si fueran entrega adicional, flurocloridona pasaria de +5,30 a +425,30 L
+# y paraquat de -8,00 a +452,00 L de sobrante sin remito de devolucion. Imposible.
