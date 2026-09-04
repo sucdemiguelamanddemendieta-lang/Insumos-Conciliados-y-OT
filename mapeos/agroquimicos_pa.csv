@@ -146,5 +146,7 @@ ZIDUA PACK,10603900-ZIDUA PACK,AGR HERBICIDA ( - ),PACK,ZIDUA PACK
 COAD METILADO SILICONADO,,AGR COADYUVANTE ( - ),L,
 PINXIT (GEN.AXIAL),522-PINXIT PINOXADEN,AGR HERBICIDA ( - ),L,"PINOXADEN 5% + CLOQUINTOCET 1,25% (genérico de Axial — agrupar con 22:AXIAL)"
 EUDOR CLETODIM HELM X 20 LTS,,AGR HERBICIDA ( - ),L,"CLETODIM 24% (agrupar con 31:CLETODIM 24 — confirmar concentración con Betiana antes de sumarlo)"
-VIOVAN,,AGR HERBICIDA ( - ),L,"PENDIENTE — producto nuevo (OT 761 y 765, dosis 0,75 L/ha en cebada). No inferir el principio activo por el nombre: pedir ficha técnica a Betiana."
-LONTREL,,AGR HERBICIDA ( - ),L,"CLOPIRALID (OT 763, dosis 0,18 L/ha en maíz) — confirmar concentración y sal antes de agruparlo con 33:CLOPIRALID 36"
+VIOVAN,1434-VIOVAN BIDON X 10 LTS,AGR HERBICIDA ( - ),L,"PENDIENTE — ya figura en el costeo (remito 12343 del 02/09, 130 L) pero el export no trae principio activo. OT 761 y 765, 0,75 L/ha en cebada. Sigue pendiente la ficha técnica: no inferirlo por el nombre."
+LONTREL,14-LONTREL CLOPYRALID Bidon x 5 lts,AGR HERBICIDA ( - ),L,"CLOPIRALID — confirmado en el costeo (remitos 12343 y 12345). Falta la concentración para agruparlo con 33:CLOPIRALID 36"
+PINOXAMYL,"1,410-PINOXAMYL PINOXADEM x 5 lts",AGR HERBICIDA ( - ),L,"PINOXADEN — tercera marca del mismo principio activo (Axial Plus, Pinxit, Pinoxamyl). Confirmar concentración antes de sumarlas."
+DIFLUFENICAN 50% SC,268-DIFLUFENICAN 50% SC (Caja 4 Bidones x 5),AGR HERBICIDA ( - ),L,"DIFLUFENICAN 50% — presentación distinta del Legacy; agrupan igual mientras la concentración sea 50%"
