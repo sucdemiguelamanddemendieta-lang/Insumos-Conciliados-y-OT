@@ -1,0 +1,252 @@
+<title>Conciliación Siembra Asociada ADM 26-27</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f1; --surface:#ffffff; --surface-2:#eef0e7;
+    --ink:#242820; --ink-soft:#4b5044; --muted:#767c6b;
+    --line:#dde1d3; --line-strong:#c7cdb8;
+    --accent:#4a6b3d; --accent-ink:#2f4527; --accent-soft:#e3ead9;
+    --ok-bg:#e2efe1; --ok-ink:#2e6b3e; --ok-line:#b7dabb;
+    --warn-bg:#faf0da; --warn-ink:#93641a; --warn-line:#e9cf98;
+    --bad-bg:#fbe6e1; --bad-ink:#a3402c; --bad-line:#eab9ab;
+    --unk-bg:#eceae4; --unk-ink:#6a6657; --unk-line:#d4d0c3;
+    --shadow: 0 1px 2px rgba(36,40,32,.06), 0 6px 20px -8px rgba(36,40,32,.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+      --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+      --line:#343829; --line-strong:#454b34;
+      --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+      --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+      --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+      --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+      --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+    --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+    --line:#343829; --line-strong:#454b34;
+    --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+    --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+    --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+    --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+    --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height:1.5;
+    -webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001ms !important; transition-duration:.001ms !important;}}
+  .wrap{max-width:980px; margin:0 auto; padding:0 24px 96px;}
+  header.hero{padding:56px 0 32px; border-bottom:1px solid var(--line); margin-bottom:40px;}
+  .eyebrow{font-family:"IBM Plex Mono", monospace; font-size:12.5px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent-ink); background:var(--accent-soft);
+    display:inline-block; padding:4px 10px; border-radius:4px; margin-bottom:18px;}
+  h1{font-family:"Fraunces", Georgia, serif; font-optical-sizing:auto; font-weight:600;
+    font-size:clamp(30px,4.4vw,44px); line-height:1.08; letter-spacing:-.01em;
+    margin:0 0 14px; text-wrap:balance;}
+  .dek{font-size:17px; color:var(--ink-soft); max-width:64ch; margin:0 0 20px;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:8px 18px; font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px; color:var(--muted);}
+  .meta-row b{color:var(--ink-soft); font-weight:600;}
+  section{margin-bottom:52px;}
+  h2{font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:24px;
+    letter-spacing:-.005em; margin:0 0 6px; text-wrap:balance;}
+  h3{font-weight:600; font-size:15px; margin:26px 0 10px;}
+  .section-note{color:var(--muted); font-size:14.5px; margin:0 0 22px; max-width:70ch;}
+  p{margin:0 0 14px; color:var(--ink-soft); max-width:72ch;}
+  p:last-child{margin-bottom:0;}
+  strong{color:var(--ink); font-weight:600;}
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:16px; box-shadow:var(--shadow);}
+  .stat .n{font-family:"Fraunces",serif; font-weight:600; font-size:30px; line-height:1;
+    font-variant-numeric:tabular-nums;}
+  .stat .l{font-size:12.5px; color:var(--muted); margin-top:6px;}
+  .stat.ok .n{color:var(--ok-ink);} .stat.bad .n{color:var(--bad-ink);}
+  .stat.warn .n{color:var(--warn-ink);} .stat.unk .n{color:var(--unk-ink);}
+  .callout{border:1px solid var(--line-strong); background:var(--surface); border-radius:10px;
+    padding:20px 22px; box-shadow:var(--shadow);}
+  .callout + .callout{margin-top:14px;}
+  .callout.warn{background:var(--warn-bg); border-color:var(--warn-line);}
+  .callout.bad{background:var(--bad-bg); border-color:var(--bad-line);}
+  .callout.ok{background:var(--ok-bg); border-color:var(--ok-line);}
+  .callout .tag{font-family:"IBM Plex Mono",monospace; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:.08em; font-weight:600; margin-bottom:8px; display:block;}
+  .callout.warn .tag{color:var(--warn-ink);} .callout.bad .tag{color:var(--bad-ink);}
+  .callout.ok .tag{color:var(--ok-ink);}
+  .table-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    box-shadow:var(--shadow); background:var(--surface); margin-bottom:10px;}
+  table{border-collapse:collapse; width:100%; min-width:640px; font-size:13.8px;}
+  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+  thead th{font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--muted); background:var(--surface-2); white-space:nowrap;
+    border-bottom:1px solid var(--line-strong);}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:var(--surface-2);}
+  td.num, th.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+    text-align:right; white-space:nowrap;}
+  td.mono{font-family:"IBM Plex Mono",monospace; font-size:13px; white-space:nowrap;}
+  .pill{display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    font-weight:600; padding:3px 9px; border-radius:100px; white-space:nowrap;
+    border:1px solid transparent;}
+  .pill.ok{background:var(--ok-bg); color:var(--ok-ink); border-color:var(--ok-line);}
+  .pill.bad{background:var(--bad-bg); color:var(--bad-ink); border-color:var(--bad-line);}
+  .pill.warn{background:var(--warn-bg); color:var(--warn-ink); border-color:var(--warn-line);}
+  .pill.unk{background:var(--unk-bg); color:var(--unk-ink); border-color:var(--unk-line);}
+  .neg{color:var(--bad-ink); font-weight:600;}
+  .pos{color:var(--ok-ink); font-weight:600;}
+  .small-note{font-size:12.5px; color:var(--muted); margin-top:2px;}
+  ul.plain{margin:0; padding-left:20px; color:var(--ink-soft);}
+  ul.plain li{margin-bottom:8px;} ul.plain li:last-child{margin-bottom:0;}
+  .questions{list-style:none; counter-reset:q; margin:0; padding:0; display:flex;
+    flex-direction:column; gap:12px;}
+  .questions li{counter-increment:q; position:relative; background:var(--surface);
+    border:1px solid var(--line-strong); border-left:3px solid var(--accent);
+    border-radius:8px; padding:14px 18px 14px 52px; box-shadow:var(--shadow);}
+  .questions li::before{content:counter(q); position:absolute; left:16px; top:14px;
+    font-family:"Fraunces",serif; font-weight:600; font-size:17px; color:var(--accent-ink);}
+  .questions p{margin:0; color:var(--ink); font-size:15px;}
+  .resolved{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+  .resolved li{background:var(--surface); border:1px solid var(--line);
+    border-left:3px solid var(--ok-line); border-radius:8px; padding:13px 16px;
+    font-size:14.5px; color:var(--ink-soft);}
+  footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
+    font-size:12.5px; color:var(--muted);}
+  @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr);} header.hero{padding-top:36px;}}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Conciliación C2 · 10ª corrida · 7 sep 2026</span>
+  <h1>Siembra Asociada ADM 26-27</h1>
+  <p class="dek">Betiana corrigió un supuesto que venía arrastrado desde el 20 de agosto. Con esa corrección, sobre consumo real no queda ningún principio activo negativo.</p>
+  <div class="meta-row">
+    <span><b>Sucesores de Miguel Amand de Mendieta SRL</b></span>
+    <span>Corte 03/09/2026 · sobre la respuesta de Betiana del 07/09</span>
+    <span>Actividad (52) · desde 1 abr 2026</span>
+  </div>
+</header>
+
+<section>
+  <div class="stats">
+    <div class="stat ok"><div class="n">0</div><div class="l">Negativos sobre consumo real</div></div>
+    <div class="stat ok"><div class="n">+58</div><div class="l">Litros de glifosato, antes −302</div></div>
+    <div class="stat unk"><div class="n">480 L</div><div class="l">De remitido que no estaba contado</div></div>
+    <div class="stat warn"><div class="n">3</div><div class="l">En tránsito, sobre plan impreso</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>La corrección: el 11754 no reemplazaba a nada</h2>
+  <p class="section-note">Es el punto que destraba toda la conciliación, y es una corrección a una conclusión mía.</p>
+
+  <div class="callout bad">
+    <span class="tag">Qué se había concluido mal</span>
+    <p>En la corrida del 20/08 se dio por sentado que el remito 11754 de Siembra Asociada <strong>reemplazaba</strong> a los remitos 11533 y 11534, y por eso estos dos no se contaron del lado remitido. Esa conclusión se apoyó en un parecido de contenido, sin tener los remitos escaneados a la vista. <strong>Era incorrecta.</strong> Betiana lo corrigió el 07/09 y subió los tres documentos.</p>
+    <p>Con los escaneos delante se ve que no se parecen: el 11533 tiene <em>una sola línea</em> de 160 L de Panzer Gold, mientras el 11754 tiene seis productos con 340 L de Panzer. No es la misma mercadería.</p>
+  </div>
+
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Remito</th><th>Fecha</th><th>Contenido</th><th>OT anotada a mano</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">RyC 0202-00011533</td><td>13/05</td><td>Panzer Gold 160</td><td class="mono">722</td></tr>
+        <tr><td class="mono">RyC 0202-00011534</td><td>13/05</td><td>Panzer Gold 200 · Cletodim <strong>Arrow</strong> 160 · Herbifen 120 · TTM 40 · Veltroma 2,80 kg</td><td class="mono">724 / 723 / 722</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout ok" style="margin-top:18px;">
+    <span class="tag">La confirmación que cierra el punto</span>
+    <p>El 11534 es <strong>el único remito de toda la campaña que entrega cletodim marca Arrow</strong> — todos los demás son Sino Agri. Y los reescaneos de las OT 723 y 724 declaran, escrito a mano por el operario, que esas OT aplicaron <strong>Arrow</strong>. El único remito con esa marca respalda justo las dos OT que dicen haberla usado, y las mismas que lo citan a mano. No hay forma de que sea coincidencia.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Sobre consumo real no queda ningún negativo</h2>
+  <p class="section-note">OT hasta la 754, con el consumo real leído de los reescaneos. Es el bloque donde una diferencia significa algo.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th class="num">Remitido</th><th class="num">Aplicado real</th><th class="num">Diferencia</th><th class="num">Antes</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Flurocloridona</td><td class="num">700,00</td><td class="num">694,70</td><td class="num pos">+5,30</td><td class="num">+5,30</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td>Paraquat</td><td class="num">660,00</td><td class="num">668,00</td><td class="num">−8,00</td><td class="num">−8,00</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td>2,4-D Herbifen</td><td class="num">340,00</td><td class="num">328,50</td><td class="num pos">+11,50</td><td class="num neg">−108,50</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Round Up Full II</td><td class="num">200,00</td><td class="num">186,00</td><td class="num pos">+14,00</td><td class="num">+14,00</td><td><span class="pill ok">OK</span></td></tr>
+        <tr><td>Enlist</td><td class="num">60,00</td><td class="num">38,00</td><td class="num">+22,00</td><td class="num">+22,00</td><td><span class="pill warn">Sobrante</span></td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">250,00</td><td class="num">223,00</td><td class="num">+27,00</td><td class="num neg">−13,00</td><td><span class="pill warn">Sobrante</span></td></tr>
+        <tr><td>Cletodim</td><td class="num">620,00</td><td class="num">587,82</td><td class="num">+32,18</td><td class="num neg">−127,82</td><td><span class="pill warn">Sobrante</span></td></tr>
+        <tr><td>Panzer Gold</td><td class="num">1.280,00</td><td class="num">1.235,62</td><td class="num">+44,38</td><td class="num neg">−315,62</td><td><span class="pill warn">Sobrante</span></td></tr>
+        <tr><td>Saflufenacil</td><td class="num">9,80 kg</td><td class="num">9,05 kg</td><td class="num">+0,75</td><td class="num neg">−2,05</td><td><span class="pill warn">Sobrante</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Los tres negativos grandes se dieron vuelta: <strong>glifosato pasó de −301,62 a +58,38 L, cletodim de −127,82 a +32,18 y el 2,4-D de −86,50 a +33,50</strong>. El único signo negativo que queda es el paraquat con −8,00 L, muy dentro de la tolerancia de un bidón.</p>
+  <p class="small-note">Los sobrantes no son producto perdido: es stock que quedó en galpón y se está aplicando en las OT siguientes, que efectivamente tienen faltante del mismo producto. Se ve en el acumulado.</p>
+</section>
+
+<section>
+  <h2>Acumulado de campaña</h2>
+  <p class="section-note">Todo el período, 1 de abril al 3 de septiembre, con el remitido completo ya identificado.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Principio activo</th><th class="num">Remitido</th><th class="num">Aplicado real</th><th class="num">Plan OT 755-767</th><th class="num">Diferencia</th></tr></thead>
+      <tbody>
+        <tr><td>2,4-D (Herbifen + Enlist)</td><td class="num">1.020,00</td><td class="num">366,50</td><td class="num">628,87</td><td class="num pos">+24,63</td></tr>
+        <tr><td>Flurocloridona</td><td class="num">700,00</td><td class="num">694,70</td><td class="num">—</td><td class="num pos">+5,30</td></tr>
+        <tr><td>Paraquat</td><td class="num">660,00</td><td class="num">668,00</td><td class="num">—</td><td class="num">−8,00</td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">470,00</td><td class="num">223,00</td><td class="num">305,98</td><td class="num neg">−58,98</td></tr>
+        <tr><td>Cletodim</td><td class="num">720,00</td><td class="num">587,82</td><td class="num">250,40</td><td class="num neg">−118,22</td></tr>
+        <tr><td>Glifosato</td><td class="num">2.960,00</td><td class="num">1.421,62</td><td class="num">1.695,32</td><td class="num neg">−156,94</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Los tres negativos del acumulado están enteramente del lado del plan impreso.</strong> Ninguna de las OT 755 a 767 volvió anotada, así que ese lado sobreestima: si alguna fue selectiva, el consumo real es menor y cierran. Se siguen clasificando <span class="pill warn">En tránsito</span>, no como faltante.</p>
+</section>
+
+<section>
+  <h2>El escalamiento se retira</h2>
+  <div class="callout ok">
+    <span class="tag">Ya no hay motivo</span>
+    <p>El escalamiento a Mercedes se había preparado por glifosato, cletodim y 2,4-D. Los tres pasaron a positivo con documentación, no con un ajuste. <strong>Queda sin efecto</strong> y el documento se archiva. Nunca llegó a enviarse, así que no hay nada que retractar.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Lo demás que respondió Betiana</h2>
+  <ul class="resolved">
+    <li><strong>Cletodim:</strong> Arrow, Sino Agri y Eudor Helm son los tres cletodim 24 %. Se agrupan como un solo principio activo. Ya cargado en el mapeo.</li>
+    <li><strong>Viovan:</strong> es <em>picoxistrobin + prothioconazole</em>, de Corteva. Es un <strong>fungicida</strong>, no un herbicida — las OT 761 y 765 lo traen bajo «02.AGROQUÍMICO». Cargado. Falta la concentración de cada activo.</li>
+    <li><strong>Lontrel:</strong> clopiralid-olamina 47,5 % p/v. Coincide con el clopiralid que ya estaba en el mapeo, así que se agrupan.</li>
+    <li><strong>La Palma, OT 712 y 726:</strong> confirmado que corresponden a Ganadería y no a esta actividad. Ya estaban excluidas del control desde la primera corrida.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Lo que queda</h2>
+  <ol class="questions">
+    <li><p><strong>El consumo real de las OT 755 a 767</strong> cuando vuelvan anotadas. Es lo único que separa al acumulado de cerrar del todo, y va a mover los tres saldos hacia cero.</p></li>
+    <li><p><strong>Una diferencia menor a aclarar.</strong> Comentás que en el 11754 figuran 20 L de Herbifen, 60 de Panzer y 40 de TTM en menos de lo que se retiró. El 11754 escaneado coincide exactamente con el costeo (Herbifen 100, Panzer 340, TTM 40), así que esa diferencia debe estar en otro comprobante. ¿Contra qué papel la estás comparando?</p></li>
+    <li><p><strong>El remito del paraquat de la OT 767</strong> (doble golpe, 108 ha, 270 L) sigue sin emitirse.</p></li>
+    <li><p><strong>Concentración de los dos activos del Viovan</strong>, para poder cargarlo completo.</p></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Verificación</h2>
+  <p>Antes de aceptar que el 11533 y el 11534 son remitido adicional se corrieron cinco controles, y los cinco dan lo mismo. El contenido no coincide con el 11754, a diferencia de los pares 11629/11795 y 11682/11801 que sí eran idénticos línea por línea. La marca Arrow del 11534 aparece únicamente en ese remito y únicamente en las OT 723 y 724. Las anotaciones manuscritas dicen «OT 722» y «OT 724/23/22», que son exactamente las OT que citaban «533/534». Las fechas calzan: remitos del 13/05, OT emitidas el 12/05 y aplicadas entre el 18 y el 21/05. Y el test por descarte no rompe nada: sumarlos no genera ningún sobrante absurdo, y no toca la flurocloridona ni el paraquat, que siguen cerrando exactos.</p>
+  <p>Vale marcar el contraste con las corridas anteriores: ahí el mismo test por descarte sirvió para <em>rechazar</em> dos remitos como entrega adicional, y acá para <em>aceptar</em> otros dos. La regla no cambió; cambiaron los documentos que había sobre la mesa.</p>
+</section>
+
+<footer>
+  Conciliación C2 (Remitido vs. Aplicado) · Actividad (52) Siembra Asociada ADM 26-27 · La Palma excluida por corresponder a Ganadería · Ningún archivo de Drive fue editado — trabajo de solo lectura y diagnóstico.
+</footer>
+
+</div>

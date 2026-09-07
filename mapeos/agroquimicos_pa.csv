@@ -145,8 +145,9 @@ YAMATO,,AGR HERBICIDA ( - ),L,PYROXASULFONE 85
 ZIDUA PACK,10603900-ZIDUA PACK,AGR HERBICIDA ( - ),PACK,ZIDUA PACK
 COAD METILADO SILICONADO,,AGR COADYUVANTE ( - ),L,
 PINXIT (GEN.AXIAL),522-PINXIT PINOXADEN,AGR HERBICIDA ( - ),L,"PINOXADEN 5% + CLOQUINTOCET 1,25% (genérico de Axial — agrupar con 22:AXIAL)"
-EUDOR CLETODIM HELM X 20 LTS,,AGR HERBICIDA ( - ),L,"CLETODIM 24% (agrupar con 31:CLETODIM 24 — confirmar concentración con Betiana antes de sumarlo)"
-VIOVAN,1434-VIOVAN BIDON X 10 LTS,AGR HERBICIDA ( - ),L,"PENDIENTE — ya figura en el costeo (remito 12343 del 02/09, 130 L) pero el export no trae principio activo. OT 761 y 765, 0,75 L/ha en cebada. Sigue pendiente la ficha técnica: no inferirlo por el nombre."
-LONTREL,14-LONTREL CLOPYRALID Bidon x 5 lts,AGR HERBICIDA ( - ),L,"CLOPIRALID — confirmado en el costeo (remitos 12343 y 12345). Falta la concentración para agruparlo con 33:CLOPIRALID 36"
+EUDOR CLETODIM HELM X 20 LTS,,AGR HERBICIDA ( - ),L,"CLETODIM 24% — confirmado por Betiana el 07/09. Arrow, Sino Agri y Eudor Helm son los tres cletodim 24%: se agrupan."
+VIOVAN,1434-VIOVAN BIDON X 10 LTS,AGR FUNGICIDA ( - ),L,"PICOXISTROBIN + PROTHIOCONAZOLE (Corteva) — confirmado por ficha técnica que aportó Betiana el 07/09. Es FUNGICIDA, no herbicida: las OT 761 y 765 lo traen bajo 02.AGROQUIMICO. Falta la concentración de cada activo."
+LONTREL,14-LONTREL CLOPYRALID Bidon x 5 lts,AGR HERBICIDA ( - ),L,"CLOPIRALID-OLAMINA 47,5% p/v — confirmado por Betiana el 07/09. Misma concentración que 33:CLOPIRALID 36 (clopiralid monoetanolamina 47,5%): se agrupan."
 PINOXAMYL,"1,410-PINOXAMYL PINOXADEM x 5 lts",AGR HERBICIDA ( - ),L,"PINOXADEN — tercera marca del mismo principio activo (Axial Plus, Pinxit, Pinoxamyl). Confirmar concentración antes de sumarlas."
 DIFLUFENICAN 50% SC,268-DIFLUFENICAN 50% SC (Caja 4 Bidones x 5),AGR HERBICIDA ( - ),L,"DIFLUFENICAN 50% — presentación distinta del Legacy; agrupan igual mientras la concentración sea 50%"
+CLETODIM ARROW X 20 LTS,,AGR HERBICIDA ( - ),L,"CLETODIM 24% — confirmado por Betiana el 07/09. Entregado por el remito 11534; es la marca que declaran las OT 723 y 724."

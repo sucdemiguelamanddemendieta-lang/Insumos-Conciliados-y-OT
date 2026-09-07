@@ -1,0 +1,15 @@
+# Remitos 11533 y 11534, 13/05/2026, a nombre de SUCESORES DE MIGUEL AMAND DE MENDIETA S.R.L.
+# CORRECCION del 07/09/2026: Betiana confirmo que el remito 11754 de Siembra Asociada
+# NO los reemplaza. Son REMITIDO ADICIONAL y no estaban contados.
+# La conclusion contraria, de la corrida del 20/08, era erronea: se habia inferido el
+# reemplazo por parecido de contenido, sin tener los remitos escaneados a la vista.
+remito,fecha,producto,cantidad,unidad,ot_manuscrita
+0202-00011533,2026-05-13,GLIFOSATO PANZER GOLD,160.00,L,722
+0202-00011534,2026-05-13,GLIFOSATO PANZER GOLD,200.00,L,724/723/722
+0202-00011534,2026-05-13,CLETODIM ARROW X 20 LTS,160.00,L,724/723/722
+0202-00011534,2026-05-13,2-4-D HERBIFEN ADVANCE,120.00,L,724/723/722
+0202-00011534,2026-05-13,COADYUVANTE TTM,40.00,L,724/723/722
+0202-00011534,2026-05-13,VELTROMA SAFLUFENACIL 70% WG,2.80,kg,724/723/722
+# Confirmacion cruzada: el 11534 es el UNICO remito que entrega cletodim marca ARROW,
+# y los reescaneos de las OT 723 y 724 declaran justamente Arrow. El resto de los
+# remitos de cletodim de la campania son Sino Agri.
