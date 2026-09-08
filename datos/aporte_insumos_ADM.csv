@@ -1,0 +1,25 @@
+# APORTE DE INSUMOS DE ADM AGRO A LA SIEMBRA ASOCIADA (52) ADM 26-27
+# Fuente: datos/fuentes/2026-09-08_INSUMOS_APORTADOS_POR_ADM_AGRO.xlsx (aportado por el dueño el 08/09/2026)
+#
+# QUE SON: insumos que estaban fisicamente en stock en la agronomia (RyC) pero eran
+# PROPIEDAD DE ADM AGRO, comprados y pagados en 2025. Al incorporarlos a la Siembra
+# Asociada, RyC emitio "Remito de Cliente" -- no "Salida de insumos" como el resto.
+# POR ESO ERAN DIFICILES DE CONCILIAR: no aparecen en el circuito normal
+# "SALIDA INSUMOS, (52) SIEMBRA ASOCIADA ADM 26-27" del costeo de actividad.
+#
+# CUENTAN COMO REMITIDO, igual que los remitos propios de ADM (R369, R375, 0003-0000005).
+# Cantidades verificadas contra los remitos escaneados: 6 de 6 lineas coinciden.
+fecha,comprobante,tipo,numero,cantidad,unidad,articulo,lote,vencimiento,deposito,id_transaccion,factura,fecha_factura
+2026-05-13,0202-00011534,Remito de Cliente,11534,120.00,L,"2,4 D HERBIFEN ADVANCE X 20 LT",SACL06-26CS,2028-05-18,TANDIL PROPIO BASE AEREA,10127757,0020-00025752,
+2026-05-13,0202-00011534,Remito de Cliente,11534,160.00,L,CLETODIM ARROW x 20 lt,AF-50108,2027-10-10,TANDIL PROPIO BASE AEREA,10126820,0020-00025752,
+2026-05-13,0202-00011534,Remito de Cliente,11534,40.00,L,COADYUVANTE TTM Bidon x 10 lts,254904,2027-11-01,TANDIL PROPIO BASE AEREA,10126341,0020-00025752,
+2026-05-13,0202-00011533,Remito de Cliente,11533,160.00,L,GLIFOSATO PANZER GOLD EN X 20 LTS,20251114,2027-01-11,TANDIL PROPIO BASE AEREA,10126341,0020-00022008,2025-04-23
+2026-05-13,0202-00011534,Remito de Cliente,11534,200.00,L,GLIFOSATO PANZER GOLD EN X 20 LTS,26C6128B55,2028-03-02,TANDIL CYO BASE AEREA,10126341,0020-00025751,
+2026-05-13,0202-00011534,Remito de Cliente,11534,2.80,kg,VELTROMA SAFLUFENACIL 70% WG,1392501450,2030-01-01,TANDIL CYO BASE AEREA,10126341,0020-00025754,
+#
+# TOTAL DEL APORTE: Panzer Gold 360,00 L | Cletodim Arrow 160,00 L | Herbifen 120,00 L
+#                   Coadyuvante TTM 40,00 L | Veltroma saflufenacil 2,80 kg
+#
+# OBSERVACION MENOR DE CARGA: en el export los lotes de Herbifen y Cletodim estan
+# intercambiados. AF-50108 es lote de Herbifen (asi figura en el remito 11629) y
+# SACL06-26CS es lote de cletodim (idem). No afecta cantidades.
