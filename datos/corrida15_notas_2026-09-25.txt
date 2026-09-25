@@ -1,0 +1,56 @@
+============================================================================================
+CORRIDA 15 · CORTE 25/09/2026
+============================================================================================
+
+CUATRO OT PASAN DE PLAN A CONSUMO REAL
+  OT    Producto          Plan      Real       Dif
+  767   Paraquat        270,00    275,00      5,00
+  767   Coad. TTM        21,60  ilegible         —
+  781   Viovan           79,50     80,00      0,50
+  781   Coad. TTM        21,20     20,00     −1,20
+  782   Viovan           54,75     60,00      5,25
+  782   Coad. TTM        14,60     15,00      0,40
+  786   Paraquat         42,20     45,00      2,80
+  786   Coad. TTM         3,38      4,00      0,62
+
+============================================================================================
+PASADA 1 · BLOQUE ABIERTO (OT 755-786)
+============================================================================================
+Producto         Remitido    Aplicado         Dif    El 23/09  Estado
+BROMOXINIL         125,00      125,30       −0,30       −0,30  OK
+CLETODIM           472,18      506,56      −34,38      −34,38  NEGATIVO
+DIFLUFENICAN       165,00      210,65      −45,65      −45,65  NEGATIVO
+FLUMIOXAZIN         55,00       52,64        2,36        2,36  OK
+HERBIFEN           911,50    1.495,09     −583,59     −583,59  NEGATIVO
+LONTREL             20,00       41,83      −21,83      −21,83  NEGATIVO
+MCPA               120,00      107,40       12,60       12,60  OK
+PANZER GOLD      2.244,38    3.139,10     −894,72     −894,72  NEGATIVO
+PARAQUAT           320,00      440,00     −120,00     −112,20  NEGATIVO
+PINOXADEN          100,00       96,80        3,20        3,20  OK
+SAFLUFENACIL         7,75       14,00       −6,25       −6,25  NEGATIVO
+TTM                417,00      495,58      −78,58      −78,76  NEGATIVO
+VIOVAN             440,00      438,95        1,05        6,80  OK
+VITAGROW            17,00       16,80        0,20        0,20  OK
+
+  Cierran (6): BROMOXINIL, FLUMIOXAZIN, MCPA, PINOXADEN, VIOVAN, VITAGROW
+  Negativos (8): PANZER GOLD, HERBIFEN, PARAQUAT, TTM, DIFLUFENICAN, CLETODIM, LONTREL, SAFLUFENACIL
+
+============================================================================================
+PASADA 2 · efecto del consumo real
+============================================================================================
+  PARAQUAT           −112,20  ->      −120,00   (−7,80)
+  TTM                 −78,76  ->       −78,58   (0,18)
+  VIOVAN                6,80  ->         1,05   (−5,75)
+  El Viovan pasa a +1,05: cierra casi exacto con consumo real.
+
+============================================================================================
+PASADA 3 · SOLMIX y revision critica
+============================================================================================
+  Solmix: remitido 59.160,00 kg (12456+12523) · aplicado 82.884,40 kg (OT 773,774,789,790)
+          diferencia −23.724,40 kg -> faltan remitos de Solmix posteriores al 17/09
+  · OT 789 (15.449 kg) y 790 (9.855 kg) son del 23/09, sin remito cargado todavia.
+  · OT 791: solo rolo picador, sin insumo.
+  · OT 767: el consumo real de TTM no se pudo leer; se computa el plan (21,60).
+  · OT 767 cita 'Remito RyC 12528 + Rotulo Cuthill 2385' y 5 L de NPA:
+    tercer remito Cuthill pendiente de escanear, junto con el 2322 y el 2327.
+  · Sin costeo nuevo: el ultimo sigue siendo el del 18/09.
