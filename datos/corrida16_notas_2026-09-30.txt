@@ -1,0 +1,43 @@
+================================================================================================
+PASADA 1 - BLOQUE ABIERTO (OT 755-791) con el export al 25/09
+================================================================================================
+Producto        Remit.25/09    +nuevo   Remitido   Aplicado        Dif.  Estado
+PANZER GOLD        2244.38    560.00    2804.38    3139.10     -334.72  NEGATIVO
+HERBIFEN 2,4-D      911.50    360.00    1271.50    1495.09     -223.59  NEGATIVO
+PARAQUAT            320.00      0.00     320.00     440.00     -120.00  NEGATIVO
+TTM                 417.00     50.00     467.00     495.58      -28.58  NEGATIVO
+DIFLUFENICAN        165.00     35.00     200.00     210.65      -10.65  NEGATIVO
+CLETODIM            472.18      0.00     472.18     506.56      -34.38  NEGATIVO
+LONTREL              20.00     20.00      40.00      41.83       -1.83  OK
+SAFLUFENACIL          7.75      0.70       8.45      14.00       -5.55  NEGATIVO
+VIOVAN              440.00      0.00     440.00     438.95        1.05  OK
+BROMOXINIL          125.00      0.00     125.00     125.30       -0.30  OK
+FLUMIOXAZIN          55.00      0.00      55.00      52.64        2.36  OK
+MCPA                120.00      0.00     120.00     107.40       12.60  OK
+PINOXADEN           100.00      0.00     100.00      96.80        3.20  OK
+VITAGROW             17.00      0.00      17.00      16.80        0.20  OK
+
+  Cierran (7): BROMOXINIL, FLUMIOXAZIN, LONTREL, MCPA, PINOXADEN, VIOVAN, VITAGROW
+  Negativos (7): PANZER GOLD, HERBIFEN 2,4-D, PARAQUAT, CLETODIM, TTM, DIFLUFENICAN, SAFLUFENACIL
+
+================================================================================================
+PASADA 2 - efecto del export nuevo
+================================================================================================
+  PANZER GOLD        -894.72  ->     -334.72   (+560.00 L)
+  HERBIFEN 2,4-D     -583.59  ->     -223.59   (+360.00 L)
+  TTM                 -78.58  ->      -28.58   (+50.00 L)
+  DIFLUFENICAN        -45.65  ->      -10.65   (+35.00 L)
+  LONTREL             -21.83  ->       -1.83   (+20.00 L) -> PASA A CERRAR
+  SAFLUFENACIL         -6.25  ->       -5.55   (+0.70 kg)
+
+================================================================================================
+PASADA 3 - revision critica
+================================================================================================
+  PARAQUAT: aplicado 440,00 = 275 (OT 767, real) + 45 (OT 786, real) + 120 (OT 768-771, plan)
+            remitido 320,00 = remito 12528 del 18/09, que cubre EXACTO el consumo real (275+45=320).
+            El -120,00 es exactamente el plan impreso de las OT 768-771 del 04/09, sin remito de paraquat.
+  2,4-D   : con Academix -> -223.59 ; sin Academix -> -523.59
+  SOLMIX  : remitido 59.160,00 kg (12456 + 12523) - sin remito nuevo despues del 17/09.
+            aplicado 82.884,40 kg (OT 773, 774, 789, 790) -> -23.724,40 kg
+  OT      : la serie termina en la 791; no entro ninguna OT nueva ni ninguna OT anotada desde el 25/09.
+            34 de 38 OT del bloque abierto siguen sin consumo real anotado.
