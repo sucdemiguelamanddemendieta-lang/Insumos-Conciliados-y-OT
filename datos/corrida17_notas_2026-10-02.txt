@@ -1,0 +1,42 @@
+====================================================================================================
+PASADA 1 - BLOQUE 755-791 (remitido completo al 25/09): SIN CAMBIOS respecto del 30/09
+====================================================================================================
+  14 principios activos: 7 cierran, 7 en transito. Ninguna OT <=791 volvio anotada
+  ni entro remito nuevo, asi que el cuadro es identico al del 30/09.
+
+====================================================================================================
+PASADA 2 - OT NUEVAS 792, 793 y 794 (01-02/10): POSTERIORES AL REMITIDO
+====================================================================================================
+  OT 792  02/10  La Celina      Soja 47 ha             2,4-D ENLIST COLEX-D 66,9%       84.60 L
+  OT 792  02/10  La Celina      Soja 47 ha             PANZER GOLD                      94.00 L
+  OT 792  02/10  La Celina      Soja 47 ha             FLUMIOXAZIN 48%                   7.05 L
+  OT 792  02/10  La Celina      Soja 47 ha             COADYUVANTE TTM                   9.40 L
+  OT 792  02/10  La Celina      Soja 47 ha             SAFLUFENACIL HEAT 70WG            1.41 kg
+  OT 793  01/10  Santo Domingo  Girasol oleico 48 ha   CIBUS DUO BL                     96.00 kg
+  OT 794  01/10  La Manga       Girasol 245,67 ha      CIBUS DUO BL                    491.34 kg
+
+  Verificacion de los totales impresos:
+   OT 792: 47 x 1,80 = 84,60 | 47 x 2,00 = 94,00 | 47 x 0,15 = 7,05 | 47 x 0,20 = 9,40 | 47 x 0,03 = 1,41  OK
+   OT 793: 48 x 2,00 = 96,00  OK
+   OT 794: 23+26+30+63,17+58,50+45 = 245,67 ha ; 245,67 x 2,00 = 491,34 kg  OK
+
+====================================================================================================
+PASADA 3 - efecto combinado y revision critica
+====================================================================================================
+Producto           Remitido   Aplicado  Dif. 30/09  Dif. 02/10  Estado
+PANZER GOLD         2804.38    3233.10     -334.72     -428.72  EN TRANSITO
+TTM                  467.00     504.98      -28.58      -37.98  EN TRANSITO
+FLUMIOXAZIN           55.00      59.69        2.36       -4.69  OK
+SAFLUFENACIL           8.45      15.41       -5.55       -6.96  EN TRANSITO
+ENLIST (2,4-D)         0.00      84.60           -      -84.60  EN TRANSITO (linea nueva)
+CIBUS DUO (kg)         0.00     587.34           -     -587.34  EN TRANSITO (linea nueva)
+
+  El Enlist NO se agrupa con el Herbifen: es 2,4-D sal colina 66,9%, otra sal y otro canal.
+  El HEAT ya estaba mapeado (saflufenacil 70%): misma concentracion que el Veltroma, se agrupa.
+  CIBUS DUO BL no esta en el mapeo -> principio activo a preguntar, no se infiere.
+
+  *** DEFECTO EN LA OT 794: el Gestor la emitio en dos versiones distintas ***
+   version 14:19 -> 737,01 kg de Cibus Duo, SIN linea de labor; la columna Ha trae los kilos
+   version 14:28 -> 491,34 kg de Cibus Duo, con labor 245,67 ha y dosis 2,00 kg/ha
+   737,01 - 491,34 = 245.67 = exactamente las 245,67 ha, que se sumaron como si fueran kilos.
+   Se computa 491,34 (la version consistente). Si el costeo toma la otra, sobran 245,67 kg.
