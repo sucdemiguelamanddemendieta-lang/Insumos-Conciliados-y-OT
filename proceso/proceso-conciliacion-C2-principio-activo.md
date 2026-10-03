@@ -113,6 +113,16 @@ Cada corrida produce:
 - Un detalle por OT con su cruce de remito(s) y qué quedó sin poder cruzar.
 - La lista de preguntas pendientes, si las hay, con destinatario sugerido (Betiana para carga/datos operativos, Mercedes para excepciones o escalamiento según el punto 8 del instructivo general).
 
+### Destinatarios del mail de cada corrida
+
+| Rol | Dirección | Cómo va |
+|---|---|---|
+| Dueño | `sucdemiguelamanddemendieta@gmail.com` | Para |
+| Betiana Bertolami — carga y corrección de RE/OT | `betianabertolami@gmail.com` | Copia |
+| Mercedes — validación y escalamiento | `mercedes@gestormax.com` | Copia, **en todas las corridas** |
+
+La dirección de Mercedes fue **confirmada por el dueño el 03/10/2026**. Hasta esa fecha no se la tenía y por eso los escalamientos del 26/08, del 02/09 y del 02/10 se prepararon pero no se enviaron: la regla era —y sigue siendo para cualquier destinatario nuevo— **no usar una dirección inferida de los metadatos de Drive**. Con la dirección confirmada, Mercedes va en copia de todas las corridas, no solo de las que escalan: así ve la serie completa y un escalamiento no le llega sin contexto.
+
 ## 4. Historial de corridas
 
 | Fecha | Actividad | Resultado | Preguntas abiertas |
@@ -146,7 +156,7 @@ Cumple el criterio del punto 9 y de 2.bis: es la **cuarta corrida consecutiva** 
 
 Se eleva **la pregunta, no una cifra definitiva**: las OT 768-771 todavía no volvieron anotadas, así que el monto puede bajar si el consumo real fue menor al plan. Lo que no cambia con las anotaciones es el agujero del lado remitido.
 
-Documento armado en `pedidos/2026-10-02_escalamiento_mercedes_3.docx`. **No se envió:** la dirección de correo de Mercedes nunca se confirmó y no se usa una inferida de los metadatos de Drive. Hace falta que la confirmen antes de mandarlo.
+Documento armado en `pedidos/2026-10-02_escalamiento_mercedes_3.docx`. **Enviado el 03/10/2026** a `mercedes@gestormax.com`, con copia al dueño y a Betiana, apenas el dueño confirmó la dirección. Desde esta corrida Mercedes va en copia de todas las corridas.
 
 **En observación, sin escalar:**
 
