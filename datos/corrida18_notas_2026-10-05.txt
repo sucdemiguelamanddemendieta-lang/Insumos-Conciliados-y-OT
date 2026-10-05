@@ -1,0 +1,78 @@
+========================================================================================================
+PASADA 1 - CORRECCION DEL PLAN DE LAS OT 768-771 (releidas una por una del documento emitido)
+========================================================================================================
+Producto           Correcto  Usado 23/09      Delta  Causa
+2,4-D                489.60       405.60      84.00  OT 770 reemitida (+38,40) + error de calculo mio (+45,60)
+PANZER               758.80       697.60      61.20  OT 770 reemitida (+38,40) + error de calculo mio (+22,80)
+PARAQUAT             144.00       120.00      24.00  OT 771 reemitida: dosis 2,50 -> 3,00 L/ha
+TTM                   78.40        78.40      -0.00  coincide
+DIFLUFENICAN          54.60        54.60       0.00  coincide
+LONTREL               22.80        22.80       0.00  coincide
+SAFLUF                 1.92         1.92       0.00  coincide
+
+  Verificacion de las reemisiones (documentos de ambas fechas a la vista):
+   OT 770  04/09: 2,4-D 153,60 (1,70 y 1,50 L/ha) | Panzer 201,60 (2,20 y 2,00)
+   OT 770  23/09: 2,4-D 192,00 (2,00 y 2,00)      | Panzer 240,00 (2,50 y 2,50)
+   OT 771  04/09: paraquat 120,00 (2,50 L/ha)     | 23/09: 144,00 (3,00 L/ha)
+   Las OT 768 y 769 NO cambiaron. NINGUNA de las cuatro lleva paraquat salvo la 771.
+
+========================================================================================================
+PASADA 2 - CONSUMO REAL DE LAS OT 768 Y 769 (volvieron anotadas el 04/10) y OT 767
+========================================================================================================
+OT    Producto                 Plan       Real       Dif
+768   2,4-D Herbifen         136.80     140.00     +3.20
+768   Lontrel                 22.80      20.00     -2.80
+768   Panzer Gold            250.80     250.00     -0.80
+768   Coad. TTM               22.80      24.00     +1.20
+769   2,4-D Herbifen         160.80     160.00     -0.80
+769   Diflufenican            40.20      40.00     -0.20
+769   Panzer Gold            268.00     270.00     +2.00
+769   Coad. TTM               26.80      26.00     -0.80
+767   Coad. TTM               21.60      20.00     -1.60
+
+  Ajuste neto por consumo real: 2,4-D +2.40, LONTREL -2.80, PANZER +1.20, TTM -1.20, DIFLUFENICAN -0.20
+  El TTM de la OT 767 (ilegible desde el 25/09) lo respondio Betiana: 20 L, no el plan de 21,60.
+
+========================================================================================================
+PASADA 3 - CUADRO DEL BLOQUE 755-791 RECALCULADO
+========================================================================================================
+Producto         Remitido  Apl.02/10  Apl.05/10   Dif.02/10   Dif.05/10  Estado
+PANZER            2804.38    3139.10    3201.50     -334.72     -397.12  En transito
+2,4-D             1271.50    1495.09    1581.49     -223.59     -309.99  En transito
+PARAQUAT           320.00     440.00     464.00     -120.00     -144.00  En transito
+CLETODIM           472.18     506.56     506.56      -34.38      -34.38  En transito
+TTM                467.00     495.58     494.38      -28.58      -27.38  En transito
+DIFLUFENICAN       200.00     210.65     210.45      -10.65      -10.45  En transito
+SAFLUFENACIL         8.45      14.00      14.00       -5.55       -5.55  En transito
+LONTREL             40.00      41.83      39.03       -1.83        0.97  Cierra
+VIOVAN             440.00     438.95     438.95        1.05        1.05  Cierra
+BROMOXINIL         125.00     125.30     125.30       -0.30       -0.30  Cierra
+FLUMIOXAZIN         55.00      52.64      52.64        2.36        2.36  Cierra
+MCPA               120.00     107.40     107.40       12.60       12.60  Cierra
+PINOXADEN          100.00      96.80      96.80        3.20        3.20  Cierra
+VITAGROW            17.00      16.80      16.80        0.20        0.20  Cierra
+
+  Cierran (7): BROMOXINIL, FLUMIOXAZIN, LONTREL, MCPA, PINOXADEN, VIOVAN, VITAGROW
+  En transito (7): PANZER, 2,4-D, PARAQUAT, CLETODIM, TTM, DIFLUFENICAN, SAFLUFENACIL
+
+========================================================================================================
+SOLMIX - las OT 789 y 790 NO fueron realizadas (respuesta de Betiana)
+========================================================================================================
+  Remitido          : 59.160,00 kg  (remitos 12456 y 12523)
+  OT 773 real       : 24.150,00 kg  (Betiana; el plan impreso era 23.540,40 -> +609,60)
+  OT 774 plan       : 34.040,00 kg
+  OT 789 + 790      :       0,00 kg  (15.449 + 9.855 = 25.304 kg que NO se aplicaron)
+  Aplicado          : 58.190,00 kg
+  Diferencia        :    +970,00 kg  = +1,6 % sobre lo remitido  -> CIERRA
+  El 02/10 daba -23.724,40 kg. Todo el faltante era OT emitidas y no ejecutadas.
+
+========================================================================================================
+CANAL CUTHILL - NPA 15 FULL
+========================================================================================================
+  Betiana corrigio los numeros: el "2322" es 2332 (ya estaba) y el "2327" es 2377 (subido).
+  Remitido: 2332 (20) + 2344 (20) + 2377 (20) + 2385 (20) = 80,00 L
+  Aplicado documentado: 36,45 L (OT 739-747) + 5,00 L (OT 767) = 41,45 L
+  Sobrante 38,55 L: es stock, no faltante. Pendiente el consumo de NPA de las OT 765 y 766.
+  Productos nuevos del canal, sin consumo en ninguna OT todavia:
+   COAD MAX x 5 LT      20,00 L (remito 2377)
+   ANTIESPUMANTE x 1 LT  2,00 L (remito 2385)

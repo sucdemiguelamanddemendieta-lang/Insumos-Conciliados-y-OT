@@ -14,3 +14,10 @@ aplicado,,,NPA 15 FULL,2.10,745,manuscrito en remito 8-2344 (100 cm3/ha)
 aplicado,,,NPA 15 FULL,7.20,746,manuscrito en remito 8-2344 (100 cm3/ha)
 aplicado,,,NPA 15 FULL,6.80,747,manuscrito en remito 8-2344 (100 cm3/ha)
 factura,CUTHILL A 0009-00001722,2026-08-03,NPA 15 FULL,40.00,,factura de los dos remitos - no es remitido adicional
+# Corrida 05/10/2026: Betiana corrigio los numeros. El "2322" es el 2332 (ya estaba) y el "2327" es el 2377.
+remito,CUTHILL 0008-00002377,2026-09-07,NPA 15 FULL,20.00,,"subido el 04/10; citado en la OT 766"
+remito,CUTHILL 0008-00002377,2026-09-07,COAD MAX x 5 LT,20.00,,"PRODUCTO NUEVO - sin consumo en ninguna OT todavia"
+remito,CUTHILL 0008-00002385,2026-09-17,NPA 15 FULL,20.00,,"subido el 04/10; citado en la OT 767"
+remito,CUTHILL 0008-00002385,2026-09-17,ANTIESPUMANTE x 1 LT,2.00,,"PRODUCTO NUEVO - sin consumo en ninguna OT todavia"
+aplicado,,,NPA 15 FULL,5.00,767,"citado en la OT 767 junto con el rotulo Cuthill 2385"
+# NPA: remitido 80,00 L contra 41,45 L de consumo documentado. Sobrante = stock. Falta el NPA de las OT 765 y 766.
