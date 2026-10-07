@@ -21,3 +21,9 @@ remito,CUTHILL 0008-00002385,2026-09-17,NPA 15 FULL,20.00,,"subido el 04/10; cit
 remito,CUTHILL 0008-00002385,2026-09-17,ANTIESPUMANTE x 1 LT,2.00,,"PRODUCTO NUEVO - sin consumo en ninguna OT todavia"
 aplicado,,,NPA 15 FULL,5.00,767,"citado en la OT 767 junto con el rotulo Cuthill 2385"
 # NPA: remitido 80,00 L contra 41,45 L de consumo documentado. Sobrante = stock. Falta el NPA de las OT 765 y 766.
+# Corrida 07/10/2026: Betiana aporto el NPA de las dos OT que faltaban. La linea queda cerrada.
+aplicado,,,NPA 15 FULL,4.00,765,"respuesta de Betiana del 05/10"
+aplicado,,,NPA 15 FULL,5.00,766,"respuesta de Betiana del 05/10"
+# NPA: remitido 80,00 L contra 50,45 L aplicados (36,45 en las OT 739-747 + 5,00 OT 767 + 4,00 OT 765 + 5,00 OT 766).
+# Sobrante 29,55 L = stock en galpon. PREGUNTA CERRADA.
+

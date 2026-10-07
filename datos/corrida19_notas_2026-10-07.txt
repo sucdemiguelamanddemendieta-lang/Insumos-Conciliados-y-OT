@@ -1,0 +1,57 @@
+========================================================================================================
+PASADA 1 - OT EMITIDAS Y NO EJECUTADAS (respuesta de Betiana: 770, 771, 772, 789, 790, 792, 793, 794)
+========================================================================================================
+  OT 770: 2,4-D 192.00 · DIFLUFENICAN 14.40 · PANZER 240.00 · SAFLUFENACIL 1.92 · TTM 19.20
+  OT 771: PARAQUAT 144.00 · TTM 9.60
+  OT 772: 2,4-D 158.00 · CLETODIM 158.00 · PANZER 197.50 · SAFLUFENACIL 3.16 · TTM 15.80
+
+  Total a quitar del aplicado: 2,4-D 350.00 · CLETODIM 158.00 · DIFLUFENICAN 14.40 · PANZER 437.50 · PARAQUAT 144.00 · SAFLUFENACIL 5.08 · TTM 44.60
+  Las OT 789 y 790 ya se habian quitado el 05/10 (Solmix). Las 792, 793 y 794 nunca entraron al cuadro
+  por ser posteriores al remitido, asi que el Cibus Duo (587,34 kg) y el Enlist (84,60 L) salen tambien.
+  Verificacion del plan de la OT 772: 79 ha x 2,00 / 2,00 / 2,50 / 0,04 / 0,20 = 158 / 158 / 197,50 / 3,16 / 15,80  OK
+
+========================================================================================================
+PASADA 2 - CUADRO RECALCULADO (OT 755-769 y 773-786)
+========================================================================================================
+Producto         Remitido  Apl.05/10  Apl.07/10   Dif.05/10   Dif.07/10  Estado
+PANZER            2804.38    3201.50    2764.00     -397.12       40.38  SOBRANTE
+2,4-D             1271.50    1581.49    1231.49     -309.99       40.01  SOBRANTE
+PARAQUAT           320.00     464.00     320.00     -144.00        0.00  Cierra
+CLETODIM           472.18     506.56     348.56      -34.38      123.62  SOBRANTE
+TTM                467.00     494.38     449.78      -27.38       17.22  SOBRANTE
+DIFLUFENICAN       200.00     210.45     196.05      -10.45        3.95  Cierra
+SAFLUFENACIL         8.45      14.00       8.92       -5.55       -0.47  NEGATIVO
+LONTREL             40.00      39.03      39.03        0.97        0.97  Cierra
+VIOVAN             440.00     438.95     438.95        1.05        1.05  Cierra
+BROMOXINIL         125.00     125.30     125.30       -0.30       -0.30  Cierra
+FLUMIOXAZIN         55.00      52.64      52.64        2.36        2.36  Cierra
+MCPA               120.00     107.40     107.40       12.60       12.60  Cierra
+PINOXADEN          100.00      96.80      96.80        3.20        3.20  Cierra
+VITAGROW            17.00      16.80      16.80        0.20        0.20  Cierra
+
+  NEGATIVOS fuera de tolerancia: SAFLUFENACIL
+  Cierran: BROMOXINIL, DIFLUFENICAN, FLUMIOXAZIN, LONTREL, MCPA, PARAQUAT, PINOXADEN, VIOVAN, VITAGROW
+  Sobrantes (producto remitido y todavia no aplicado = stock): 2,4-D, CLETODIM, PANZER, TTM
+
+========================================================================================================
+PASADA 3 - REVISION CRITICA
+========================================================================================================
+  PARAQUAT: cierra en 0,00 EXACTO. Remitido 320,00 (remito 12528) contra 320,00 aplicados
+            = 275 L de consumo real de la OT 767 + 45 L de la OT 786. La OT 771, unica con
+            paraquat, no fue ejecutada. EL ESCALAMIENTO SE DISUELVE: no habia faltante.
+  REMITO 12606: no existe. El PDF subido es el 0202-00012608 del 25/09 (Lontrel 20, Panzer 520,
+            TTM 50, identico al costeo) y trae anotado a mano "768.769". El numero manuscrito
+            en la OT 768 era un error de transcripcion. No falta ningun remito.
+  2,4-D / concentracion: el Academix es ester etilhexilico 89%% (ac. equiv. 59%%) y el Herbifen
+            figura al 97% en el maestro. A valor nominal el 2,4-D da +40.01;
+            llevando los 300 L de Academix a equivalente Herbifen (x 89/97 = 275,26) daria +15.27,
+            es decir dentro de tolerancia. Falta confirmar el equivalente acido del Herbifen.
+  SAFLUFENACIL: -0,47 kg sobre 8,45 remitidos. La tolerancia es 0,35 kg, asi que queda 0,12 kg
+            por fuera: es practicamente cero y no califica como faltante.
+  NPA (canal Cuthill): remitido 80,00 L. Aplicado 36,45 (OT 739-747) + 5,00 (767) + 4,00 (765)
+            + 5,00 (766) = 50,45 L. Sobrante 29,55 L = stock. La pregunta queda cerrada.
+  CIBUS DUO: las OT 793 y 794 no fueron ejecutadas, asi que los 587,34 kg no son consumo.
+            La linea desaparece del cuadro. Principio activo confirmado: carbaril 8%% + metaldehido 4%%.
+  VIOVAN: Betiana menciona "se aplico 175 litros" al contestar la concentracion. No coincide con
+            los 438,95 L que suman las OT (y que cierran en +1,05 contra 440 remitidos). Ninguna
+            OT con Viovan figura entre las no ejecutadas. SE PREGUNTA, no se cambia la cifra.
