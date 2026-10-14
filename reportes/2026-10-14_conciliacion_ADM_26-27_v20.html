@@ -1,0 +1,273 @@
+<title>Conciliación Siembra Asociada ADM 26-27</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f1; --surface:#ffffff; --surface-2:#eef0e7;
+    --ink:#242820; --ink-soft:#4b5044; --muted:#767c6b;
+    --line:#dde1d3; --line-strong:#c7cdb8;
+    --accent:#4a6b3d; --accent-ink:#2f4527; --accent-soft:#e3ead9;
+    --ok-bg:#e2efe1; --ok-ink:#2e6b3e; --ok-line:#b7dabb;
+    --warn-bg:#faf0da; --warn-ink:#93641a; --warn-line:#e9cf98;
+    --bad-bg:#fbe6e1; --bad-ink:#a3402c; --bad-line:#eab9ab;
+    --unk-bg:#eceae4; --unk-ink:#6a6657; --unk-line:#d4d0c3;
+    --shadow: 0 1px 2px rgba(36,40,32,.06), 0 6px 20px -8px rgba(36,40,32,.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+      --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+      --line:#343829; --line-strong:#454b34;
+      --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+      --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+      --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+      --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+      --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+    --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+    --line:#343829; --line-strong:#454b34;
+    --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+    --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+    --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+    --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+    --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height:1.5;
+    -webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001ms !important; transition-duration:.001ms !important;}}
+  .wrap{max-width:980px; margin:0 auto; padding:0 24px 96px;}
+  header.hero{padding:56px 0 32px; border-bottom:1px solid var(--line); margin-bottom:40px;}
+  .eyebrow{font-family:"IBM Plex Mono", monospace; font-size:12.5px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent-ink); background:var(--accent-soft);
+    display:inline-block; padding:4px 10px; border-radius:4px; margin-bottom:18px;}
+  h1{font-family:"Fraunces", Georgia, serif; font-optical-sizing:auto; font-weight:600;
+    font-size:clamp(30px,4.4vw,44px); line-height:1.08; letter-spacing:-.01em;
+    margin:0 0 14px; text-wrap:balance;}
+  .dek{font-size:17px; color:var(--ink-soft); max-width:64ch; margin:0 0 20px;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:8px 18px; font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px; color:var(--muted);}
+  .meta-row b{color:var(--ink-soft); font-weight:600;}
+  section{margin-bottom:52px;}
+  h2{font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:24px;
+    letter-spacing:-.005em; margin:0 0 6px; text-wrap:balance;}
+  h3{font-weight:600; font-size:15px; margin:26px 0 10px;}
+  .section-note{color:var(--muted); font-size:14.5px; margin:0 0 22px; max-width:70ch;}
+  p{margin:0 0 14px; color:var(--ink-soft); max-width:72ch;}
+  p:last-child{margin-bottom:0;}
+  strong{color:var(--ink); font-weight:600;}
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:16px; box-shadow:var(--shadow);}
+  .stat .n{font-family:"Fraunces",serif; font-weight:600; font-size:30px; line-height:1;
+    font-variant-numeric:tabular-nums;}
+  .stat .l{font-size:12.5px; color:var(--muted); margin-top:6px;}
+  .stat.ok .n{color:var(--ok-ink);} .stat.bad .n{color:var(--bad-ink);}
+  .stat.warn .n{color:var(--warn-ink);} .stat.unk .n{color:var(--unk-ink);}
+  .callout{border:1px solid var(--line-strong); background:var(--surface); border-radius:10px;
+    padding:20px 22px; box-shadow:var(--shadow);}
+  .callout + .callout{margin-top:14px;}
+  .callout.warn{background:var(--warn-bg); border-color:var(--warn-line);}
+  .callout.bad{background:var(--bad-bg); border-color:var(--bad-line);}
+  .callout.ok{background:var(--ok-bg); border-color:var(--ok-line);}
+  .callout .tag{font-family:"IBM Plex Mono",monospace; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:.08em; font-weight:600; margin-bottom:8px; display:block;}
+  .callout.warn .tag{color:var(--warn-ink);} .callout.bad .tag{color:var(--bad-ink);}
+  .callout.ok .tag{color:var(--ok-ink);}
+  .table-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    box-shadow:var(--shadow); background:var(--surface); margin-bottom:10px;}
+  table{border-collapse:collapse; width:100%; min-width:640px; font-size:13.8px;}
+  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+  thead th{font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--muted); background:var(--surface-2); white-space:nowrap;
+    border-bottom:1px solid var(--line-strong);}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:var(--surface-2);}
+  td.num, th.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+    text-align:right; white-space:nowrap;}
+  td.mono{font-family:"IBM Plex Mono",monospace; font-size:13px; white-space:nowrap;}
+  .pill{display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    font-weight:600; padding:3px 9px; border-radius:100px; white-space:nowrap;
+    border:1px solid transparent;}
+  .pill.ok{background:var(--ok-bg); color:var(--ok-ink); border-color:var(--ok-line);}
+  .pill.bad{background:var(--bad-bg); color:var(--bad-ink); border-color:var(--bad-line);}
+  .pill.warn{background:var(--warn-bg); color:var(--warn-ink); border-color:var(--warn-line);}
+  .pill.unk{background:var(--unk-bg); color:var(--unk-ink); border-color:var(--unk-line);}
+  .neg{color:var(--bad-ink); font-weight:600;}
+  .pos{color:var(--ok-ink); font-weight:600;}
+  .small-note{font-size:12.5px; color:var(--muted); margin-top:2px;}
+  ul.plain{margin:0; padding-left:20px; color:var(--ink-soft);}
+  ul.plain li{margin-bottom:8px;} ul.plain li:last-child{margin-bottom:0;}
+  .questions{list-style:none; counter-reset:q; margin:0; padding:0; display:flex;
+    flex-direction:column; gap:12px;}
+  .questions li{counter-increment:q; position:relative; background:var(--surface);
+    border:1px solid var(--line-strong); border-left:3px solid var(--accent);
+    border-radius:8px; padding:14px 18px 14px 52px; box-shadow:var(--shadow);}
+  .questions li::before{content:counter(q); position:absolute; left:16px; top:14px;
+    font-family:"Fraunces",serif; font-weight:600; font-size:17px; color:var(--accent-ink);}
+  .questions p{margin:0; color:var(--ink); font-size:15px;}
+  .resolved{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+  .resolved li{background:var(--surface); border:1px solid var(--line);
+    border-left:3px solid var(--ok-line); border-radius:8px; padding:13px 16px;
+    font-size:14.5px; color:var(--ink-soft);}
+  footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
+    font-size:12.5px; color:var(--muted);}
+  @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr);} header.hero{padding-top:36px;}}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Conciliación C2 · 21ª corrida · 14 oct 2026</span>
+  <h1>Siembra Asociada ADM 26-27</h1>
+  <p class="dek">Arrancó la gruesa: nueve OT nuevas de girasol, maíz y cebada que traen siete productos que recién aparecen y ningún remito. El bloque viejo no se movió y sigue sin negativos.</p>
+  <div class="meta-row">
+    <span><b>Sucesores de Miguel Amand de Mendieta SRL</b></span>
+    <span>Corte 14/10/2026 · remitido al 25/09</span>
+    <span>Actividad (52) · desde 1 abr 2026</span>
+  </div>
+</header>
+
+<section>
+  <div class="stats">
+    <div class="stat ok"><div class="n">0</div><div class="l">Negativos en el bloque conciliado</div></div>
+    <div class="stat warn"><div class="n">9</div><div class="l">OT nuevas, todas sin remitido</div></div>
+    <div class="stat unk"><div class="n">7</div><div class="l">Productos que recién aparecen</div></div>
+    <div class="stat warn"><div class="n">19 días</div><div class="l">De atraso del costeo</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Empezó la siembra de gruesa</h2>
+  <p>Entre el 2 y el 13 de octubre el Gestor emitió las <strong>OT 795 a 804</strong>. Es un cambio de etapa, no una corrida más: aparecen barbechos de presiembra de girasol y maíz, las primeras dos OT de siembra con fertilizante y semilla, y curas de cebada. Dos aclaraciones antes del detalle:</p>
+  <ul>
+    <li>La <strong>OT 795 queda afuera</strong>: es de Campo La Palma, con labor tipificada «FUMIGACIÓN CTTA TERRESTRE» y lotes de La Palma SRL. Corresponde a Ganadería, no a la actividad (52).</li>
+    <li>La <strong>OT 802 no existe</strong> en ninguna de las dos carpetas. Es una discontinuidad nueva de la serie, que se suma a la del 774 → 778 ya confirmada.</li>
+  </ul>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>OT</th><th>Campo</th><th>Labor / cultivo</th><th class="num">Ha</th><th>Insumos</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">796</td><td>Don Federico</td><td>cebo · girasol</td><td class="num">108,00</td><td>Cibus Duo 216,00 kg</td></tr>
+        <tr><td class="mono">797</td><td>Don Federico</td><td>fumigación · girasol</td><td class="num">108,00</td><td>paraquat 216,00 · flurocloridona 140,40 · <b>Mabua</b> 108,00 · <b>sulfentrazone</b> 32,40 · TTM 21,60 · <b>lambdacialotrina</b> 5,40</td></tr>
+        <tr><td class="mono">798</td><td>Don Federico</td><td>siembra · girasol</td><td class="num">108,00</td><td><b>MAP</b> 3.780,00 kg · semilla NS1117 35,64 bls</td></tr>
+        <tr><td class="mono">799</td><td>La Manga</td><td>fumigación · girasol</td><td class="num">245,67</td><td>paraquat 491,34 · flurocloridona 319,37 · <b>Mabua</b> 245,67 · <b>sulfentrazone</b> 73,70 · TTM 49,13 · <b>lambdacialotrina</b> 12,28</td></tr>
+        <tr><td class="mono">800</td><td>La Manga</td><td>siembra · girasol</td><td class="num">245,77</td><td><b>MAP</b> 9.830,80 kg · semilla NK3969 + NS1227 81,10 bls</td></tr>
+        <tr><td class="mono">801</td><td>La Manga</td><td>fumigación · maíz</td><td class="num">105,70</td><td><b>Acuron Uno</b> 105,70 · Panzer Gold 158,55 · <b>Mabua</b> 105,70 · TTM 21,14 · <b>lambdacialotrina</b> 5,29</td></tr>
+        <tr><td class="mono">803</td><td>La Manga</td><td>fumigación · cebada</td><td class="num">165,26</td><td><b>Morata Ace</b> 107,68 · TTM 33,13 · <b>Transform</b> 6,63 kg</td></tr>
+        <tr><td class="mono">804</td><td>Don Federico</td><td>fumigación · cebada</td><td class="num">230,00</td><td><b>Morata Ace</b> 149,50 · TTM 46,00 · <b>Transform</b> 9,20 kg</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>El bloque nuevo no tiene un solo remito</h2>
+  <p class="section-note">El costeo sigue siendo el del 29/09, con remitido cortado al 25/09, y estas OT son del 13 de octubre. Ninguno de estos productos tiene remitido cargado.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th class="num">Aplicado</th><th class="num">Stock al 07/10</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>MAP (fertilizante)</td><td class="num">13.610,80 kg</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Paraquat</td><td class="num">707,34</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Flurocloridona</td><td class="num">459,77</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Mabua S-metolacloro</td><td class="num">459,37</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Morata Ace</td><td class="num">257,18</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Cibus Duo</td><td class="num">216,00 kg</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">171,00</td><td class="num pos">+17,22</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Glifosato Panzer Gold</td><td class="num">158,55</td><td class="num pos">+40,38</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Sulfentrazone 50 %</td><td class="num">106,10</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Acuron Uno</td><td class="num">105,70</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Semilla de girasol</td><td class="num">116,74 bls</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Lambdacialotrina 25 %</td><td class="num">22,97</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Transform</td><td class="num">15,83 kg</td><td class="num">—</td><td><span class="pill warn">En tránsito</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Los únicos dos que tienen algo de stock son el TTM y el Panzer, justamente los sobrantes que dejó el bloque anterior, y alcanzan para muy poco: <strong>171,00 L de TTM pedidos contra 17,22 de sobrante</strong> y <strong>158,55 L de Panzer contra 40,38</strong>. O sea que falta remitido por unos 154 L de coadyuvante y 118 de glifosato, más la totalidad de los otros once productos.</p>
+  <p>Eso es desfasaje puro y no se reporta como faltante: son OT emitidas ayer contra un costeo de hace diecinueve días. <strong>La salida es el export de costeo al día</strong>, igual que en setiembre.</p>
+</section>
+
+<section>
+  <h2>Siete productos que recién aparecen</h2>
+  <p>Seis ya estaban en el maestro de productos y se pudieron mapear sin preguntar nada:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th>Principio activo</th><th>Tipo</th></tr></thead>
+      <tbody>
+        <tr><td>Acuron Uno</td><td>Biciclopirona 20 %</td><td>herbicida</td></tr>
+        <tr><td>Morata Ace</td><td>Mesotrione 48 %</td><td>herbicida</td></tr>
+        <tr><td>Sulfentrazone 50 %</td><td>Sulfentrazone 50 %</td><td>herbicida</td></tr>
+        <tr><td>Flurocloridona</td><td>Flurocloridona 25 %</td><td>herbicida</td></tr>
+        <tr><td>Lambdacialotrina 25 %</td><td>Lambdacialotrina 25 %</td><td>insecticida</td></tr>
+        <tr><td>Transform</td><td>Sulfoxaflor 50</td><td>insecticida</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Los otros dos se dieron de alta <strong>sin confirmar</strong>, porque el nombre no alcanza:</p>
+  <ul>
+    <li><strong>Mabua S-metolacloro</strong> (459,37 L en tres OT). El activo es S-metolacloro, pero la concentración no está declarada. El maestro tiene un genérico «S-metolacloro 96 %» y <em>no</em> se asumió que el Mabua sea ése: hace falta la ficha. En la OT viene escrito «S-metalocloro».</li>
+    <li><strong>MAP</strong> (13.610,80 kg en las dos OT de siembra). Es fosfato monoamónico, fertilizante y no agroquímico, así que va en línea propia como el Solmix y no entra al cuadro de principios activos. Falta el grado — el típico es 11-52-0, pero no se da por supuesto.</li>
+  </ul>
+  <p class="small-note">El picloran de la OT 795 no se incorporó al mapeo de esta actividad: esa OT es de La Palma y corresponde a Ganadería.</p>
+</section>
+
+<section>
+  <h2>El bloque 755-791 no se movió</h2>
+  <p class="section-note">No entró costeo nuevo ni volvió ninguna OT anotada de ese tramo, así que el cuadro es idéntico al del 07/10: <strong>ningún insumo negativo</strong>.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th class="num">Remitido</th><th class="num">Aplicado</th><th class="num">Dif.</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Paraquat</td><td class="num">320,00</td><td class="num">320,00</td><td class="num pos">0,00</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Lontrel</td><td class="num">40,00</td><td class="num">39,03</td><td class="num pos">+0,97</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Viovan</td><td class="num">440,00</td><td class="num">438,95</td><td class="num pos">+1,05</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Bromoxinil</td><td class="num">125,00</td><td class="num">125,30</td><td class="num">−0,30</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Vitagrow</td><td class="num">17,00 kg</td><td class="num">16,80 kg</td><td class="num pos">+0,20</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Flumioxazin 48 %</td><td class="num">55,00</td><td class="num">52,64</td><td class="num pos">+2,36</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Pinoxaden</td><td class="num">100,00</td><td class="num">96,80</td><td class="num pos">+3,20</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Diflufenican</td><td class="num">200,00</td><td class="num">196,05</td><td class="num pos">+3,95</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>MCPA 75 %</td><td class="num">120,00</td><td class="num">107,40</td><td class="num pos">+12,60</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Saflufenacil</td><td class="num">8,45 kg</td><td class="num">8,92 kg</td><td class="num">−0,47</td><td><span class="pill warn">Al borde</span></td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">467,00</td><td class="num">449,78</td><td class="num pos">+17,22</td><td><span class="pill ok">Sobrante</span></td></tr>
+        <tr><td>2,4-D</td><td class="num">1.271,50</td><td class="num">1.231,49</td><td class="num pos">+40,01</td><td><span class="pill ok">Sobrante</span></td></tr>
+        <tr><td>Glifosato Panzer Gold</td><td class="num">2.804,38</td><td class="num">2.764,00</td><td class="num pos">+40,38</td><td><span class="pill ok">Sobrante</span></td></tr>
+        <tr><td>Cletodim 24 %</td><td class="num">472,18</td><td class="num">348,56</td><td class="num pos">+123,62</td><td><span class="pill ok">Sobrante</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Nueve cierran, cuatro en sobrante y uno al borde. El bloque conciliado (OT ≤754) tampoco se toca, y el Solmix sigue en <strong>+970,00 kg</strong>.</p>
+</section>
+
+<section>
+  <h2>Lo que se pide</h2>
+  <ol class="questions">
+    <li><p><strong>El export de costeo al día.</strong> Lleva diecinueve días (el último es del 29/09, con remitido al 25/09) y es lo único que puede conciliar el bloque nuevo, que son nueve OT y trece productos sin un solo remito.</p></li>
+    <li><p><strong>¿Cuáles de las OT 795 a 804 están ejecutadas?</strong> Desde el 05/10 esto es pregunta de rutina, y acá importa especialmente: son OT de ayer y de las nueve del bloque anterior ocho resultaron no ejecutadas.</p></li>
+    <li><p><strong>Ficha técnica del Mabua</strong> (concentración de S-metolacloro) y <strong>grado del MAP</strong>. Son los dos de mayor volumen del bloque nuevo que no se pueden mapear con certeza.</p></li>
+    <li><p><strong>Confirmar que la OT 802 no existe</strong>, como se confirmó el salto 774 → 778.</p></li>
+    <li><p>Siguen de antes: los <strong>175 litros de Viovan</strong> que no cierran con los 438,95 de las OT, y el <strong>equivalente ácido del Herbifen</strong> para cerrar la equivalencia con el Academix al 89 %.</p></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Verificación</h2>
+  <p>Tres pasadas. Las nueve OT se recalcularon lote por lote, dosis por hectáreas, contra su propio encabezado: once controles, todos cerrados. Ese recálculo encontró dos inconsistencias chicas de superficie dentro de los propios documentos, que se anotan sin alterar las cifras:</p>
+  <ul>
+    <li>La <strong>OT 799</strong> dosifica el lote 6 sobre 58,50 ha y la <strong>OT 800</strong>, el mismo lote, sobre 58,60 — de ahí que una sume 245,67 ha y la otra 245,77.</li>
+    <li>En la <strong>OT 803</strong> la labor suma 165,26 ha pero los agroquímicos se dosifican sobre 165,66: el lote 15 lleva 20,60 ha de labor y 21,00 de producto. Son 0,40 ha.</li>
+  </ul>
+  <p>Se verificó que no hay export de costeo posterior al del 29/09 y que no entró nada a la carpeta de documentos primarios desde el 05/10, así que el remitido no se movió y el bloque 755-791 se deja exactamente como quedó. La OT 795 se leyó completa antes de excluirla, para confirmar por el establecimiento y por la labor que es de Ganadería y no de la actividad (52).</p>
+</section>
+
+<footer>
+  Conciliación C2 (Remitido vs. Aplicado) · Actividad (52) Siembra Asociada ADM 26-27 · La Palma excluida por corresponder a Ganadería · Ningún archivo de Drive fue editado — trabajo de solo lectura y diagnóstico.
+</footer>
+
+</div>

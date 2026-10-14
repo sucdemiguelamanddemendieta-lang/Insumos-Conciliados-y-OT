@@ -1,0 +1,92 @@
+====================================================================================================
+PASADA 1 - NUEVE OT NUEVAS: 795 a 804 (el 802 no existe, el 795 es de La Palma / Ganaderia)
+====================================================================================================
+  OT 796  Don Federico   cebo · girasol           108.00 ha
+        CIBUS DUO BL                           216.00 kg
+  OT 797  Don Federico   fumigacion · girasol     108.00 ha
+        FLUROCLORIDONA                         140.40 L
+        LAMBDACIALOTRINA 25%                     5.40 L
+        MABUA S-METOLACLORO                    108.00 L
+        PARAQUAT                               216.00 L
+        SULFENTRAZONE 50%                       32.40 L
+        COADYUVANTE TTM                         21.60 L
+  OT 798  Don Federico   siembra · girasol        108.00 ha
+        MAP (fertilizante)                    3780.00 kg
+        SEMILLA girasol NS1117                  35.64 bls
+  OT 799  La Manga       fumigacion · girasol     245.67 ha
+        FLUROCLORIDONA                         319.37 L
+        LAMBDACIALOTRINA 25%                    12.28 L
+        MABUA S-METOLACLORO                    245.67 L
+        PARAQUAT                               491.34 L
+        SULFENTRAZONE 50%                       73.70 L
+        COADYUVANTE TTM                         49.13 L
+  OT 800  La Manga       siembra · girasol        245.77 ha
+        MAP (fertilizante)                    9830.80 kg
+        SEMILLA girasol NK3969 + NS1227         81.10 bls
+  OT 801  La Manga       fumigacion · maiz        105.70 ha
+        ACURON UNO                             105.70 L
+        LAMBDACIALOTRINA 25%                     5.29 L
+        MABUA S-METOLACLORO                    105.70 L
+        PANZER GOLD                            158.55 L
+        COADYUVANTE TTM                         21.14 L
+  OT 803  La Manga       fumigacion · cebada      165.26 ha
+        MORATA ACE                             107.68 L
+        TRANSFORM                                6.63 kg
+        COADYUVANTE TTM                         33.13 L
+  OT 804  Don Federico   fumigacion · cebada      230.00 ha
+        MORATA ACE                             149.50 L
+        TRANSFORM                                9.20 kg
+        COADYUVANTE TTM                         46.00 L
+
+====================================================================================================
+PASADA 2 - TOTALES DEL BLOQUE NUEVO POR PRINCIPIO ACTIVO (remitido: no hay)
+====================================================================================================
+Producto                               Aplicado   Unid    Stock 07/10  Estado
+MAP (fertilizante)                     13610.80     kg   sin remitido  EN TRANSITO
+PARAQUAT                                 707.34      L   sin remitido  EN TRANSITO
+FLUROCLORIDONA                           459.77      L   sin remitido  EN TRANSITO
+MABUA S-METOLACLORO                      459.37      L   sin remitido  EN TRANSITO
+MORATA ACE                               257.18      L   sin remitido  EN TRANSITO
+CIBUS DUO BL                             216.00     kg   sin remitido  EN TRANSITO
+COADYUVANTE TTM                          171.00      L         +17.22  EN TRANSITO
+PANZER GOLD                              158.55      L         +40.38  EN TRANSITO
+SULFENTRAZONE 50%                        106.10      L   sin remitido  EN TRANSITO
+ACURON UNO                               105.70      L   sin remitido  EN TRANSITO
+SEMILLA girasol NK3969 + NS1227           81.10    bls   sin remitido  EN TRANSITO
+SEMILLA girasol NS1117                    35.64    bls   sin remitido  EN TRANSITO
+LAMBDACIALOTRINA 25%                      22.97      L   sin remitido  EN TRANSITO
+TRANSFORM                                 15.83     kg   sin remitido  EN TRANSITO
+
+  Ninguno de estos productos tiene remitido en el costeo, que sigue cortado al 25/09.
+  Solo el TTM y el Panzer tienen stock, y es minimo contra la demanda nueva:
+   TTM   : 171,00 L pedidos contra 17,22 L de sobrante  -> falta remitido por ~153,78 L
+   Panzer: 158,55 L pedidos contra 40,38 L de sobrante  -> falta remitido por ~118,17 L
+
+====================================================================================================
+PASADA 3 - VERIFICACION Y REVISION CRITICA
+====================================================================================================
+  Recalculo dosis x hectareas contra el encabezado impreso:
+   OT 796 Cibus Duo          108.00 x  2.00 =     216.00  vs     216.00  OK
+   OT 797 paraquat           108.00 x  2.00 =     216.00  vs     216.00  OK
+   OT 797 flurocloridona     108.00 x  1.30 =     140.40  vs     140.40  OK
+   OT 798 MAP                108.00 x 35.00 =    3780.00  vs    3780.00  OK
+   OT 799 paraquat           245.67 x  2.00 =     491.34  vs     491.34  OK
+   OT 799 sulfentrazone      245.67 x  0.30 =      73.70  vs      73.70  OK
+   OT 800 MAP                245.77 x 40.00 =    9830.80  vs    9830.80  OK
+   OT 801 Acuron Uno         105.70 x  1.00 =     105.70  vs     105.70  OK
+   OT 801 Panzer             105.70 x  1.50 =     158.55  vs     158.55  OK
+   OT 803 Morata Ace         165.66 x  0.65 =     107.68  vs     107.68  OK
+   OT 804 Morata Ace         230.00 x  0.65 =     149.50  vs     149.50  OK
+
+  Dos inconsistencias chicas de superficie, dentro del propio documento:
+   OT 799 usa 58,50 ha en el lote 6 y la OT 800 usa 58,60 para el mismo lote (245,67 vs 245,77 ha).
+   OT 803: la labor suma 165,26 ha pero los agroquimicos se dosifican sobre 165,66 (el lote 15
+           lleva 20,60 de labor y 21,00 de producto). Son 0,40 ha: no mueve el cuadro, se anota.
+
+  Mapeo: ya estaban LAMBDACIALOTRINA 25%, SULFENTRAZONE 50%, ACURON UNO (biciclopirona 20%),
+         MORATA ACE (mesotrione 48%), TRANSFORM (sulfoxaflor 50) y FLUROCLORIDONA.
+         FALTAN de alta: MABUA S-METOLACLORO (concentracion a confirmar) y MAP (fertilizante).
+         El PICLORAN de la OT 795 queda fuera: esa OT es de La Palma, labor CTTA, Ganaderia.
+
+  El bloque 755-791 NO se movio: sin costeo nuevo y sin OT anotadas nuevas de ese tramo.
+  Sigue sin ningun insumo negativo (9 cierran, 4 en sobrante, 1 al borde).
