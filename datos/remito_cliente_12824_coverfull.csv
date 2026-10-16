@@ -1,0 +1,11 @@
+# Remito 0202-00012824 del 16/10/2026 - canal "Remito de Cliente" (tercer canal del punto 2.bis).
+# A nombre de SUCESORES DE MIGUEL AMAND DE MENDIETA S.R.L., SIN la linea "SALIDA INSUMOS, (52) SIEMBRA ASOCIADA".
+# Ninguna OT consume Coverfull todavia: es remitido sin aplicado = stock con comprobante.
+tipo,comprobante,fecha,producto,cantidad_L,envases,deposito,n_venta,lote,vto_leido,observacion
+remito,0202-00012824,2026-10-16,COVERFULL ACE (CARBOXO+PROPI) X 5 L,120.00,24,TANDIL PROPIO BASE AEREA,0001-00016117,RBT2H00047,2025-08-01,"La fecha se lee como vencimiento y es anterior al corte: PREGUNTA"
+remito,0202-00012824,2026-10-16,COVERFULL ACE (CARBOXO+PROPI) X 5 L,90.00,18,TANDIL PROPIO BASE AEREA,0001-00016117,ACD3H00107,2026-08-01,"Idem: anterior al corte"
+remito,0202-00012824,2026-10-16,COVERFULL ACE (CARBOXO+PROPI) X 5 L,50.00,10,TANDIL CYO BASE AEREA,0001-00016388,ACD3H00107,2026-08-01,"Idem: anterior al corte"
+# Cruce contra la planilla "despachos pendientes ... al 10-09-2026":
+#   venta 0001-00016117: 210 L pendientes -> se retiran 120 + 90 = 210  (calza exacto)
+#   venta 0001-00016388:  80 L pendientes -> se retiran 50             (quedan 30)
+# Ese cruce es lo que confirma que el canal es el stock de ADM en la agronomia.

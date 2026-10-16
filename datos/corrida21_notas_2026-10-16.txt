@@ -1,0 +1,69 @@
+========================================================================================================
+PASADA 1 - EL 2,4-D CIERRA: llego el equivalente acido del Herbifen
+========================================================================================================
+  Betiana aporto la ficha: Herbifen Advance = ester 2-etilhexilico 97% p/v, EQUIV. ACIDO 64,3% p/v.
+  Academix LV EC (ya confirmado el 05/10) = ester etilhexilico 89%, EQUIV. ACIDO 59%.
+
+  Los 300 L de Academix llevan 177.0 kg de acido -> 275.27 L de Herbifen equivalente.
+  Producto                                 Remitido   Aplicado       Dif.  Estado
+  2,4-D a valor nominal                     1271.50    1231.49     +40.01  SOBRANTE (2 bidones)
+  2,4-D en equivalente acido                1246.77    1231.49     +15.28  CIERRA (tol. 20 L)
+
+  Queda un residuo: el Caster LV (320 L del total) sigue sin concentracion declarada,
+  asi que va a valor nominal. Es el unico tramo del 2,4-D sin ajustar.
+
+========================================================================================================
+PASADA 2 - CUADRO DEL BLOQUE 755-791 (remitido al 25/09)
+========================================================================================================
+Producto                   Remitido   Aplicado       Dif.  Estado
+Saflufenacil                   8.45       8.92      -0.47  NEGATIVO
+Bromoxinil                   125.00     125.30      -0.30  Cierra
+Paraquat                     320.00     320.00      +0.00  Cierra
+Vitagrow                      17.00      16.80      +0.20  Cierra
+Lontrel                       40.00      39.03      +0.97  Cierra
+Viovan                       440.00     438.95      +1.05  Cierra
+Flumioxazin 48%               55.00      52.64      +2.36  Cierra
+Pinoxaden                    100.00      96.80      +3.20  Cierra
+Diflufenican                 200.00     196.05      +3.95  Cierra
+MCPA 75%                     120.00     107.40     +12.60  Cierra
+2,4-D (equiv. acido)        1246.77    1231.49     +15.28  Cierra
+Coadyuvante TTM              467.00     449.78     +17.22  Sobrante (stock)
+Glifosato Panzer Gold       2804.38    2764.00     +40.38  Sobrante (stock)
+Cletodim 24%                 472.18     348.56    +123.62  Sobrante (stock)
+
+  Cierran: 10  ·  Sobrante: 3  ·  NEGATIVOS: 1
+  El 2,4-D pasa de sobrante a cerrar: ahora son 10 los que cierran y 3 los sobrantes.
+  Unico signo negativo: saflufenacil -0,47 kg sobre 8,45 (tolerancia 0,35) -> 0,12 kg afuera.
+
+========================================================================================================
+PASADA 3 - NOVEDADES Y REVISION CRITICA
+========================================================================================================
+  OT NUEVAS
+   802 (15/10, La Manga, maiz, siembra): MAP 10.041,50 kg + semilla Nidera AX 7761VT3P 77,16 bls
+       95 kg/ha x 105,70 ha = 10.041,50  OK. Betiana: "si existe, se habia borrado; quedo cargada".
+       MAP acumulado del bloque nuevo: 3.780,00 + 9.830,80 + 10.041,50 = 23.652,30 kg
+   805 y 806 (16/10, CAMPO LA PALMA, labor CONTRATISTA, lotes LP-*): EXCLUIDAS, Ganaderia.
+       Betiana confirmo que la 795 "es de Ganaderia": el criterio de exclusion queda validado.
+   803 y 804 REEMITIDAS el 15/10 con proveedor WINGS DEL SUDESTE y labor FUMIGACION CTTA AEREA
+       (antes LAGOS BUSTOS, FUMIGACION PPIA TERRESTRE). Las cantidades NO cambiaron:
+       803 = TTM 33,13 · Morata 107,68 · Transform 6,63 kg | 804 = TTM 46,00 · Morata 149,50 · Transform 9,20 kg
+       Es una reemision de labor, no de insumos: no mueve el cuadro. Tercer caso de reemision.
+
+  REMITO NUEVO 0202-00012824 del 16/10 - canal "Remito de Cliente"
+   A nombre de SUCESORES DE MIGUEL AMAND DE MENDIETA S.R.L., SIN la linea de actividad (52).
+   COVERFULL ACE (CARBOXO+PROPI): 120 + 90 + 50 = 260,00 L. Ninguna OT lo consume todavia.
+   Calza con la planilla de despachos pendientes: tenia 210 L en la venta 0001-00016117 (se
+   retiraron 120+90=210) y 80 L en la 0001-00016388 (se retiraron 50). Eso confirma el canal.
+   ATENCION: dos lineas traen vencimiento 1/08/2025 (120 L) y 1/08/2026 (140 L), los dos
+   anteriores a hoy. Se pregunta, no se afirma: la columna puede no ser el vencimiento.
+
+  CONFLICTO DE MAPEO - MORATA ACE
+   El maestro dice MORATA ACE = MESOTRIONE 48% y asi se mapeo el 14/10.
+   La planilla de RyC describe "MORATA ACE 4 X 5 LT" como CARBOXO+PROPI, igual que el Coverfull.
+   Y las OT 803/804 lo aplican sobre CEBADA a 0,65 L/ha junto con Transform (insecticida):
+   eso es una cura de cereal con fungicida, no un herbicida de maiz —el mesotrione daniaria la cebada—.
+   Dos fuentes y el contexto agronomico contradicen al maestro. SE MARCA EN DUDA y se pregunta.
+
+  BLOQUE NUEVO (OT 796-804): sigue sin remitido. El costeo sigue siendo el del 29/09.
+   Betiana: "es correcto, el clima no nos permite avanzar" — pero NO dijo cuales de las
+   OT 796-804 estan ejecutadas; solo contesto por la 795. La pregunta sigue abierta.

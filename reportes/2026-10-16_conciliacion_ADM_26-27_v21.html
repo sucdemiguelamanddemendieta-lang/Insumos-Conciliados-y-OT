@@ -1,0 +1,257 @@
+<title>Conciliación Siembra Asociada ADM 26-27</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f1; --surface:#ffffff; --surface-2:#eef0e7;
+    --ink:#242820; --ink-soft:#4b5044; --muted:#767c6b;
+    --line:#dde1d3; --line-strong:#c7cdb8;
+    --accent:#4a6b3d; --accent-ink:#2f4527; --accent-soft:#e3ead9;
+    --ok-bg:#e2efe1; --ok-ink:#2e6b3e; --ok-line:#b7dabb;
+    --warn-bg:#faf0da; --warn-ink:#93641a; --warn-line:#e9cf98;
+    --bad-bg:#fbe6e1; --bad-ink:#a3402c; --bad-line:#eab9ab;
+    --unk-bg:#eceae4; --unk-ink:#6a6657; --unk-line:#d4d0c3;
+    --shadow: 0 1px 2px rgba(36,40,32,.06), 0 6px 20px -8px rgba(36,40,32,.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+      --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+      --line:#343829; --line-strong:#454b34;
+      --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+      --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+      --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+      --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+      --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+    --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+    --line:#343829; --line-strong:#454b34;
+    --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+    --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+    --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+    --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+    --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height:1.5;
+    -webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001ms !important; transition-duration:.001ms !important;}}
+  .wrap{max-width:980px; margin:0 auto; padding:0 24px 96px;}
+  header.hero{padding:56px 0 32px; border-bottom:1px solid var(--line); margin-bottom:40px;}
+  .eyebrow{font-family:"IBM Plex Mono", monospace; font-size:12.5px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent-ink); background:var(--accent-soft);
+    display:inline-block; padding:4px 10px; border-radius:4px; margin-bottom:18px;}
+  h1{font-family:"Fraunces", Georgia, serif; font-optical-sizing:auto; font-weight:600;
+    font-size:clamp(30px,4.4vw,44px); line-height:1.08; letter-spacing:-.01em;
+    margin:0 0 14px; text-wrap:balance;}
+  .dek{font-size:17px; color:var(--ink-soft); max-width:64ch; margin:0 0 20px;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:8px 18px; font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px; color:var(--muted);}
+  .meta-row b{color:var(--ink-soft); font-weight:600;}
+  section{margin-bottom:52px;}
+  h2{font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:24px;
+    letter-spacing:-.005em; margin:0 0 6px; text-wrap:balance;}
+  h3{font-weight:600; font-size:15px; margin:26px 0 10px;}
+  .section-note{color:var(--muted); font-size:14.5px; margin:0 0 22px; max-width:70ch;}
+  p{margin:0 0 14px; color:var(--ink-soft); max-width:72ch;}
+  p:last-child{margin-bottom:0;}
+  strong{color:var(--ink); font-weight:600;}
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:16px; box-shadow:var(--shadow);}
+  .stat .n{font-family:"Fraunces",serif; font-weight:600; font-size:30px; line-height:1;
+    font-variant-numeric:tabular-nums;}
+  .stat .l{font-size:12.5px; color:var(--muted); margin-top:6px;}
+  .stat.ok .n{color:var(--ok-ink);} .stat.bad .n{color:var(--bad-ink);}
+  .stat.warn .n{color:var(--warn-ink);} .stat.unk .n{color:var(--unk-ink);}
+  .callout{border:1px solid var(--line-strong); background:var(--surface); border-radius:10px;
+    padding:20px 22px; box-shadow:var(--shadow);}
+  .callout + .callout{margin-top:14px;}
+  .callout.warn{background:var(--warn-bg); border-color:var(--warn-line);}
+  .callout.bad{background:var(--bad-bg); border-color:var(--bad-line);}
+  .callout.ok{background:var(--ok-bg); border-color:var(--ok-line);}
+  .callout .tag{font-family:"IBM Plex Mono",monospace; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:.08em; font-weight:600; margin-bottom:8px; display:block;}
+  .callout.warn .tag{color:var(--warn-ink);} .callout.bad .tag{color:var(--bad-ink);}
+  .callout.ok .tag{color:var(--ok-ink);}
+  .table-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    box-shadow:var(--shadow); background:var(--surface); margin-bottom:10px;}
+  table{border-collapse:collapse; width:100%; min-width:640px; font-size:13.8px;}
+  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+  thead th{font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--muted); background:var(--surface-2); white-space:nowrap;
+    border-bottom:1px solid var(--line-strong);}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:var(--surface-2);}
+  td.num, th.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+    text-align:right; white-space:nowrap;}
+  td.mono{font-family:"IBM Plex Mono",monospace; font-size:13px; white-space:nowrap;}
+  .pill{display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    font-weight:600; padding:3px 9px; border-radius:100px; white-space:nowrap;
+    border:1px solid transparent;}
+  .pill.ok{background:var(--ok-bg); color:var(--ok-ink); border-color:var(--ok-line);}
+  .pill.bad{background:var(--bad-bg); color:var(--bad-ink); border-color:var(--bad-line);}
+  .pill.warn{background:var(--warn-bg); color:var(--warn-ink); border-color:var(--warn-line);}
+  .pill.unk{background:var(--unk-bg); color:var(--unk-ink); border-color:var(--unk-line);}
+  .neg{color:var(--bad-ink); font-weight:600;}
+  .pos{color:var(--ok-ink); font-weight:600;}
+  .small-note{font-size:12.5px; color:var(--muted); margin-top:2px;}
+  ul.plain{margin:0; padding-left:20px; color:var(--ink-soft);}
+  ul.plain li{margin-bottom:8px;} ul.plain li:last-child{margin-bottom:0;}
+  .questions{list-style:none; counter-reset:q; margin:0; padding:0; display:flex;
+    flex-direction:column; gap:12px;}
+  .questions li{counter-increment:q; position:relative; background:var(--surface);
+    border:1px solid var(--line-strong); border-left:3px solid var(--accent);
+    border-radius:8px; padding:14px 18px 14px 52px; box-shadow:var(--shadow);}
+  .questions li::before{content:counter(q); position:absolute; left:16px; top:14px;
+    font-family:"Fraunces",serif; font-weight:600; font-size:17px; color:var(--accent-ink);}
+  .questions p{margin:0; color:var(--ink); font-size:15px;}
+  .resolved{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+  .resolved li{background:var(--surface); border:1px solid var(--line);
+    border-left:3px solid var(--ok-line); border-radius:8px; padding:13px 16px;
+    font-size:14.5px; color:var(--ink-soft);}
+  footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
+    font-size:12.5px; color:var(--muted);}
+  @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr);} header.hero{padding-top:36px;}}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Conciliación C2 · 22ª corrida · 16 oct 2026</span>
+  <h1>Siembra Asociada ADM 26-27</h1>
+  <p class="dek">Llegó el equivalente ácido del Herbifen y con eso el 2,4-D pasa de sobrante a cerrar: diez principios activos cierran y ninguno queda negativo. Pero apareció un dato que pone en duda un mapeo que yo había dado por bueno.</p>
+  <div class="meta-row">
+    <span><b>Sucesores de Miguel Amand de Mendieta SRL</b></span>
+    <span>Corte 16/10/2026 · remitido al 25/09</span>
+    <span>Actividad (52) · desde 1 abr 2026</span>
+  </div>
+</header>
+
+<section>
+  <div class="stats">
+    <div class="stat ok"><div class="n">10 de 14</div><div class="l">Principios activos que cierran</div></div>
+    <div class="stat ok"><div class="n">3</div><div class="l">Preguntas que se cierran</div></div>
+    <div class="stat warn"><div class="n">Morata</div><div class="l">Un mapeo mío que queda en duda</div></div>
+    <div class="stat unk"><div class="n">260 L</div><div class="l">De Coverfull que no consume ninguna OT</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>El 2,4-D cierra</h2>
+  <p>Betiana aportó la ficha que faltaba: el <strong>Herbifen Advance es éster 2-etilhexílico al 97 % p/v, con equivalente ácido del 64,3 %</strong>. El Academix, confirmado el 05/10, es éster al 89 % con equivalente ácido del 59 %. Con eso se puede llevar todo a una misma base en vez de sumar litros contra litros:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Criterio</th><th class="num">Remitido</th><th class="num">Aplicado</th><th class="num">Dif.</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>A valor nominal, litro a litro</td><td class="num">1.271,50</td><td class="num">1.231,49</td><td class="num">+40,01</td><td><span class="pill warn">Sobrante, 2 bidones</span></td></tr>
+        <tr><td><b>En equivalente ácido</b></td><td class="num">1.246,77</td><td class="num">1.231,49</td><td class="num pos"><b>+15,28</b></td><td><span class="pill ok">Cierra</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Los 300 L de Academix llevan 177,0 kg de ácido, que a la concentración del Herbifen son <strong>275,27 L</strong> y no 300. Esos 24,73 L de diferencia son justo lo que separaba a esta línea de la tolerancia. Es el mismo ajuste que ya había estimado el 05/10 con las concentraciones del éster; ahora está hecho sobre el dato correcto, que es el ácido.</p>
+  <p class="small-note">Queda un residuo honesto: el <strong>Caster LV</strong> —320 L de los 1.271,50— sigue sin concentración declarada, así que va a valor nominal. Es el único tramo del 2,4-D sin ajustar, y es chico.</p>
+  <p class="small-note">Una aclaración sobre la respuesta: Betiana explicó que no hay equivalencia posible entre el Viovan y el Herbifen, lo cual es correcto —uno es fungicida y el otro herbicida— pero no era la pregunta. La comparación que hacía falta era entre los dos 2,4-D éster, el Herbifen y el Academix. El dato que dio sirve exactamente para eso.</p>
+</section>
+
+<section>
+  <h2>Cuadro del bloque 755-791</h2>
+  <p class="section-note">Remitido al 25/09. Con el 2,4-D en equivalente ácido.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th class="num">Remitido</th><th class="num">Aplicado</th><th class="num">Dif.</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Paraquat</td><td class="num">320,00</td><td class="num">320,00</td><td class="num pos">0,00</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Bromoxinil</td><td class="num">125,00</td><td class="num">125,30</td><td class="num">−0,30</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Vitagrow</td><td class="num">17,00 kg</td><td class="num">16,80 kg</td><td class="num pos">+0,20</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Lontrel</td><td class="num">40,00</td><td class="num">39,03</td><td class="num pos">+0,97</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Viovan</td><td class="num">440,00</td><td class="num">438,95</td><td class="num pos">+1,05</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Flumioxazin 48 %</td><td class="num">55,00</td><td class="num">52,64</td><td class="num pos">+2,36</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Pinoxaden</td><td class="num">100,00</td><td class="num">96,80</td><td class="num pos">+3,20</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Diflufenican</td><td class="num">200,00</td><td class="num">196,05</td><td class="num pos">+3,95</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>MCPA 75 %</td><td class="num">120,00</td><td class="num">107,40</td><td class="num pos">+12,60</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td><b>2,4-D (equiv. ácido)</b></td><td class="num">1.246,77</td><td class="num">1.231,49</td><td class="num pos"><b>+15,28</b></td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Saflufenacil</td><td class="num">8,45 kg</td><td class="num">8,92 kg</td><td class="num">−0,47</td><td><span class="pill warn">Al borde</span></td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">467,00</td><td class="num">449,78</td><td class="num pos">+17,22</td><td><span class="pill ok">Sobrante</span></td></tr>
+        <tr><td>Glifosato Panzer Gold</td><td class="num">2.804,38</td><td class="num">2.764,00</td><td class="num pos">+40,38</td><td><span class="pill ok">Sobrante</span></td></tr>
+        <tr><td>Cletodim 24 %</td><td class="num">472,18</td><td class="num">348,56</td><td class="num pos">+123,62</td><td><span class="pill ok">Sobrante</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="section-note"><strong>Diez cierran, tres en sobrante, uno al borde. Ningún negativo.</strong> El único signo negativo sigue siendo el saflufenacil, −0,47 kg sobre 8,45 remitidos: se pasa de la tolerancia de 0,35 kg por 0,12 kg. Los tres sobrantes son el producto entregado para las OT 770, 771 y 772, que están emitidas y sin ejecutar.</p>
+</section>
+
+<section>
+  <h2>Un mapeo mío que queda en duda: el Morata Ace</h2>
+  <p>El 14/10 mapeé el Morata Ace como <strong>mesotrione 48 %</strong> y dije que no hacía falta preguntar nada porque ya estaba en el maestro de productos. Al revisar la planilla de despachos pendientes de Rindes y Cultivos apareció otra cosa: ahí el producto figura como <strong>«MORATA ACE 4 X 5 LT CARBOXO+PROPI»</strong>, es decir carboxamida más propiconazol — un <em>fungicida</em>, el mismo descriptor que lleva el Coverfull.</p>
+  <p>Y el contexto agronómico apunta en la misma dirección: las OT 803 y 804 lo aplican sobre <strong>cebada</strong>, a 0,65 L/ha, junto con Transform, que es un insecticida. Eso es una cura de cereal con fungicida e insecticida. Un herbicida de maíz como el mesotrione no se aplica sobre cebada — la dañaría.</p>
+  <p>Dos fuentes y el uso real contradicen al maestro, así que <strong>dejé la línea marcada en duda y no uso ninguna de las dos lecturas como cierta</strong>. No cambia ningún número de hoy, porque el Morata está en el bloque nuevo y no tiene remitido todavía, pero cambiaría a qué familia se agrupa cuando llegue. La lección es para mí: <em>que un producto esté en el maestro no significa que su principio activo esté bien cargado</em>, y conviene cruzarlo contra la descripción del proveedor y contra el cultivo donde se aplica.</p>
+</section>
+
+<section>
+  <h2>Un remito por el tercer canal</h2>
+  <p>Entró el <strong>remito 0202-00012824 del 16/10</strong>, a nombre de <strong>Sucesores de Miguel Amand de Mendieta S.R.L.</strong> y <em>sin</em> la línea «SALIDA INSUMOS, (52) SIEMBRA ASOCIADA» que llevan los remitos de la actividad. Trae <strong>260 L de Coverfull ACE</strong> (120 + 90 + 50).</p>
+  <p>Es el tercer canal del que habla el procedimiento —el stock de ADM en la agronomía, que RyC documenta como «Remito de Cliente»— y se puede comprobar: la planilla de despachos pendientes tenía <strong>210 L pendientes en la venta 0001-00016117</strong> y <strong>80 L en la 0001-00016388</strong>, y el remito retira exactamente 210 de la primera (120 + 90) y 50 de la segunda. Calza línea por línea.</p>
+  <p><strong>Ninguna OT consume Coverfull todavía</strong>, así que es remitido sin aplicado: stock con comprobante. Entró al mapeo como fungicida a base de carboxamida y propiconazol, con las concentraciones sin confirmar.</p>
+  <p class="small-note">Dos de las tres líneas del remito traen una fecha que se lee como vencimiento: <strong>1/08/2025</strong> para 120 L y <strong>1/08/2026</strong> para 140 L, las dos anteriores a hoy. No lo afirmo —la columna podría ser otra cosa— pero si son vencimientos, son 260 L de fungicida vencido y conviene mirarlo antes de aplicarlo.</p>
+</section>
+
+<section>
+  <h2>Novedades de OT</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>OT</th><th>Qué pasó</th><th>Efecto</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">802</td><td>Apareció el 15/10: La Manga, maíz, siembra. MAP 10.041,50 kg (95 kg/ha × 105,70 ha) y semilla Nidera AX 7761VT3P 77,16 bls. Betiana: «si existe, se había borrado; quedó cargada».</td><td>Cierra la discontinuidad de la serie. El MAP del bloque nuevo sube a <b>23.652,30 kg</b>.</td></tr>
+        <tr><td class="mono">803 · 804</td><td><b>Reemitidas el 15/10</b> con proveedor Wings del Sudeste y labor «FUMIGACIÓN CTTA AÉREA», antes Lagos Bustos y «FUMIGACIÓN PPIA TERRESTRE».</td><td>Las cantidades <b>no cambiaron</b>: es reemisión de labor, no de insumos. No mueve el cuadro.</td></tr>
+        <tr><td class="mono">805 · 806</td><td>Nuevas el 16/10, las dos de Campo La Palma, labor de contratista y lotes LP-*.</td><td><b>Excluidas</b>: Ganadería. Betiana confirmó que la 795 «es de Ganadería», así que el criterio queda validado.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>El <strong>bloque nuevo (OT 796 a 804) sigue sin un solo remito</strong>: el costeo continúa siendo el del 29/09, con remitido al 25/09. Betiana explicó el atraso con «es correcto, el clima no nos permite avanzar», lo cual encaja con que el campo esté parado, pero <strong>no dijo cuáles de las OT 796 a 804 están ejecutadas</strong> — solo contestó por la 795. Esa pregunta sigue abierta y es la que más mueve el cuadro.</p>
+</section>
+
+<section>
+  <h2>Lo que se cierra</h2>
+  <ol class="questions">
+    <li><p><strong>Equivalente ácido del Herbifen:</strong> 64,3 % p/v. Con eso el 2,4-D cierra en +15,28.</p></li>
+    <li><p><strong>Mabua:</strong> S-metolacloro al 96 %, formulación CE. Coincide con el genérico del maestro, que no se había dado por bueno sin confirmar.</p></li>
+    <li><p><strong>MAP:</strong> grado 11-52-0.</p></li>
+    <li><p><strong>OT 802:</strong> existe, se había borrado y quedó cargada.</p></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Lo que se pide</h2>
+  <ol class="questions">
+    <li><p><strong>¿Cuáles de las OT 796 a 804 están ejecutadas?</strong> Es la pregunta que más mueve el cuadro y quedó sin responder: la respuesta cubrió solo la 795.</p></li>
+    <li><p><strong>Qué es el Morata Ace.</strong> El maestro dice mesotrione 48 %; la planilla de RyC dice carboxamida + propiconazol. Son 257,18 L y van a familias distintas según la respuesta.</p></li>
+    <li><p><strong>El export de costeo.</strong> Veintiún días de atraso. Entiendo que el campo esté parado, pero el remitido es producto que sale de RyC y no depende del clima: el remito 12824 del Coverfull es de hoy mismo.</p></li>
+    <li><p><strong>Los vencimientos del remito 12824</strong> (1/08/2025 y 1/08/2026) y si ese Coverfull corresponde a la Siembra Asociada, ya que el remito no trae la línea de actividad.</p></li>
+    <li><p><strong>Los 175 litros de Viovan</strong>, que siguen sin aclararse: no cierran con los 438,95 L que suman las OT. Y la concentración del <strong>Caster LV</strong>, el único tramo del 2,4-D que quedó sin llevar a equivalente ácido.</p></li>
+  </ol>
+</section>
+
+<section>
+  <h2>El bloque conciliado no se toca</h2>
+  <p>Las OT hasta la 754 siguen como quedaron el 08/09, con respaldo documental completo y sin negativos. El Solmix sigue en <strong>+970,00 kg</strong>.</p>
+</section>
+
+<section>
+  <h2>Verificación</h2>
+  <p>Tres pasadas. El ajuste a equivalente ácido se hizo sobre el dato de la ficha, no sobre el porcentaje del éster: 300 L × 59 % = 177,0 kg de ácido, y 177,0 ÷ 64,3 % = 275,27 L de Herbifen. El resultado coincide con la estimación que se había hecho el 05/10 por otra vía, lo que da confianza en los dos cálculos.</p>
+  <p>Las tres OT nuevas y las dos reemitidas se recalcularon lote por lote contra su encabezado antes de incorporarlas: la 802 cierra en 95 kg/ha × 105,70 ha = 10.041,50 kg, y las 803 y 804 reemitidas conservan exactamente las cantidades de la versión anterior. Las OT 805 y 806 se leyeron completas antes de excluirlas, por establecimiento, lotes y tipo de labor.</p>
+  <p>La planilla de despachos pendientes aparecía modificada hoy en Drive, pero al abrirla el contenido sigue siendo el del 10/09: cambió la fecha del archivo, no los datos. Se usó solo para cruzar el remito del Coverfull y para el descriptor del Morata, no como fuente de saldos.</p>
+</section>
+
+<footer>
+  Conciliación C2 (Remitido vs. Aplicado) · Actividad (52) Siembra Asociada ADM 26-27 · La Palma excluida por corresponder a Ganadería · Ningún archivo de Drive fue editado — trabajo de solo lectura y diagnóstico.
+</footer>
+
+</div>
