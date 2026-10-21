@@ -1,0 +1,7 @@
+# Control de relecturas del export de costeo. El archivo cambia de fecha y de tamano en Drive
+# SIN cambiar el contenido de insumos: hay que abrirlo y comparar, la fecha no sirve como senal.
+fecha_lectura,fecha_archivo_drive,bytes,total_insumos,ultimo_remito,fecha_ultimo_remito,contenido_nuevo
+2026-09-30,2026-09-29,20727,34046.64,0202-00012612,2026-09-25,si (3 remitos nuevos: 12553, 12608, 12612)
+2026-10-05,2026-10-04,26137,34046.64,0202-00012612,2026-09-25,no
+2026-10-16,2026-10-16,26137,34046.64,0202-00012612,2026-09-25,no
+2026-10-21,2026-10-20,26226,34046.64,0202-00012612,2026-09-25,no

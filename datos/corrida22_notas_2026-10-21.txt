@@ -1,0 +1,61 @@
+======================================================================================================
+PASADA 1 - EL COSTEO: tercera vez que cambia la fecha del archivo sin cambiar el contenido
+======================================================================================================
+  El export "Siembras Asociadas ADM 29-09-2026.xlsx" figura modificado el 20/10 (26.226 bytes,
+  antes 26.137). Se releyo completo: el contenido de insumos es IDENTICO.
+   · Total de insumos: 34.046,64  (igual que el 30/09, el 05/10 y el 16/10)
+   · Ultimo remito: 0202-00012612 del 25/09
+  Ya paso lo mismo el 04/10 y el 16/10. CONCLUSION: la fecha de Drive NO sirve como senal de
+  que hubo export nuevo; hay que abrir el archivo y comparar el contenido. Queda como regla.
+
+  REMITIDO SIGUE CORTADO AL 25/09 -> 26 dias de atraso.
+
+======================================================================================================
+PASADA 2 - OT 807: aplicacion por MANCHONEO, el plan NO es imputable
+======================================================================================================
+  OT 807 · 13/10 · CAMPO CIERVO BLANCO · Soja 1 · 65,00 ha · FUMIGACION PPIA TERRESTRE
+  Nota del documento, repetida en cada linea: "Manchoneo - 4 bajo, 4 loma, 5 bajo, 5 loma,
+  6 loma, 7 bajo, 8, 9, 10".  Manchoneo = aplicacion por manchones, o sea SELECTIVA.
+
+  Producto                                 Plan    Dosis    Imputable
+  CLETODIM 24% SINO AGRI                 159.90     2.46           NO
+  GLIFOSATO PANZER GOLD                  130.00     2.00           NO
+  COADYUVANTE TTM                         13.00     0.20           NO
+
+  Verificacion: 65,00 x 2,46 = 159.90 | 65,00 x 2,00 = 130.00 | 65,00 x 0,20 = 13.00  OK
+  La labor viene tipificada como genérica, no como selectiva: el dato esta en las notas.
+  Por la regla Weed-It no se imputa el plan como consumo. Falta el consumo real o el % tratado.
+  Dato llamativo: la dosis de cletodim es 2,46 L/ha, un numero que no es de tabla. Se pregunta.
+
+======================================================================================================
+PASADA 3 - CUADROS
+======================================================================================================
+BLOQUE 755-791 (remitido al 25/09) - sin cambios desde el 16/10
+  10 cierran · 3 en sobrante · 1 al borde/negativo
+  Ninguna OT de ese tramo volvio anotada y no entro remitido: el cuadro es identico.
+
+BLOQUE NUEVO (OT 796-804 y 807) - remitido: ninguno
+  Producto                             Plan    Stock 16/10
+  MAP (fertilizante, kg)           23652.30   sin remitido
+  Paraquat                           707.34   sin remitido
+  Flurocloridona                     459.77   sin remitido
+  Mabua S-metolacloro                459.37   sin remitido
+  Glifosato Panzer Gold              288.55         +40.38
+  Morata Ace (EN DUDA)               257.18   sin remitido
+  Cibus Duo (kg)                     216.00   sin remitido
+  Coadyuvante TTM                    184.00         +17.22
+  Cletodim 24%                       159.90        +123.62
+  Semilla girasol (bls)              116.74   sin remitido
+  Sulfentrazone 50%                  106.10   sin remitido
+  Acuron Uno                         105.70   sin remitido
+  Semilla maiz (bls)                  77.16   sin remitido
+  Lambdacialotrina 25%                22.97   sin remitido
+  Transform (kg)                      15.83   sin remitido
+
+  La OT 807 agrega cletodim 159,90 · Panzer 130,00 · TTM 13,00, los tres como plan NO imputable.
+  El Panzer del bloque nuevo sube de 158,55 a 288,55 y el TTM de 171,00 a 184,00 contando el plan,
+  pero el tramo de la 807 queda marcado aparte hasta que llegue el consumo real.
+
+  Contra el stock que dejo el bloque anterior: el cletodim pedido (159,90) ya excede los 123,62
+  de sobrante, el Panzer (288,55) excede los 40,38 y el TTM (184,00) los 17,22. Sin el export
+  no se puede decir si eso es faltante o simplemente remitido sin cargar: lo segundo es lo probable.
