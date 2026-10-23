@@ -22,3 +22,9 @@ OT,Fecha,Establecimiento,Ha,Producto,PlanQueNoSeComputa,Unidad,EstabaEnElCuadro
 792,2026-10-02,CAMPO LA CELINA,47.00,SAFLUFENACIL HEAT 70WG,1.41,kg,no (posterior al remitido)
 793,2026-10-01,CAMPO SANTO DOMINGO,48.00,CIBUS DUO BL,96.00,kg,no (posterior al remitido)
 794,2026-10-01,CAMPO LA MANGA,245.67,CIBUS DUO BL,491.34,kg,no (posterior al remitido)
+# ACTUALIZACION 23/10/2026: las OT 789 y 790 SI se ejecutaron, el 16/10, y volvieron anotadas
+# citando el remito Bunge 26972 del 14/10. La respuesta del 05/10 era correcta ESE DIA.
+# Correccion de establecimiento: la OT 789 es de CAMPO CIERVO BLANCO (106 ha de cebada), no de
+# La Manga; la OT 790 es de CAMPO LA CELINA (73 ha). Las cantidades coincidian.
+789,2026-09-23,CAMPO CIERVO BLANCO,106.00,UANSOLMIX,15449.00,kg,"EJECUTADA el 16/10 - vuelve al aplicado"
+790,2026-09-23,CAMPO LA CELINA,73.00,UANSOLMIX,9855.00,kg,"EJECUTADA el 16/10 - vuelve al aplicado"

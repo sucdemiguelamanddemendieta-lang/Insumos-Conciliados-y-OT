@@ -1,0 +1,85 @@
+========================================================================================================
+PASADA 1 - EL REMITIDO LLEGA POR DOCUMENTO, NO POR EXPORT
+========================================================================================================
+  El costeo se releyo por CUARTA vez: contenido identico (total 34.046,64, ultimo remito 12612
+  del 25/09). 28 dias de atraso. PERO Betiana subio los remitos escaneados que cubren el hueco:
+   0202-00012645          30/09  OT 770-771-772             cletodim Campodim 80 · Panzer 420 · Veltroma 5,25 kg · diflufenican Tuken 15 · paraquat Ruralco 120 · TTM 50
+   0202-00012745          ?      ilegible                   OCR vacio - hay que volver a subirlo
+   0202-00012798          15/10  OT 796                     Cibus Duo 220 kg
+   0202-00012824          16/10  sin OT (Remito de Cliente) Coverfull ACE 260 L - ya leido el 16/10
+   0202-00012855          17/10  sin OT legible             Panzer 50 · cletodim Campodim 100 · TTM 10
+   0202-00012862          19/10  sin OT legible             180 kg, producto no legible (lote 136 y vto 11/11/2027 = los del Cibus Duo)
+   0202-00012863          19/10  OT 797                     flurocloridona 140 · lambdacialotrina Rafter 10 · S-metolacloro Symphony 100 · sulfentrazone Fender 40 · TTM 20
+   0202-00012865          19/10  OT 797 / 792               paraquat Inzira 220
+   0202-00012915          20/10  OT 799-801                 flurocloridona 320 · lambdacialotrina 15 · S-metolacloro 320 · sulfentrazone 60 · Panzer 160 · TTM 70
+   0202-00012917          ?      ilegible                   OCR vacio - hay que volver a subirlo
+   0202-00012920          20/10  OT 801                     Acuron Uno 105
+   Coope 121553           ?      ilegible                   OCR vacio - hay que volver a subirlo
+   Bunge 0426100026972    14/10  OT 789-790                 Solmix 28.080 kg - entrega a Siembras Asociadas, pendiente de numero de RyC
+
+========================================================================================================
+PASADA 2 - BLOQUE 755-791: el remito 12645 borra el ultimo negativo de la campana
+========================================================================================================
+  El remito 12645 del 30/09 viene anotado "OT 770-771-772", las tres OT de este bloque que
+  Betiana informo como no ejecutadas. O sea: el producto se retiro, el trabajo no se hizo.
+
+Producto                  Rem.21/10    +12645   Remitido   Aplicado        Dif.  Estado
+Paraquat                     320.00    120.00     440.00     320.00     +120.00  Sobrante (stock)
+Bromoxinil                   125.00      0.00     125.00     125.30       -0.30  Cierra
+Vitagrow                      17.00      0.00      17.00      16.80       +0.20  Cierra
+Lontrel                       40.00      0.00      40.00      39.03       +0.97  Cierra
+Viovan                       440.00      0.00     440.00     438.95       +1.05  Cierra
+Flumioxazin 48%               55.00      0.00      55.00      52.64       +2.36  Cierra
+Pinoxaden                    100.00      0.00     100.00      96.80       +3.20  Cierra
+Diflufenican                 200.00     15.00     215.00     196.05      +18.95  Sobrante (stock)
+MCPA 75%                     120.00      0.00     120.00     107.40      +12.60  Cierra
+2,4-D (equiv. acido)        1246.77      0.00    1246.77    1231.49      +15.28  Cierra
+Saflufenacil                   8.45      5.25      13.70       8.92       +4.78  Sobrante (stock)
+Coadyuvante TTM              467.00     50.00     517.00     449.78      +67.22  Sobrante (stock)
+Glifosato Panzer Gold       2804.38    420.00    3224.38    2764.00     +460.38  Sobrante (stock)
+Cletodim 24%                 472.18     80.00     552.18     348.56     +203.62  Sobrante (stock)
+
+  NEGATIVOS: 0
+  El saflufenacil pasa de -0,47 a +4,78: era el ultimo signo negativo de toda la campana.
+  NO QUEDA NINGUN NEGATIVO NI NINGUNO AL BORDE EN EL BLOQUE 755-791.
+
+========================================================================================================
+PASADA 3 - SOLMIX: las OT 789 y 790 SI se ejecutaron, el 16/10
+========================================================================================================
+  Las dos volvieron anotadas con "16/10" de puno y letra y citando el remito Bunge 26972.
+  El 05/10 Betiana informo que no estaban realizadas: era cierto ESE DIA, se hicieron despues.
+  Ademas la OT 789 no es de La Manga sino de CAMPO CIERVO BLANCO (106 ha de cebada) y la 790
+  es de CAMPO LA CELINA (73 ha). Las cantidades coinciden con lo que ya estaba computado.
+   Remitido : 59.160,00 (12456 + 12523) + 28.080,00 (Bunge 26972 del 14/10) = 87.240,00 kg
+   Aplicado : OT 773 real 24.150,00 + OT 774 plan 34.040,00 + OT 789 15.449,00 + OT 790 9.855,00 = 83.494,00 kg
+   Diferencia: +3.746,00 kg  = +4,3 %% sobre lo remitido  -> SOBRANTE, no faltante
+   Verificacion: el sobrante anterior era +970,00 y el Bunge trajo 2.776,00 mas de lo que
+   consumieron las dos OT (28.080 - 25.304). 970 + 2.776 = 3.746  OK
+
+========================================================================================================
+PASADA 4 - EL CRUCE REMITO <-> OT ES LO MAS FUERTE DE ESTA CORRIDA
+========================================================================================================
+  Varios remitos citan la OT y coinciden casi exacto con su plan. Eso valida el circuito entero:
+  Remito       Producto           OT citada          Remitido       Plan       Dif.
+  12863+12915  flurocloridona     OT 797+799           460.00     459.77      +0.23
+  12920        Acuron Uno         OT 801               105.00     105.70      -0.70
+  12863+12915  lambdacialotrina   OT 797+799+801        25.00      22.97      +2.03
+  12915        coadyuvante TTM    OT 799+801            70.00      70.27      -0.27
+  12865        paraquat           OT 797               220.00     216.00      +4.00
+  12798        Cibus Duo (kg)     OT 796               220.00     216.00      +4.00
+
+  Seis cruces, los seis dentro de un envase. Es la primera vez en la campana que el remitido
+  se puede atar a la OT por el propio documento y no por inferencia de fechas.
+
+========================================================================================================
+PASADA 5 - LO QUE NO SE PUDO LEER Y LO QUE QUEDA ABIERTO
+========================================================================================================
+  CINCO escaneos no dieron texto: remitos 12745, 12917 y Coope 121553, y las OT 792 y 797.
+  Se pide volver a subirlos o pasar las cifras: sin ellos el bloque nuevo no cierra.
+  OT 807 (manchoneo): volvio firmada y fechada 13/10 pero la columna "Cant Real" esta VACIA.
+   El plan sigue sin ser imputable y la pregunta del porcentaje tratado sigue abierta.
+  OT nuevas: 808 (13/10, La Manga, soja 93,78 ha: Herbifen 140,67 · cletodim 93,78 · TTM 18,76
+   · Panzer 187,56) y 809 (23/10, La Maria Cristina, 248 ha: MAP 14.850 + semilla).
+   MAP del bloque nuevo: 3.780 + 9.830,80 + 10.041,50 + 14.850 = 38.502,30 kg, sin remitido.
+  Marcas nuevas de activos ya mapeados: cletodim CAMPODIM, diflufenican TUKEN, lambdacialotrina
+   RAFTER, S-metolacloro SYMPHONY, sulfentrazone FENDER. Confirman los activos por otra via.
