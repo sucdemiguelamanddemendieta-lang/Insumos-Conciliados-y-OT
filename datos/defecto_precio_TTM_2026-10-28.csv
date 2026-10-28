@@ -1,0 +1,12 @@
+# DEFECTO DE CARGA EN C1 detectado el 28/10/2026 en el export "Siembras Asociadas ADM 27-10-2026.xlsx".
+# El COADYUVANTE TTM (Bidon x 10 lts) cotiza 16,51 USD/L en los 17 remitos de toda la campana.
+# En CUATRO remitos nuevos aparece a 246,10 USD/L, que es exactamente el precio unitario del
+# TRANSFORM (Bolsa x 2 kgs) de los remitos 12825 y 12999.
+# LAS CANTIDADES ESTAN BIEN: la conciliacion por principio activo no se altera. El error es de PRECIO.
+# No se corrige ajustando un saldo (regla de oro C1/C2/C3): se corrige en el origen.
+remito,fecha,cantidad_L,p_unit_cargado,p_unit_correcto,facturado_USD,correcto_USD,exceso_USD
+12855,2026-10-17,10.00,246.10,16.51,2461.00,165.10,2295.90
+12863,2026-10-19,20.00,246.10,16.51,4922.00,330.20,4591.80
+12915,2026-10-20,70.00,246.10,16.51,17227.00,1155.70,16071.30
+12969,2026-10-22,20.00,246.10,16.51,4922.00,330.20,4591.80
+TOTAL,,120.00,,,29532.00,1981.20,27550.80

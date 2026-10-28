@@ -1,0 +1,224 @@
+
+========================================================================================================
+PASADA 1 - EL EXPORT NUEVO: integridad y que trajo
+========================================================================================================
+  Archivo: "Siembras Asociadas ADM 27-10-2026.xlsx" (creado 28/10 11:05)
+  Lineas de insumo        : 152
+  Suma de la col. Cantidad:   38920.17
+  ///TOTALES: del archivo :   38920.17
+  Delta                   :       0.00   -> transcripcion EXACTA
+  Export anterior (4 relecturas identicas): 34.046,64 - ultimo remito 12612 del 25/09
+  Export nuevo                            : 38.920,17 - ultimo remito 12999 del 24/10
+  Entra material nuevo por 4873.53 unidades. EL CUELLO DE BOTELLA DE 33 DIAS SE DESTRABA.
+  Remitos nuevos (posteriores al 12612): 12645, 12648, 12745, 12798, 12825, 12827, 12829, 12855, 12862, 12863, 12865, 12909, 12915, 12917, 12920, 12969, 12999
+
+========================================================================================================
+PASADA 2 - DEFECTO DE CARGA EN C1: el TTM facturado al precio del Transform
+========================================================================================================
+  El TTM cotiza 16,51 USD/L en los 17 remitos de toda la campana. En CUATRO remitos nuevos
+  aparece a 246,10 USD/L, que es exactamente el precio unitario del TRANSFORM (bolsa x 2 kg).
+
+  Remito      Cant TTM   P.Unit cargado   Deberia ser    Facturado      Correcto    Exceso
+  12855        10.00 L         246.10         16.51      2461.00       165.10    2295.90
+  12863        20.00 L         246.10         16.51      4922.00       330.20    4591.80
+  12915        70.00 L         246.10         16.51     17227.00      1155.70   16071.30
+  12969        20.00 L         246.10         16.51      4922.00       330.20    4591.80
+  TOTAL       120.00 L              -             -     29532.00      1981.20   27550.80
+
+  LAS CANTIDADES ESTAN BIEN: la conciliacion de insumos no se altera.
+  Lo que esta mal es el PRECIO, y son 27550.80 USD de mas cargados a la actividad.
+  Es un defecto de C1 (carga), no de C3: se corrige en el origen, no ajustando un saldo.
+
+========================================================================================================
+PASADA 3 - BLOQUE 755-791 (fina y barbechos): el export confirma el 12645 y agrega el 12648
+========================================================================================================
+  El remito 12645 que el 23/10 se reconstruyo del escaneo aparece en el export IDENTICO:
+    Campodim 80 · Panzer 420 · Veltroma 5,25 · Tuken 15 · Paraquat Ruralco 120 · TTM 50  OK
+  Novedad: el remito 12648, del MISMO dia 30/09, trae 300 L de 2,4-D ACADEMIX.
+  Asignacion: las OT 770 y 772 de este bloque piden 192 + 158 = 350 L de 2,4-D y ningun otro
+  remito se los provee; el 12645 del mismo dia esta anotado "Ot: 770-771-772" y NO trae 2,4-D.
+  Por fecha y por complemento el 12648 es de este bloque. QUEDA DECLARADO COMO ASIGNACION
+  POR FECHA, no por anotacion: si fuera del bloque nuevo, el 2,4-D de aqui vuelve a +15,28.
+
+  Producto                 Remitido    Aplicado        Dif.   Estado
+  Paraquat                   440.00      320.00     +120.00   Sobrante (stock retirado)
+  Bromoxinil                 125.00      125.30       -0.30   Cierra
+  Vitagrow (kg)               17.00       16.80       +0.20   Cierra
+  Lontrel                     40.00       39.03       +0.97   Cierra
+  Viovan                     440.00      438.95       +1.05   Cierra
+  Flumioxazin 48%             55.00       52.64       +2.36   Cierra
+  Pinoxaden                  100.00       96.80       +3.20   Cierra
+  MCPA 75%                   120.00      107.40      +12.60   Cierra
+  Diflufenican               215.00      196.05      +18.95   Cierra
+  Saflufenacil (kg)           13.70        8.92       +4.78   Cierra
+  Coadyuvante TTM            517.00      449.78      +67.22   Sobrante (stock retirado)
+  Glifosato Panzer          3224.38     2764.00     +460.38   Sobrante (stock retirado)
+  Cletodim 24%               552.18      348.56     +203.62   Sobrante (stock retirado)
+  2,4-D (eq. acido)         1423.77     1231.49     +192.28   Sobrante (stock retirado)
+
+  NEGATIVOS EN EL BLOQUE: 0
+  El 2,4-D pasa de +15,28 a +192.28 con el 12648, y el sobrante se explica solo:
+  las OT 770 y 772 piden 350 L de Herbifen = 225.05 de equivalente acido, y siguen SIN EJECUTAR.
+  Todos los sobrantes de este bloque son el producto retirado para las OT 770-772.
+
+========================================================================================================
+PASADA 4 - BLOQUE ABIERTO 792-816: por primera vez TIENE REMITIDO
+========================================================================================================
+  Remitido del bloque = remitos 12745 a 12999 del export (el 12645/12648 van al bloque
+  anterior y el 12829 es Solmix, linea propia).
+  Aplicado = OT con producto demostrablemente retirado. NO se computan:
+    - OT 807 (manchoneo: aplicacion selectiva, plan no imputable - regla Weed-It)
+    - OT 810 a 816 (emitidas el 26-27/10, fechadas 23/10, sin remito y sin devolucion anotada)
+    - OT 798/800/802/809/810/812/815 (siembra: MAP y semilla van en linea propia)
+
+  Producto             Remitido  Aplic.(plan)       Dif.  Env.  Estado
+  Flurocloridona         460.00      459.77      +0.23    20  Cierra
+  Lambdacialotrina        25.00       22.97      +2.03     5  Cierra
+  Biciclopirona          105.00      105.70      -0.70    20  Cierra
+  Saflufenacil (kg)        1.40        1.41      -0.01  0.35  Cierra
+  Flumioxazin              5.00        7.05      -2.05     5  Cierra
+  Paraquat               720.00      707.34     +12.66    20  Cierra
+  Sulfentrazone          100.00      106.10      -6.10    10  Cierra
+  S-metolacloro          420.00      459.37     -39.37    20  NEGATIVO contra plan
+  Sulfoxaflor (kg)        28.80       15.83     +12.97     2  Sobrante
+  Glifosato Panzer       580.00      440.11    +139.89    20  Sobrante
+  Cletodim 24%           260.00       93.78    +166.22    20  Sobrante
+  Coadyuvante TTM        250.00      199.16     +50.84    10  Sobrante
+  Cibus Duo (kg)         700.00      803.34    -103.34    20  NEGATIVO contra plan
+
+  Los cuatro primeros cierran dentro de un envase. Y los tres NEGATIVOS contra plan
+  (S-metolacloro -39,37 · Sulfentrazone -6,10 · Flumioxazin -2,05) NO son faltantes:
+  el consumo no puede superar lo que se retiro. Aplicando la regla del 23/10 -el remito
+  con la OT anotada es mejor fuente que el plan impreso- el aplicado real es el remitido:
+
+  Producto           Plan OT   Remito con OT   Dif.   Lectura
+  S-metolacloro       459.37         420.00  -39.37   el remito redondea a bidon: el plan sobreestima
+  Sulfentrazone       106.10         100.00   -6.10   el remito redondea a bidon: el plan sobreestima
+  Flumioxazin           7.05           5.00   -2.05   el remito redondea a bidon: el plan sobreestima
+
+  Caso S-metolacloro, lote por lote del remito:
+    12863 (OT 797)      : 100 L contra plan 108,00     -> 5 bidones donde hacian falta 5,4
+    12915 (OT 799+801)  : 320 L contra plan 351,37     -> 16 bidones donde hacian falta 17,57
+  Es redondeo a multiplo de bidon aplicado dos veces, no un faltante.
+  CON ESA LECTURA, LOS TRES CIERRAN EN 0 Y EL BLOQUE NO TIENE NINGUN NEGATIVO.
+
+========================================================================================================
+PASADA 5 - EL CLETODIM CONTESTA LA PREGUNTA DEL MANCHONEO (OT 807)
+========================================================================================================
+  El 21/10 quedo la hipotesis de que la dosis de 2,46 L/ha de la OT 807 ya estuviera
+  ajustada a la superficie del manchoneo. El remitido del bloque la confirma por aritmetica:
+
+    Cletodim remitido al bloque nuevo        :   260.00 L
+    OT 808 (plan, ejecutada, remito 12969)   :    93.78 L
+    OT 807 (plan del manchoneo)              :   159.90 L
+    Resto                                    :    +6.32 L
+
+  Sobran 6,32 L sobre 260: menos de un bidon. Si la OT 807 hubiera consumido mucho menos
+  que su plan, sobrarian decenas de litros sin destino. QUE EL RESTO SEA DE UN TERCIO DE
+  BIDON DICE QUE LA OT 807 CONSUMIO PRACTICAMENTE SU PLAN COMPLETO, o sea que el 2,46 L/ha
+  ya venia ajustado al manchoneo, como se sospechaba el 21/10.
+  Es inferencia por cantidad, no dato: la pregunta del porcentaje tratado se mantiene,
+  pero deja de ser un hueco y pasa a ser una confirmacion pendiente.
+
+========================================================================================================
+PASADA 6 - MORATA ACE = COVERFULL ACE: el cruce que cierra dos huecos a la vez
+========================================================================================================
+  Dos anomalias abiertas que resultan ser la misma:
+    (a) MORATA ACE : 257,18 L aplicados en las OT 803/804, SIN UN SOLO LITRO REMITIDO
+        en todo el export de la campana. Tres corridas preguntando que es.
+    (b) COVERFULL ACE : 260,00 L remitidos el 16/10 por el remito 12824, SIN NINGUNA OT
+        que los consumiera.
+
+    Remitido Coverfull (remito 12824, 16/10)  :   260.00 L
+    Aplicado "Morata Ace" (OT 803 + OT 804)   :   257.18 L
+    Diferencia                                :    +2.82 L  -> MENOS DE UN ENVASE DE 5 L
+
+  Y la coincidencia no es solo de cantidad:
+    - Misma dosis exacta: 0,65 L/ha en las OT 803/804 (Morata) y en las 811/816 (Coverfull).
+    - Mismo cultivo: cebada. Mismo destino: cura de hoja bandera / manchas de ramularia.
+    - Mismo acompanante: TRANSFORM (sulfoxaflor) para pulgon, en las cuatro OT.
+    - La planilla de despachos de Rindes y Cultivos describe el MORATA ACE como
+      "CARBOXO+PROPI", que es exactamente lo que es el Coverfull Ace.
+
+  LECTURA: el producto que las OT 803/804 llaman "Morata Ace" es el Coverfull Ace del
+  remito 12824. Eso explica a la vez el aplicado sin remito y el remito sin aplicado,
+  y confirma que NO es mesotrione 48% sino un fungicida carboxamida+propiconazol.
+  NO SE DA POR CERRADO: se pide una confirmacion de una palabra. Pero la pregunta deja de
+  ser "que es el Morata Ace" y pasa a ser "el Morata de las 803/804 es el Coverfull del 12824?".
+
+  Ademas, las OT 811 y 816 (23/10, Ciervo Blanco y La Celina, 106 y 73 ha de cebada)
+  CONTESTAN la pregunta del 16/10: si, el Coverfull es de la Siembra Asociada.
+
+========================================================================================================
+PASADA 7 - LA OT NOMBRA UNA MARCA DE 2,4-D Y EL REMITO ENTREGA OTRA
+========================================================================================================
+  El remito 12969 del 22/10 calza con la OT 808 en CUATRO productos a la vez:
+
+    Producto             OT 808 (plan)   Remito 12969      Dif.   Envase
+    2,4-D                     140.67         140.00     -0.67     20
+    Cletodim                   93.78         100.00     +6.22     20
+    Glifosato Panzer          187.56         200.00    +12.44     20
+    Coadyuvante TTM            18.76          20.00     +1.24     10
+  Los cuatro dentro de un envase: el 12969 es el retiro de la OT 808. Queda identificado.
+
+  PERO la OT pide "2,4-D HERBIFEN ADVANCE" y el remito entrega "2,4-D CONTROLER EH 59%".
+  En litros parecen lo mismo (140,67 contra 140,00). En equivalente acido NO:
+    Herbifen Advance : ester 2-etilhexilico 97% -> eq. acido 64,3% ->  90.45 de acido
+    Controler EH 59% : si el 59% es equivalente acido ->  82.60 de acido
+    Diferencia                                                       -7.85
+  Son 7,85 unidades de acido de diferencia sobre una sola OT: 8,7 por ciento menos de activo.
+  Y el 59 por ciento del nombre es AMBIGUO: puede ser la concentracion del ester (como el Academix,
+  que es 89 de ester y 59 de acido) o directamente el equivalente acido. Son dos numeros
+  distintos y hay que saber cual: por eso el 2,4-D del bloque nuevo NO SE CIERRA hoy.
+
+  REGLA NUEVA: que la OT y el remito coincidan en litros no significa que coincidan en
+  principio activo. Cuando el remito entrega una marca distinta a la que pide la OT, el
+  consumo real es el del producto ENTREGADO, con SU concentracion.
+
+========================================================================================================
+PASADA 8 - LO QUE SIGUE SIN CERRAR, Y POR QUE
+========================================================================================================
+  1) CIBUS DUO (cebo) - EN TRANSITO, no faltante
+     Remitido 700,00 kg (12798 220 + 12862 160 + 12909 320).
+     Demanda de las OT de cebo: 796 (216, confirmada por el 12798) + 793 (96) + 794 (491,34)
+     + 814 (124, nueva del 23/10) = 927,34 kg.
+     Contra 793+794+796 da -103,34 kg = 5 bolsas. Contra la 796 sola da +484,00.
+     TODO depende de si las OT 793 y 794 se ejecutaron: Betiana informo el 05/10 que no, y
+     no hubo actualizacion. La diferencia es MENOS DE LO QUE MUEVE UNA SOLA OT (la 794 son
+     491 kg), asi que es EN TRANSITO por definicion del punto 2.bis. No suma a escalamiento.
+
+  2) MAP (fertilizante, linea propia) - SIN REMITIDO EN NINGUNA CORRIDA
+     Aplicado en OT de siembra anteriores al corte :   38502.30 kg
+     Aplicado en las OT nuevas 810/812/815         :   30410.00 kg
+     Total de la campana                           :   68912.30 kg
+     Remitido en el export de Rindes y Cultivos    :       0.00 kg
+     No es un faltante de insumo: es que el MAP NO ENTRA por este circuito. Pero ya son
+     casi 69 toneladas sin un remito en el costeo de la actividad, y eso hay que resolverlo
+     por donde corresponda, no en este cuadro.
+
+  3) SOLMIX - el remito de Bunge YA TIENE NUMERO DE RINDES Y CULTIVOS
+     El export lo trae como remito 12829 del 16/10 por 28,08 tn. Era la pregunta del 23/10.
+     Remitido 87.240,00  contra  aplicado 83.494,00  =  +3.746,00 kg (+4,3%). Sin cambios.
+
+  4) CONCENTRACIONES QUE SIGUEN SIN DECLARARSE
+     Diflufenican TUKEN, S-metolacloro SYMPHONY, Coverfull ACE, 2,4-D CONTROLER EH,
+     2,4-D ENLIST (sal colina 66,9%: falta el equivalente acido). Ninguna frena un cierre
+     salvo las dos de 2,4-D, que si frenan la linea del bloque nuevo.
+
+========================================================================================================
+RESUMEN DE LA CORRIDA - corte 28/10/2026
+========================================================================================================
+  BLOQUE CONCILIADO (OT <=754) : cerrado, sin negativos desde el 08/09
+  BLOQUE 755-791               : 14 principios activos, 0 negativos, 0 al borde
+                                 10 cierran dentro de tolerancia, 4 en sobrante por las
+                                 OT 770-772 retiradas y no ejecutadas
+  BLOQUE ABIERTO 792-816       : 13 principios activos con remitido por primera vez
+                                 10 cierran dentro de un envase (leyendo el remito, no el plan)
+                                 2 en sobrante por OT emitidas sin retirar (Panzer, Cletodim)
+                                 1 EN TRANSITO (Cibus Duo, depende de las OT 793/794)
+                                 1 SIN CERRAR por dato faltante (2,4-D: falta el eq. acido)
+  LINEAS PROPIAS               : Solmix +3.746,00 kg · MAP 68.912,30 kg sin remitido
+
+  NEGATIVOS REALES EN TODA LA CAMPANA : 0
+  PARA ESCALAR A MERCEDES             : nada
+  DEFECTO DE C1 PARA CORREGIR         : 27.550,80 USD de sobreprecio en 120 L de TTM

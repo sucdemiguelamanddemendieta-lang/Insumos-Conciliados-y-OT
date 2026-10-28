@@ -1,0 +1,17 @@
+# CRUCE DEL 28/10/2026: el "MORATA ACE" de las OT 803/804 seria el COVERFULL ACE del remito 12824.
+# Dos anomalias abiertas que resultan la misma: 257,18 L aplicados sin remito, y 260,00 L
+# remitidos sin aplicado. Diferencia +2,82 L = menos de un envase de 5 L.
+# NO ESTA CONFIRMADO: la evidencia es de cantidad y de uso, no la ficha tecnica. Se pide
+# confirmacion de una palabra. Si es si, las dos lineas se unifican y cierran.
+concepto,OT,fecha,producto_declarado,cantidad_L,dosis_L_ha,cultivo,destino,acompanante
+aplicado,803,2026-10-15,MORATA ACE,107.68,0.65,Cebada,cura de cereal,TRANSFORM
+aplicado,804,2026-10-15,MORATA ACE,149.50,0.65,Cebada,cura de cereal,TRANSFORM
+subtotal_aplicado,,,MORATA ACE,257.18,,,,
+remitido,,2026-10-16,COVERFULL ACE (CARBOXO+PROPI),260.00,,,remito 12824 canal Remito de Cliente,
+diferencia,,,,2.82,,,menos de un envase de 5 L,
+aplicado,811,2026-10-23,COVERFULL ACE,68.90,0.65,Cebada,fungicida hoja bandera + pulgon,TRANSFORM
+aplicado,816,2026-10-23,COVERFULL ACE,47.45,0.65,Cebada,fungicida manchas ramularia + pulgon,TRANSFORM
+# Las OT 811 y 816 (23/10) contestan ademas la pregunta del 16/10: SI, el Coverfull es de la
+# Siembra Asociada. Y muestran el mismo uso que el "Morata": misma dosis, cultivo y acompanante.
+# La planilla de despachos de Rindes y Cultivos describe el MORATA ACE como "CARBOXO+PROPI",
+# que es exactamente lo que es el Coverfull Ace.

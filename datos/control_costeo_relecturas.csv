@@ -6,3 +6,4 @@ fecha_lectura,fecha_archivo_drive,bytes,total_insumos,ultimo_remito,fecha_ultimo
 2026-10-16,2026-10-16,26137,34046.64,0202-00012612,2026-09-25,no
 2026-10-21,2026-10-20,26226,34046.64,0202-00012612,2026-09-25,no
 2026-10-23,2026-10-23,26226,34046.64,0202-00012612,2026-09-25,no
+2026-10-28,"Siembras Asociadas ADM 27-10-2026.xlsx",38920.17,12999,2026-10-24,4,"EXPORT NUEVO: se destraba. 152 lineas, suma = TOTALES exacto. 17 remitos nuevos (12645 a 12999). El 12645 coincide producto por producto con la reconstruccion del escaneo del 23/10: metodo validado. Trae tambien los dos remitos que el OCR no pudo leer (12745 y 12917)."
