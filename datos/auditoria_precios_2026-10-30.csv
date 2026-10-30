@@ -1,0 +1,36 @@
+# AUDITORIA COMPLETA DE PRECIOS UNITARIOS - 30/10/2026. Control nuevo, incorporado al proceso.
+# El 28/10 se reviso el precio del unico producto en el que se habia tropezado (el TTM) y no se
+# auditaron los demas: el Veltroma del remito 12745 estaba a 197,00 en lugar de 297,00 y no se
+# vio. Lo corrigieron junto con el TTM, y eso puso el hueco del control a la vista.
+# Desde ahora se audita la serie completa de precios de cada producto en cada corrida.
+# La firma del error de carga es un salto de orden de magnitud al precio de OTRO producto
+# (el TTM a 246,10 era el precio del Transform). La variacion de mercado es chica y gradual.
+producto,precios_distintos,minimo,maximo,variacion_pct,lectura
+COADYUVANTE TTM,1,16.51,16.51,0,constante - CORREGIDO el 30/10
+VELTROMA SAFLUFENACIL 70%,2,297.00,302.13,1.7,baja de precio - el 197.00 del 12745 CORREGIDO el 30/10
+GLIFOSATO PANZER GOLD,2,5.09,5.30,4.1,variacion de mercado
+24D HERBIFEN ADVANCE,3,4.62,5.12,10.8,variacion de mercado
+CLETODIM 24% SINO AGRI,2,6.60,6.93,5.0,variacion de mercado
+FLUROCLORIDONA RAINBOW,2,11.55,11.99,3.8,variacion de mercado
+DIFLUFENICAN LEGACY,2,20.68,23.10,11.7,variacion de mercado
+VIOVAN,3,27.25,28.05,2.9,variacion de mercado
+SOLMIX 28-00-00-5.2,3,441.00,453.00,2.7,variacion de mercado
+PARAQUAT RURALCO,2,3.79,3.80,0.3,variacion de mercado
+CIBUS DUO BL,1,10.03,10.03,0,constante
+TRANSFORM Bolsa x 2 kgs,1,246.10,246.10,0,constante
+S-METOLACLORO SYMPHONY,1,6.49,6.49,0,constante
+SULFENTRAZONE 50% FENDER,1,18.15,18.15,0,constante
+LAMBDACIALOTRINA 25% RAFTER,1,15.40,15.40,0,constante
+CLETODIM 24% CAMPODIM,1,6.60,6.60,0,constante
+PARAQUAT 27.6% INZIRA,1,3.63,3.63,0,constante
+DIFLUFENICAN 50% SC,1,23.10,23.10,0,constante
+FLUMIOXAZYN 48% INSUAGRO,1,18.81,18.81,0,constante
+LONTREL CLOPYRALID,1,34.10,34.10,0,constante
+MCPA 75% ATANOR,1,12.10,12.10,0,constante
+BROMOXINIL BROMOTRIL,1,14.30,14.30,0,constante
+COMPINCHE SX,1,34.39,34.39,0,constante
+VITAGROW TS,1,49.05,49.05,0,constante
+RIZOSTAR PZ,1,2.79,2.79,0,constante
+MICROSTAR PZ,1,2.86,2.86,0,constante
+PARAMER PYROXASULFONE 85%,1,110.00,110.00,0,constante
+# RESULTADO: ningun precio queda fuera de lugar en el export del 30/10.

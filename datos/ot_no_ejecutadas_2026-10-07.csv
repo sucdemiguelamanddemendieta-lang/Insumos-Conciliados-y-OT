@@ -28,3 +28,21 @@ OT,Fecha,Establecimiento,Ha,Producto,PlanQueNoSeComputa,Unidad,EstabaEnElCuadro
 # La Manga; la OT 790 es de CAMPO LA CELINA (73 ha). Las cantidades coincidian.
 789,2026-09-23,CAMPO CIERVO BLANCO,106.00,UANSOLMIX,15449.00,kg,"EJECUTADA el 16/10 - vuelve al aplicado"
 790,2026-09-23,CAMPO LA CELINA,73.00,UANSOLMIX,9855.00,kg,"EJECUTADA el 16/10 - vuelve al aplicado"
+# ACTUALIZACION 30/10/2026: la OT 772 SI se ejecuto. Volvio anotada, firmada, fechada 04/09 y
+# CON CONSUMO REAL a mano, citando "Remito Ry C 12645 y 12648". Eso confirma por escrito la
+# asignacion del remito 12648 a este bloque que el 28/10 se hizo POR FECHA y se declaro como
+# inferencia. La OT anota ademas "ACADEMIX" como el 2,4-D usado, que es lo que trae el 12648.
+# OJO: EL DOCUMENTO ACTUAL DE LA OT 772 TRAE CANTIDADES DISTINTAS de las cargadas el 02/10.
+# Es el patron conocido: el Gestor reemite la OT cambiando cantidades y nada lo senala.
+# Vale el documento actual, y el consumo real anotado vale sobre el plan.
+OT,Fecha,Establecimiento,Ha,Producto,PlanActual,ConsumoRealAnotado,Unidad,Nota
+772,2026-09-04,CAMPO EL CAMPITO,79.00,"2,4-D (anotado ACADEMIX)",94.80,100.00,L,"Antes se habia cargado 158,00"
+772,2026-09-04,CAMPO EL CAMPITO,79.00,EUDOR CLETODIM HELM,94.80,100.00,L,"Antes se habia cargado 158,00"
+772,2026-09-04,CAMPO EL CAMPITO,79.00,PANZER GOLD,173.80,180.00,L,"Antes se habia cargado 197,50"
+772,2026-09-04,CAMPO EL CAMPITO,79.00,SAFLUFENACIL HEAT 70WG,3.16,3.20,kg,
+772,2026-09-04,CAMPO EL CAMPITO,79.00,COADYUVANTE TTM,15.80,,L,"Consumo real ilegible: se usa el plan"
+# SIGUEN SIN EJECUTARSE: las OT 770 y 771. La 770 volvio anotada el 29/10 pero el OCR no la
+# pudo leer, asi que no se sabe si trae fecha. Los sobrantes del bloque 755-791 coinciden con
+# lo que piden esas dos OT, lo que es una verificacion independiente de que el producto esta.
+# OT 793 y 794: sin actualizacion. La 794 volvio anotada el 29/10, OCR vacio. Es el unico papel
+# que falta para definir el Cibus Duo (+480,00 kg si no se ejecutaron, -107,34 si si).
