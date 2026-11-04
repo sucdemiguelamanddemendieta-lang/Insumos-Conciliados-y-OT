@@ -1,0 +1,89 @@
+========================================================================================================
+CORRIDA 26 - CORTE 04/11/2026 - SIN DOCUMENTACION NUEVA
+========================================================================================================
+
+PASADA 1 - BARRIDO DE DRIVE
+  Se barrieron las dos carpetas con filtro modifiedTime > 30/10 16:00 (el corte de la corrida
+  anterior). Resultado: UN SOLO archivo tocado, y es el export de costeo.
+    Carpeta de documentos primarios : solo "Siembras Asociadas ADM 30-10-2026.xlsx"
+    Carpeta del Gestor              : nada
+  NO entraron: OT nuevas, remitos nuevos, OT anotadas, ni planillas nuevas.
+  Gmail: sin respuestas de Betiana ni de Mercedes en los ultimos 6 dias.
+
+PASADA 2 - EL EXPORT CAMBIO DE FECHA Y DE TAMANO SIN CAMBIAR DE DATOS
+  El archivo figura modificado el 04/11 a las 14:00 (antes 30/10 15:05) y paso de 23.818 a
+  29.127 bytes. Por la regla del 21/10 no se acepta la fecha como senal: se abrio y se comparo.
+
+    Concepto                     30/10              04/11          Resultado
+    Total de insumos             40.163,12          40.163,12      IDENTICO
+    Total en dolares            340.481,91         340.481,91      IDENTICO
+    Total en pesos          509.181.737,77     509.181.737,77      IDENTICO
+    Ultimo remito             13112 (30/10)      13112 (30/10)     IDENTICO
+
+  Es la QUINTA relectura identica de la campana, y trae una vuelta nueva: hasta ahora el archivo
+  cambiaba de fecha. Esta vez cambio TAMBIEN DE TAMANO -5.309 bytes mas- y los datos son los
+  mismos. El tamano tampoco sirve como senal de contenido nuevo. Regla agregada a 2.bis.
+
+  Se verifico tambien que no hubo retroceso en las dos correcciones de precio del 30/10:
+    TTM en los remitos 12855 / 12863 / 12915 / 12969 : 16,51 USD/L en los cuatro   OK
+    Veltroma del remito 12745                       : 297,00 USD/kg               OK
+
+PASADA 3 - NO SE REHACE LA CONCILIACION
+  El punto 3 del procedimiento es explicito: si no entro documentacion nueva y no hay respuestas
+  nuevas a los pedidos, NO se rehace la conciliacion ni se genera un reporte duplicado.
+  SIGUE VIGENTE la corrida del 30/10: reportes/2026-10-30_conciliacion_ADM_26-27_v25.html
+    Bloque conciliado (OT <=754) : cerrado, sin negativos desde el 08/09
+    Bloque 755-791               : 14 PA · 7 cierran · 7 en sobrante · 0 negativos
+    Bloque abierto 792-816       : 14 PA · 6 cierran · 6 en sobrante · 2 en transito · 0 negativos
+    Lineas propias               : Solmix +3.746,00 kg · MAP 68.912,30 kg sin remitido
+
+PASADA 4 - ESCALAMIENTO: SE CUMPLE LA CONDICION FIJADA EL 30/10
+  El 30/10 quedo escrito en el Estado de escalamiento, textual:
+    "Si en la proxima corrida no aparece el remito y la OT 804 sigue sin separarse, esto si se
+     escala, porque son mas de 100 L de fungicida aplicados sobre cebada sin respaldo."
+
+  Esta es la proxima corrida. Las dos condiciones se cumplen:
+    (a) No aparecio ningun remito de fungicida.
+    (b) La OT 804 sigue sin separarse (no se toco en Drive).
+  Y el criterio del punto 2.bis -un principio activo suma corridas consecutivas solo si entre
+  una y otra NO llego documentacion que lo afecte- aplica en su forma mas limpia: no llego
+  NINGUNA documentacion. El contador no se reinicia. Pasa de cuarta a QUINTA corrida.
+
+  ESTADO DE LA LINEA (sin cambios desde el 30/10):
+    Coverfull remitido (remito 12824 del 16/10)              :   260,00 L
+    Coverfull aplicado   OT 803 94,03 + 811 68,90 + 816 47,45:   210,38 L
+    Morata remitido en toda la campana                       :     0,00 L
+    Morata aplicado      OT 803 13,65 + OT 804 149,50        :   163,15 L
+    ------------------------------------------------------------------------
+    Fungicida aereo remitido                                 :   260,00 L
+    Fungicida aereo aplicado                                 :   373,53 L
+    FALTA REMITO POR                                         :   113,53 L
+
+  POR QUE ESTE ESCALAMIENTO NO ES COMO EL DEL 02/10 (que fue prematuro y se cayo):
+  El 02/10 se escalo un faltante de paraquat y se disolvio el 07/10 porque la OT nunca se habia
+  ejecutado: la regla que quedo fue "antes de escalar un faltante, preguntar si la OT se ejecuto".
+  Aqui esa pregunta ESTA CONTESTADA y por escrito: las cuatro OT volvieron anotadas y fechadas
+  de puno y letra -803 el 16/10, 804 el 16/10, 811 el 24/10, 816 sin fecha legible pero anotada-.
+  El consumo ocurrio. Lo que falta es el papel del remitido, no la certeza del consumo.
+
+  LA SALVEDAD QUE SE INFORMA IGUAL: este producto entra por el canal de Remito de Cliente, que
+  no esta en el export y depende de que alguien suba el PDF a mano. El remito puede existir y no
+  haber sido subido. Por eso el pedido es "subir el remito", no "explicar un faltante".
+
+PASADA 5 - LO QUE SIGUE ABIERTO Y NO ESCALA
+  Ninguno de estos tiene un faltante detras ni suma para escalamiento:
+    OT 804: separarla como se separo la 803 (es la misma pregunta que el escalamiento).
+    OT 794 y OT 770: volvieron anotadas el 29/10 y el OCR no las pudo leer. La 794 define si el
+      Cibus Duo cierra en +480,00 kg o en -107,34. Es un escaneo para repetir, no un faltante.
+    Concentraciones: S-metolacloro Xian, HEAT 70 WG, Tuken, Symphony, Coverfull.
+    Porcentaje tratado de la OT 807. El 59% del Controler EH (ya no bloquea). Equivalente acido
+      del Enlist. Los 175 L de Viovan. La concentracion del Caster LV.
+    MAP: 68.912,30 kg aplicados sin remito en el costeo. Fuera del cuadro C2.
+
+========================================================================================================
+RESUMEN - corte 04/11/2026
+========================================================================================================
+  Documentacion nueva            : NINGUNA (el export cambio de fecha y tamano, no de datos)
+  Conciliacion                   : NO SE REHACE. Sigue vigente la del 30/10 (v25)
+  Negativos reales en la campana : 0
+  ESCALAMIENTO A MERCEDES        : SI - linea de fungicida aereo, 113,53 L sin remito, 5a corrida
