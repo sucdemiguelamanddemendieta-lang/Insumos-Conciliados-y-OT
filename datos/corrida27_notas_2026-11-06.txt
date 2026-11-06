@@ -1,0 +1,158 @@
+
+========================================================================================================
+PASADA 1 - BARRIDO DE DRIVE Y ESTADO DEL EXPORT
+========================================================================================================
+  Carpeta de documentos primarios : solo el export, SIN TOCAR desde la corrida anterior
+    (modifiedTime 04/11 14:00, el mismo que se leyo el 04/11: no hubo relectura que hacer)
+  Carpeta del Gestor              : DIEZ OT NUEVAS, la 817 a la 826
+  Gmail                           : sin respuestas de Betiana ni de Mercedes
+  No entraron remitos ni devoluciones anotadas.
+  El remitido sigue cortado al remito 13112 del 30/10, que es el ultimo del export.
+
+========================================================================================================
+PASADA 2 - LAS DIEZ OT, VERIFICADAS LOTE POR LOTE
+========================================================================================================
+  Se recalculo cada OT sumando los lotes, no leyendo la columna de totales.
+
+  OT 817  02/11  La Manga              189,57 ha  Siembra soja    OK
+  OT 818  02/11  Ciervo Blanco         303,00 ha  Siembra soja    OK
+  OT 819  02/11  La Celina              47,00 ha  Siembra soja    OK
+  OT 820  02/11  El Campito             79,00 ha  Siembra soja    OK
+  OT 821  06/11  La Maria Cristina     114,00 ha  Barbecho maiz   OJO
+  OT 822  06/11  La Maria Cristina     134,00 ha  Cebo girasol    OK
+  OT 823  06/11  Santo Domingo          48,00 ha  Barbecho maiz   OK
+  OT 824  06/11  Santo Domingo          48,00 ha  Cebo girasol    OK
+  OT 825  06/11  Ciervo Blanco         213,00 ha  Preemergente    OK
+  OT 826  06/11  La Celina             152,00 ha  Preemergente    OK
+
+  Nueve de diez cierran: todos los productos del encabezado coinciden con la suma de lotes.
+  LA OT 821 NO CIERRA, Y NO ES EN LOS PRODUCTOS SINO EN LA LABOR:
+    Lotes con producto : 40 + 26 + 16 + 32 = 114,00 ha
+    Lotes con labor    : 40 +  0 + 16 + 32 =  88,00 ha   <- el lote 2 no tiene fila de labor
+    Encabezado de labor:                      88,00 ha
+  Los cinco productos cierran exactos sobre 114 ha (Herbifen 91,20 = 0,80 x 114, etc.).
+  O sea: se va a aplicar producto en 114 ha y se van a facturar 88 ha de labor. Faltan 26.
+  Es el mismo defecto que la OT 803 (labor 165,26 contra producto 165,66) y la 815, pero
+  esta vez por 26 ha, no por 0,40. NO afecta el cuadro C2 -el producto esta bien- pero si
+  el costo de la actividad, y conviene corregirlo antes de que la OT se ejecute.
+
+========================================================================================================
+PASADA 3 - REGLA WEED-IT: SE VERIFICO Y NO APLICA
+========================================================================================================
+  Cuatro de las diez son OT de fumigacion (821, 823, 825, 826). Se leyeron las notas de
+  cada lote buscando la senal de aplicacion selectiva, que es lo que obliga a no imputar
+  el plan. Ninguna la trae:
+    OT 821 y 823 : "Barbecho corto pre siembra maiz - buen mojado, 50 impactos/cm2"
+    OT 825 y 826 : "Preemergente - aplicar ni bien se termine de sembrar, buen mojado"
+  "Buen mojado" y "50 impactos/cm2" describen cobertura total, no manchoneo. No hay
+  "Manchoneo" ni "Weed It" ni superficie parcial en ninguna nota ni en la tipificacion.
+  CONCLUSION: son aplicaciones de area completa. No hay pregunta de selectividad abierta.
+
+========================================================================================================
+PASADA 4 - NINGUNA DE LAS DIEZ ESTA EJECUTADA, Y NO HAY REMITIDO NUEVO
+========================================================================================================
+  Las cuatro de siembra traen FECHA ESTIMADA, toda posterior al corte:
+    OT 817 -> 10/11    OT 818 -> 15/11    OT 819 -> 23/11    OT 820 -> 25/11
+  Las de preemergente dicen "aplicar ni bien se termine de sembrar": dependen de esas
+  siembras, que todavia no ocurrieron. Las dos de barbecho estan fechadas hoy mismo.
+  Ninguna volvio anotada ni firmada. Por la regla "una OT emitida no es una OT ejecutada",
+  SU PLAN NO SE IMPUTA COMO CONSUMO.
+
+  Y del lado del remitido no entro nada: el export sigue cortado al remito 13112 del 30/10.
+  CONSECUENCIA: los cuadros de remitido contra aplicado NO SE MUEVEN NI UN LITRO respecto
+  del 30/10. Esta corrida no rehace la conciliacion porque no hay nada que recalcular;
+  incorpora las OT al plan, da de alta los productos nuevos y proyecta la demanda.
+
+========================================================================================================
+PASADA 5 - PRODUCTOS NUEVOS: CINCO ALTAS, Y NINGUNA SE INFIERE
+========================================================================================================
+  1) MICROSTAR PZ BIO X KG (BIG BAG) - 24.742,80 kg entre las cuatro OT de siembra.
+     La nota de la OT lo dice: "Microstar 40 kg/ha (reemplaza MAP 50 kg/ha)".
+     ES UN CAMBIO DE FERTILIZANTE: la soja de primera pasa de MAP a Microstar PZ Bio.
+     El export ya tiene "MICROSTAR PZ Bolsa x 20 kgs" (fina), pero esta es otra
+     presentacion y lleva "BIO" en el nombre. NO se asume que sea el mismo grado: la
+     formulacion no viene declarada en ningun documento. Es fertilizante: linea propia.
+
+  2) CLARTHEX TDS - 546,00 kg   y   3) CLARTEX - 182,00 kg
+     Las notas los identifican: "Clartex TDS Babosa 3 kg + Clartex Xtra BB 1 kg", o sea
+     dos cebos distintos, uno para babosas y otro para bicho bolita, aplicados juntos.
+     OJO CON EL NOMBRE: el maestro escribe uno CLARTEX y el otro CLARTHEX, con H. Son dos
+     productos diferentes con nombres casi iguales y una letra de diferencia: no se
+     agrupan. Ninguno declara principio activo. NO se infiere por parecido con el Cibus
+     Duo (carbaril + metaldehido), que es el cebo que se venia usando: son marcas distintas.
+
+  4) RAINBOW FLUROCLORIDONA BIDON 10 LTS - 237,90 L en las OT 825 y 826.
+     Mismo principio activo que el "FLUROCLORIDONA RAINBOW X 20 LTS ADAMA" del export,
+     misma marca, pero BIDON DE 10 EN LUGAR DE 20. Se agrupa por activo, PERO cambia el
+     envase, y el envase es la tolerancia de este control: para los lotes que se sirvan
+     con esta presentacion la tolerancia pasa de 20 a 10 L.
+
+  5) DM 40E23 - 6.300,00 kg de semilla de soja propia (OT 819 y 820). Semilla: linea propia.
+     Aparece ademas una categoria nueva, "08.GRANOS SOJA SEMILLA (TN)", con la semilla
+     medida en toneladas (28,86 tn en las OT 817 y 818) en lugar de bolsas. Es la semilla
+     de Rindes y Cultivos. Dos unidades distintas para la misma cosa: se registran aparte.
+
+========================================================================================================
+PASADA 6 - LO QUE SI APORTA ESTA CORRIDA: LA DEMANDA QUE VIENE CONTRA EL STOCK QUE HAY
+========================================================================================================
+  Las diez OT no mueven el cuadro, pero dicen que se va a consumir en las proximas tres
+  semanas. Cruzarlo contra los sobrantes del 30/10 dice que hay que remitir y que no.
+
+  Producto              Demanda OT     Sobrante      Falta       Lectura
+                           817-826     30/10        remitir
+  Paraquat                   730.00       132.66       597.34   bloque B 120,00 + C 12,66
+  S-metolacloro              365.00         0.63       364.37   el bloque C cerro en +0,63
+  Flurocloridona             237.90        40.23       197.67   queda del remito 13098
+  Biciclopirona Acuron       182.00        -0.70       182.70   el bloque C cierra en -0,70
+  Sulfentrazone               54.90        -6.10        61.00   el bloque C cierra en -6,10
+  Coadyuvante TTM            105.40        71.66        33.74   bloque B 51,42 + C 20,24
+  Lambdacialotrina            18.25         4.03        14.22   queda del remito 13098
+  Pyroxasulfone Paramer       29.16         0.00        29.16   sin sobrante en el cuadro
+  Clarthex TDS (kg)          546.00         0.00       546.00   producto nuevo, cero remitido
+  Clartex (kg)               182.00         0.00       182.00   producto nuevo, cero remitido
+  Microstar PZ Bio (kg)    24742.80         0.00     24742.80   producto nuevo, cero remitido
+
+  Y los dos que SI estan cubiertos por el stock que ya se retiro:
+  Glifosato Panzer           324.00       512.27     cubierto   bloque B 280,38 + C 231,89: sobran 188,27
+  Cletodim                    48.60       269.84     cubierto   bloque B 103,62 + C 166,22: sobran 221,24
+  El 2,4-D de las OT 821 y 823 (163,20 L de Herbifen) tambien entraria en el sobrante del
+  bloque B (133,28 de equivalente acido = 207,28 L de Herbifen), PERO ese sobrante esta
+  comprometido con las OT 770 y 771, que siguen sin ejecutarse. No se puede contar dos veces.
+
+  ESTO NO ES UN FALTANTE: es una proyeccion de necesidad. Nada de esto se consumio todavia
+  ni esta mal documentado. Se informa porque el control tiene el dato y sirve para pedir a
+  tiempo: hay once productos con demanda comprometida por encima del stock, y tres de ellos
+  -los dos cebos Clartex y el Microstar- no tienen un solo kilo remitido en la campana.
+
+========================================================================================================
+PASADA 7 - LA CONCILIACION NO CAMBIA. SIGUE VIGENTE LA DEL 30/10
+========================================================================================================
+  Remitido sin novedades (ultimo remito 13112 del 30/10) y ninguna OT nueva ejecutada:
+    Bloque conciliado (OT <=754) : cerrado, sin negativos desde el 08/09
+    Bloque 755-791               : 14 PA · 7 cierran · 7 en sobrante · 0 negativos
+    Bloque abierto 792-816       : 14 PA · 6 cierran · 6 en sobrante · 2 en transito · 0 negativos
+    Lineas propias               : Solmix +3.746,00 kg · MAP 68.912,30 kg sin remitido
+  NEGATIVOS REALES EN TODA LA CAMPANA: 0
+
+========================================================================================================
+PASADA 8 - ESCALAMIENTO: SE MANTIENE, NO SE INTENSIFICA
+========================================================================================================
+  La linea de fungicida aereo quedo escalada el 04/11: faltan 113,53 L de remito de las
+  OT 803, 804, 811 y 816. Entre el 04/11 y hoy no llego documentacion que la afecte
+  -las diez OT nuevas no usan Coverfull ni Morata- asi que el estado no cambia: pasa a
+  SEXTA corrida abierta.
+  NO SE INTENSIFICA NI SE VUELVE A ESCALAR. El procedimiento dice que no se escala algo
+  cuyo pedido acaba de salir, y el pedido salio hace dos dias. Se informa que sigue abierto
+  y se espera la respuesta.
+
+========================================================================================================
+RESUMEN - corte 06/11/2026
+========================================================================================================
+  Documentacion nueva            : DIEZ OT nuevas (817-826). Sin remitos ni OT anotadas
+  Conciliacion                   : NO CAMBIA. Sigue vigente la del 30/10 en sus numeros
+  Negativos reales en la campana : 0
+  Altas de mapeo                 : 5 (Microstar PZ Bio, Clartex, Clarthex TDS,
+                                   flurocloridona bidon x 10, semilla DM 40E23)
+  Defecto detectado              : OT 821, labor en 88 ha y producto en 114 ha
+  Escalado a Mercedes            : el fungicida aereo sigue abierto (6a corrida), sin
+                                   intensificar porque el pedido salio hace dos dias

@@ -1,0 +1,21 @@
+# PROYECCION DE DEMANDA - 06/11/2026. NO ES UN FALTANTE.
+# Las OT 817-826 no estan ejecutadas y no mueven el cuadro de remitido contra aplicado. Pero
+# dicen que se va a consumir en las proximas tres semanas. Cruzarlo contra los sobrantes
+# publicados el 30/10 dice que hay que remitir. Los sobrantes NO se recalcularon.
+# OJO con el doble conteo: los sobrantes del bloque 755-791 estan comprometidos con las OT
+# 770 y 771, que siguen sin ejecutarse. Lo marcado "cubierto" lo esta solo sobre el papel.
+producto,demanda_OT_817_826,sobrante_30_10,falta_remitir,unidad,nota
+MICROSTAR PZ BIO,24742.80,0.00,24742.80,kg,"PRODUCTO NUEVO sin un kilo remitido. Reemplaza al MAP en soja de primera"
+PARAQUAT,730.00,132.66,597.34,L,"sobrante bloque B 120,00 + bloque C 12,66"
+CLARTHEX TDS,546.00,0.00,546.00,kg,"PRODUCTO NUEVO sin un kilo remitido"
+S-METOLACLORO,365.00,0.63,364.37,L,"el bloque C cerro en +0,63 con el remito 13098"
+RAINBOW FLUROCLORIDONA,237.90,40.23,197.67,L,"queda del remito 13098"
+BICICLOPIRONA (ACURON UNO),182.00,-0.70,182.70,L,"el bloque C cierra en -0,70"
+CLARTEX,182.00,0.00,182.00,kg,"PRODUCTO NUEVO sin un kilo remitido"
+COADYUVANTE TTM,105.40,71.66,33.74,L,"sobrante bloque B 51,42 + bloque C 20,24"
+SULFENTRAZONE 50%,54.90,-6.10,61.00,L,"el bloque C cierra en -6,10"
+PYROXASULFONE 85%,29.16,0.00,29.16,kg,"sin sobrante en el cuadro"
+LAMBDACIALOTRINA 25%,18.25,4.03,14.22,L,"queda del remito 13098"
+GLIFOSATO PANZER GOLD,324.00,512.27,0.00,L,"CUBIERTO sobre el papel: bloque B 280,38 + C 231,89. El de B esta comprometido con las OT 770/771"
+CLETODIM 24%,48.60,269.84,0.00,L,"CUBIERTO sobre el papel. Del bloque C, 159,90 estan comprometidos con la OT 807 (manchoneo)"
+"2,4-D HERBIFEN",163.20,207.28,0.00,L,"CUBIERTO solo sobre el papel: los 133,28 de equivalente acido del bloque B equivalen a 207,28 L de Herbifen, PERO estan comprometidos con las OT 770 y 771. No se puede contar dos veces"
