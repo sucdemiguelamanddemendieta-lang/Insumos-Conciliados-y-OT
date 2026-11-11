@@ -1,0 +1,85 @@
+========================================================================================================
+CORRIDA 28 - CORTE 11/11/2026 - SIN DOCUMENTACION NUEVA
+========================================================================================================
+
+PASADA 1 - BARRIDO DE DRIVE
+  Se barrieron las dos carpetas. El filtro de fecha de Drive devolvio archivos ANTERIORES al
+  corte pedido (OT 822 a 826, modificadas el 06/11 a las 14:xx cuando se pidio > 19:00), asi
+  que NO se confio en el filtro: se verificaron las fechas una por una y se repitio el barrido
+  con ventanas mas anchas.
+
+    Carpeta de documentos primarios : un solo archivo tocado desde el 01/11, el export, con
+      modifiedTime 04/11 14:00, o sea LA MISMA VERSION que se leyo el 04/11 y se verifico
+      identica. No se toco desde entonces: no hay relectura que hacer.
+    Carpeta del Gestor : NADA creado despues del 07/11. Lo mas nuevo son las OT 822-826 del
+      06/11, ya procesadas en la corrida anterior.
+
+  Gmail: sin respuestas de Betiana ni de Mercedes en los ultimos 6 dias.
+  NO entraron OT nuevas, ni remitos, ni devoluciones anotadas, ni planillas nuevas.
+
+  NOTA DE METODO: que el filtro modifiedTime de Drive devuelva archivos fuera del rango pedido
+  es un comportamiento nuevo para este control. Un resultado VACIO sigue siendo prueba fuerte
+  de que no hay nada nuevo (un filtro flojo devuelve DE MAS, no de menos), pero un resultado
+  con archivos obliga a mirar la fecha de cada uno y no a confiar en la consulta.
+
+PASADA 2 - NO SE REHACE LA CONCILIACION
+  Punto 3 del procedimiento: sin documentacion nueva y sin respuestas, no se rehace la
+  conciliacion ni se genera reporte duplicado.
+  SIGUE VIGENTE la corrida del 06/11 (reportes/2026-11-06_conciliacion_ADM_26-27_v26.html), que
+  a su vez dejo vigentes los numeros del 30/10:
+    Bloque conciliado (OT <=754) : cerrado, sin negativos desde el 08/09
+    Bloque 755-791               : 14 PA · 7 cierran · 7 en sobrante · 0 negativos
+    Bloque abierto 792-816       : 14 PA · 6 cierran · 6 en sobrante · 2 en transito · 0 negativos
+    Lineas propias               : Solmix +3.746,00 kg · MAP 68.912,30 kg sin remitido
+  NEGATIVOS REALES EN TODA LA CAMPANA: 0
+  El remitido sigue cortado al remito 13112 del 30/10: 12 dias.
+
+PASADA 3 - ESCALAMIENTO: SE CUMPLE EL CRITERIO PARA INSISTIR
+  La linea de fungicida aereo (113,53 L sin remito) se escalo a Mercedes el 04/11.
+  El 06/11 se informo sin intensificar, porque el pedido tenia dos dias.
+  HOY la situacion cambio de estado por el paso del tiempo, no por un dato nuevo:
+
+    Punto 9 del procedimiento: "si escala si ya hubo respuesta y el problema sigue, o si paso
+    otra corrida sin respuesta ni documentacion nueva."
+
+  Paso otra corrida -la del 06/11- sin respuesta y sin documentacion que afecte la linea. Y
+  entre el 06/11 y hoy, tampoco. Son SIETE corridas con la linea abierta y DOS corridas desde
+  que salio el escalamiento, sin acuse.
+  ACCION: reiteracion breve a Mercedes. NO se vuelve a argumentar el caso ni se agrega monto:
+  los 113,53 L son los mismos. Lo que se informa es el silencio de cinco dias.
+
+PASADA 4 - UNA FECHA QUE VENCIO Y HAY QUE MIRAR EN LA PROXIMA CORRIDA
+  La OT 817 (La Manga, 189,57 ha de soja) tenia FECHA ESTIMADA DE SIEMBRA EL 10/11, o sea ayer.
+  Lleva 7.582,80 kg de Microstar PZ Bio, que no tiene UN SOLO KILO remitido en la campana.
+  Las otras tres de siembra vencen el 15, el 23 y el 25/11.
+
+  NO SE IMPUTA NADA: no hay ninguna evidencia de que la OT 817 se haya ejecutado. No volvio
+  anotada, no hay remito, y "fecha estimada" es una estimacion. Imputar el plan por que la
+  fecha paso seria exactamente el error del 23/09, cuando se computaron como consumo OT que
+  no se habian ejecutado.
+  LO QUE SI CORRESPONDE: dejarlo anotado como lo primero a chequear en la proxima corrida. Si
+  la 817 se ejecuto, aparece un fertilizante aplicado sin remito, y el Microstar pasa de
+  proyeccion a faltante real.
+
+PASADA 5 - LO QUE SIGUE ABIERTO
+  ESCALADO   : el remito del fungicida aereo, 113,53 L (7a corrida, 2a sin respuesta)
+  SIN ESCALAR, sin faltante detras:
+    Corregir la labor de la OT 821 (producto en 114 ha, labor en 88) antes de que se ejecute.
+    Formulacion del Microstar PZ Bio y principio activo del Clartex y del Clarthex TDS.
+    Separar la OT 804 como se separo la 803.
+    Volver a subir las OT 794 y 770 (la 794 define el Cibus Duo: +480,00 kg o -107,34).
+    Concentraciones del S-metolacloro Xian, el HEAT 70 WG, el Tuken, el Symphony, el Coverfull.
+    Porcentaje tratado de la OT 807. El 59% del Controler EH. Equivalente acido del Enlist.
+    Los 175 L de Viovan y la concentracion del Caster LV.
+  FUERA DEL CUADRO C2: el MAP con 68.912,30 kg aplicados sin remito, y ahora el Microstar PZ
+    Bio que arranca con el mismo problema.
+
+========================================================================================================
+RESUMEN - corte 11/11/2026
+========================================================================================================
+  Documentacion nueva            : NINGUNA. El export no se toco; el Gestor no sumo nada
+  Conciliacion                   : NO SE REHACE. Sigue vigente la del 06/11
+  Negativos reales en la campana : 0
+  Atraso del remitido            : 12 dias (ultimo remito 13112 del 30/10)
+  Escalamiento                   : REITERACION a Mercedes - 2a corrida sin respuesta
+  Para la proxima corrida        : chequear si la OT 817 se ejecuto el 10/11
