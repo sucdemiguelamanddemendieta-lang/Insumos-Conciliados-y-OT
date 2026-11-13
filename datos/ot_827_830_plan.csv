@@ -1,0 +1,25 @@
+# ALTA 13/11/2026 - OT 827 a 830, subidas hoy al Drive del Gestor.
+# OT 827 y 828: actividad (52). Fechadas 12/11, NINGUNA EJECUTADA: no volvieron anotadas y sus
+#   notas son instrucciones para trabajo por hacer. EL PLAN NO SE IMPUTA.
+#   Verificadas lote por lote: las dos cierran exactas, y la labor coincide con el producto.
+#   Regla Weed-It verificada: NO aplica. Las notas describen cobertura total ("50 impactos/cm2",
+#   "120-150 lt agua/ha"), sin manchoneo ni superficie parcial.
+# OT 829 y 830: CAMPO LA PALMA, cultivo MOHA (forraje). EXCLUIDAS de la actividad (52) por
+#   corresponder a Ganaderia, como todo La Palma desde el inicio de este control. El cultivo
+#   confirma la exclusion. NO SE COMPUTAN. Se registran para que no se vuelvan a evaluar.
+#   La OT 829 esta subida DOS VECES en Drive (dos ids, mismo nombre, mismo tamano): duplicado.
+OT,Fecha,Establecimiento,Ha,Labor,Cultivo,Producto,PrincipioActivo,Cantidad,Unidad,Nota
+827,2026-11-12,CAMPO LA MANGA,435.34,FUMIGACION PPIA TERRESTRE,Soja 1 / Girasol / Girasol Oleico,CLEARSOL ONTARIO,IMAZAPIR (concentracion a confirmar),81.10,kg,"0,33 kg/ha. EL ACTIVO LO DECLARA LA NOTA DE LA OT: 'Ontario (imazapir)'. Postemergente de girasol CL"
+827,2026-11-12,CAMPO LA MANGA,435.34,FUMIGACION PPIA TERRESTRE,Soja 1 / Girasol Oleico,CLETODIM 24% CAMPODIN EC X 20 LTS,CLETODIM 24%,105.02,L,"0,40/ha. OJO: la OT lo carga en KG y es LIQUIDO (EC x 20 LTS). Y lo escribe CAMPODIN, con N, donde el export dice CAMPODIM. Mismo producto: se agrupa"
+827,2026-11-12,CAMPO LA MANGA,435.34,FUMIGACION PPIA TERRESTRE,Soja 1 / Girasol / Girasol Oleico,COADYUVANTE TTM,COADYUVANTE TTM,87.07,L,"0,20 L/ha en los diez lotes"
+827,2026-11-12,CAMPO LA MANGA,435.34,FUMIGACION PPIA TERRESTRE,Soja 1,PANZER GOLD,GLIFOSATO (Panzer Gold),143.69,L,"1,50 L/ha, solo lotes 16a y 2"
+827,2026-11-12,CAMPO LA MANGA,435.34,FUMIGACION PPIA TERRESTRE,Soja 1,S-METOLACLORO SYMPHONY,S-METOLACLORO (conc. a confirmar),189.57,L,"1,00 L/ha. Los cuatro lotes son LOS MISMOS de la siembra de la OT 817"
+827,2026-11-12,CAMPO LA MANGA,435.34,FUMIGACION PPIA TERRESTRE,Soja 1,SULFENTRAZONE 50%,SULFENTRAZONE 50%,66.35,L,"0,35 L/ha"
+828,2026-11-12,CAMPO DON FEDERICO,108.00,FUMIGACION PPIA TERRESTRE,Girasol,CLEARSOL ONTARIO,IMAZAPIR (concentracion a confirmar),35.64,kg,"0,33 kg/ha. Girasol Nidera 1117 CL en V2"
+828,2026-11-12,CAMPO DON FEDERICO,108.00,FUMIGACION PPIA TERRESTRE,Girasol,CLETODIM 24% CAMPODIN EC X 20 LTS,CLETODIM 24%,43.20,L,"0,40/ha. Misma observacion de unidad que la 827"
+828,2026-11-12,CAMPO DON FEDERICO,108.00,FUMIGACION PPIA TERRESTRE,Girasol,COADYUVANTE TTM,COADYUVANTE TTM,21.60,L,"0,20 L/ha"
+829,2026-11-13,CAMPO LA PALMA,14.30,FUMIGACION PPIA TERRESTRE,Moha,"2,4-D HERBIFEN ADVANCE",EXCLUIDA,20.02,L,"EXCLUIDA: La Palma / Ganaderia / moha. Barbecho previo a siembra de moha"
+829,2026-11-13,CAMPO LA PALMA,14.30,FUMIGACION PPIA TERRESTRE,Moha,PANZER GOLD,EXCLUIDA,31.46,L,"EXCLUIDA"
+829,2026-11-13,CAMPO LA PALMA,14.30,FUMIGACION PPIA TERRESTRE,Moha,COADYUVANTE TTM,EXCLUIDA,2.86,L,"EXCLUIDA"
+830,2026-11-13,CAMPO LA PALMA,14.30,SIEMBRA PPIA FINA DIRECTA,Moha,MAP,EXCLUIDA,715.00,kg,"EXCLUIDA. Labor FINA, no gruesa. Siembra de moha del 15 al 20/11"
+830,2026-11-13,CAMPO LA PALMA,14.30,SIEMBRA PPIA FINA DIRECTA,Moha,MOHA IDENTIFICADA BOLSA,EXCLUIDA,500.50,kg,"EXCLUIDA. La OT lo carga en LT y son KG: 35 kg/ha sobre 14,30 ha"

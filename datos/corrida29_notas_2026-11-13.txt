@@ -1,0 +1,171 @@
+
+========================================================================================================
+PASADA 1 - BARRIDO DE DRIVE
+========================================================================================================
+  Se barrio con ventanas anchas y verificando la fecha de cada archivo, por lo que paso el
+  11/11: el filtro modifiedTime de Drive devuelve archivos fuera del rango pedido.
+
+  Carpeta de documentos primarios : NADA desde el 07/11. El export sigue en la version del
+    04/11, que ya se verifico identica. No hay remitos nuevos ni OT anotadas.
+  Carpeta del Gestor : CUATRO OT NUEVAS, todas creadas hoy 13/11
+    OT 827  La Manga        12 nov 26   actividad (52)
+    OT 828  Don Federico    12 nov 26   actividad (52)
+    OT 829  La Palma        13 nov 26   EXCLUIDA - ver pasada 4
+    OT 830  La Palma        13 nov 26   EXCLUIDA - ver pasada 4
+  Gmail: sin respuestas de Betiana ni de Mercedes.
+
+  OJO: la OT 829 esta subida DOS VECES, con dos ids distintos, el mismo nombre y el mismo
+  tamano (52.395 bytes). Es un duplicado de carga, no dos OT. Se computa una sola vez.
+  Las dos de La Palma las subio otra cuenta (ctrevolazavala@gmail.com), no la del dueno.
+
+  EL REMITIDO SIGUE CORTADO AL REMITO 13112 DEL 30/10: 14 DIAS DE ATRASO.
+
+========================================================================================================
+PASADA 2 - LAS DOS OT DE LA ACTIVIDAD, VERIFICADAS LOTE POR LOTE
+========================================================================================================
+  OT 827 - CAMPO LA MANGA - 435,34 ha - diez lotes
+    Suma de lotes: 38,04 + 23 + 26 + 30 + 30 + 65,79 + 63,17 + 55,74 + 58,60 + 45 = 435,34  OK
+
+    Producto                        Suma de lotes   Encabezado   Estado
+    Clearsol Ontario (kg)                81.1041        81.10   OK
+    Cletodim Campodin                   105.0240       105.02   OK
+    Coadyuvante TTM                      87.0680        87.07   OK
+    Glifosato Panzer                    143.6850       143.69   OK
+    S-metolacloro                       189.5700       189.57   OK
+    Sulfentrazone 50%                    66.3495        66.35   OK
+
+  OT 828 - CAMPO DON FEDERICO - 108,00 ha - un lote
+    Clearsol Ontario 35,64 = 0,33 x 108   ·  Cletodim 43,20 = 0,40 x 108
+    Coadyuvante TTM  21,60 = 0,20 x 108   ·  Labor 108,00                     OK
+
+  LAS DOS CIERRAN EXACTAS, y en las dos la labor coincide con el producto: no se repite
+  el desfasaje de la OT 821.
+
+========================================================================================================
+PASADA 3 - REGLA WEED-IT: VERIFICADA, NO APLICA
+========================================================================================================
+  Las dos son OT de fumigacion. Se leyeron las notas de cada lote:
+    Preemergente de soja : "aplicar al finalizar la siembra, 50 impactos/cm2"
+    Postemergente girasol: "aplicar desde 2 hojas verdaderas, 120-150 lt agua/ha,
+                            tanque bien lavado, no aplicar con pronostico de heladas"
+  Son aplicaciones de area completa, con indicacion de cobertura y de volumen de agua.
+  No hay "Manchoneo", ni "Weed It", ni superficie parcial. NO APLICA la regla.
+  Son las notas mas detalladas de la campana: traen el estadio del cultivo, el volumen de
+  caldo, la advertencia de heladas y el lavado de tanque. Vienen de una recorrida del
+  agronomo el 11/11 que la OT cita.
+
+========================================================================================================
+PASADA 4 - LAS OT 829 Y 830 QUEDAN EXCLUIDAS, Y HAY QUE DECIR POR QUE
+========================================================================================================
+  Las dos son del CAMPO LA PALMA, lote LP-P16 de 14,30 ha, y el cultivo es MOHA:
+    OT 829: barbecho previo a la siembra de moha (Herbifen 20,02 · Panzer 31,46 · TTM 2,86)
+    OT 830: siembra de moha (MAP 715,00 kg + semilla 500,50)
+  La Palma esta excluida de la actividad (52) desde el inicio de este control por
+  corresponder a GANADERIA, y la moha es un forraje: confirma la exclusion por el cultivo,
+  no solo por el establecimiento. La labor de la 830 es ademas "SIEMBRA PPIA FINA DIRECTA".
+  NO SE COMPUTAN. Se registran como excluidas con el motivo, para que la proxima corrida no
+  las vuelva a evaluar ni alguien las sume por error al ver MAP y Herbifen en la lista.
+
+========================================================================================================
+PASADA 5 - UN PRODUCTO NUEVO, Y POR UNA VEZ EL ACTIVO VIENE DECLARADO
+========================================================================================================
+  CLEARSOL ONTARIO - 116,74 kg entre las OT 827 (81,10) y 828 (35,64).
+  La nota de la OT lo declara en el texto: "Ontario (imazapir)".
+  ES LA PRIMERA VEZ EN LA CAMPANA QUE EL PRINCIPIO ACTIVO VIENE ESCRITO EN LA OT. No hay que
+  preguntarlo ni inferirlo: lo dice el documento. Se mapea como IMAZAPIR citando la fuente.
+  LO QUE SI FALTA es la concentracion, que la nota no da. Y el uso encaja: imazapir es el
+  herbicida del sistema Clearfield, y los lotes donde se aplica son girasol CL (NK 3969 CL,
+  NS 1227 CLAO, Nidera 1117 CL), o sea hibridos tolerantes. Coherente.
+
+========================================================================================================
+PASADA 6 - DOS ERRORES DE UNIDAD EN EL MAESTRO
+========================================================================================================
+  1) "CLETODIM 24% CAMPODIN EC X 20 LTS" figura en KG y es un LIQUIDO.
+     El propio nombre dice EC (concentrado emulsionable) y X 20 LTS. Las OT 827 y 828 lo
+     cargan con unidad KG, 148,22 "kg" en total. En el export de costeo el mismo producto
+     esta en litros. Son 148,22 L, no kg.
+     Y el nombre esta escrito CAMPODIN, con N, cuando en el export es CAMPODIM, con M.
+     Es el mismo producto: no se abre una fila nueva, se agrupa y se avisa del typo.
+
+  2) En la OT 830 (excluida) la semilla de moha figura en LT y son KG: 500,50 a 35 kg/ha
+     sobre 14,30 ha. No afecta a esta actividad pero queda anotado porque es el mismo
+     defecto y conviene corregir el maestro una sola vez.
+
+  NINGUNO DE LOS DOS afecta el cuadro de principios activos: las cantidades estan bien y
+  la unidad correcta se deduce del producto. Afecta a quien lea el maestro sin contexto.
+
+========================================================================================================
+PASADA 7 - LA CONCILIACION NO CAMBIA
+========================================================================================================
+  Ninguna OT nueva esta ejecutada: la 827 y la 828 estan fechadas 12/11, ninguna volvio
+  anotada, y sus notas son instrucciones para trabajo por hacer ("aplicar al finalizar la
+  siembra", "aplicar desde 2 hojas verdaderas"). Su plan NO se imputa.
+  Y no entro remitido: el export sigue en el remito 13112 del 30/10.
+
+  SIGUE VIGENTE la conciliacion del 30/10, que el 06/11 y el 11/11 ya dejaron sin cambios:
+    Bloque conciliado (OT <=754) : cerrado, sin negativos desde el 08/09
+    Bloque 755-791               : 14 PA · 7 cierran · 7 en sobrante · 0 negativos
+    Bloque abierto 792-816       : 14 PA · 6 cierran · 6 en sobrante · 2 en transito · 0 negativos
+    Lineas propias               : Solmix +3.746,00 kg · MAP 68.912,30 kg sin remitido
+  NEGATIVOS REALES EN TODA LA CAMPANA: 0
+
+========================================================================================================
+PASADA 8 - LA OT 817: SIGUE SIN CONFIRMARSE, PERO LA 827 DICE ALGO
+========================================================================================================
+  El 11/11 quedo anotado como primer chequeo de hoy: la OT 817 (189,57 ha de soja en La
+  Manga, 7.582,80 kg de Microstar PZ Bio sin remitido) tenia fecha estimada de siembra el
+  10/11. NO VOLVIO ANOTADA Y NO HAY REMITO. No se imputa nada: sigue sin confirmarse.
+
+  PERO la OT 827 trae un dato indirecto que vale anotar. Sus cuatro lotes de preemergente
+  de soja son EXACTAMENTE los cuatro lotes de siembra de la OT 817:
+    OT 817 (siembra)    : 38,04 + 30 + 65,79 + 55,74 = 189.57 ha
+    OT 827 (preemergente): 38,04 + 30 + 65,79 + 55,74 = 189.57 ha  -> los mismos
+  Y la nota dice "aplicar al finalizar la siembra". O sea que al 11/11, cuando el agronomo
+  recorrio, la siembra de la 817 estaba en curso o inminente: se ordena el preemergente
+  para cuando termine.
+  ESO NO ES PRUEBA DE EJECUCION y no se computa. Es una senal de que la 817 esta por caer,
+  y de que el Microstar va a necesitar su remito muy pronto. Queda como chequeo del lunes.
+
+========================================================================================================
+PASADA 9 - LA PROYECCION DE DEMANDA CRECE
+========================================================================================================
+  Las OT 827 y 828 suman demanda sobre la que ya se proyecto el 06/11. Acumulado:
+
+  Producto              06/11    827+828     Total    Sobrante    Falta
+  S-metolacloro           365.00     189.57    554.57        0.63   553.94
+  Coadyuvante TTM         105.40     108.67    214.07       71.66   142.41
+  Sulfentrazone            54.90      66.35    121.25       -6.10   127.35
+  Clearsol Ontario (kg)     0.00     116.74    116.74        0.00   116.74
+  Cletodim                 48.60     148.22    196.82      269.84 cubierto
+  Glifosato Panzer        324.00     143.69    467.69      512.27 cubierto
+
+  El S-metolacloro y el sulfentrazone se duplican de golpe: la 827 sola pide 189,57 y 66,35.
+  El Clearsol Ontario entra de cero: 116,74 kg de un producto que recien se da de alta.
+  El cletodim y el Panzer siguen cubiertos sobre el papel, pero el margen se consumio:
+  del cletodim quedarian 72,02 L y del Panzer 44,58, y en los dos casos buena parte del
+  sobrante esta comprometida con las OT 770, 771 y 807, que siguen sin ejecutarse.
+  SIGUE SIENDO PROYECCION, no faltante. Pero ya son cinco productos donde el stock no
+  alcanza, mas los tres del 06/11 que no tienen un kilo remitido (Microstar y los dos cebos).
+
+========================================================================================================
+PASADA 10 - ESCALAMIENTO: ABIERTO, SIN INTENSIFICAR
+========================================================================================================
+  La linea de fungicida aereo (113,53 L) se escalo el 04/11 y se reitero el 11/11.
+  Entre el 11/11 y hoy no llego documentacion que la afecte -las cuatro OT nuevas no usan
+  Coverfull ni Morata- asi que pasa a OCTAVA corrida abierta y TERCERA desde el escalamiento.
+  NO SE INTENSIFICA: la reiteracion salio hace dos dias y el procedimiento dice que no se
+  insiste sobre un pedido que acaba de salir. Se informa que sigue abierto.
+
+========================================================================================================
+RESUMEN - corte 13/11/2026
+========================================================================================================
+  Documentacion nueva   : 4 OT (827 y 828 de la actividad; 829 y 830 de La Palma, EXCLUIDAS)
+  Conciliacion          : NO CAMBIA. Sigue vigente la del 30/10
+  Negativos reales      : 0 en toda la campana
+  Atraso del remitido   : 14 dias (ultimo remito 13112 del 30/10)
+  Alta de mapeo         : 1 - CLEARSOL ONTARIO, con el activo DECLARADO en la OT (imazapir)
+  Defectos detectados   : cletodim Campodin en KG siendo liquido (y escrito CAMPODIN por
+                          CAMPODIM); semilla de moha en LT siendo kg; OT 829 subida 2 veces
+  OT 817                : sigue sin confirmarse. La OT 827 sugiere que la siembra esta en
+                          curso, pero no se imputa. Chequeo del lunes
+  Escalamiento          : fungicida aereo abierto (8a corrida), sin intensificar

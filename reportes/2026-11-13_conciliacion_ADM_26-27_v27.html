@@ -1,0 +1,299 @@
+<title>Conciliación Siembra Asociada ADM 26-27</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f1; --surface:#ffffff; --surface-2:#eef0e7;
+    --ink:#242820; --ink-soft:#4b5044; --muted:#767c6b;
+    --line:#dde1d3; --line-strong:#c7cdb8;
+    --accent:#4a6b3d; --accent-ink:#2f4527; --accent-soft:#e3ead9;
+    --ok-bg:#e2efe1; --ok-ink:#2e6b3e; --ok-line:#b7dabb;
+    --warn-bg:#faf0da; --warn-ink:#93641a; --warn-line:#e9cf98;
+    --bad-bg:#fbe6e1; --bad-ink:#a3402c; --bad-line:#eab9ab;
+    --unk-bg:#eceae4; --unk-ink:#6a6657; --unk-line:#d4d0c3;
+    --shadow: 0 1px 2px rgba(36,40,32,.06), 0 6px 20px -8px rgba(36,40,32,.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+      --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+      --line:#343829; --line-strong:#454b34;
+      --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+      --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+      --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+      --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+      --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+    --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+    --line:#343829; --line-strong:#454b34;
+    --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+    --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+    --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+    --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+    --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height:1.5;
+    -webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001ms !important; transition-duration:.001ms !important;}}
+  .wrap{max-width:980px; margin:0 auto; padding:0 24px 96px;}
+  header.hero{padding:56px 0 32px; border-bottom:1px solid var(--line); margin-bottom:40px;}
+  .eyebrow{font-family:"IBM Plex Mono", monospace; font-size:12.5px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent-ink); background:var(--accent-soft);
+    display:inline-block; padding:4px 10px; border-radius:4px; margin-bottom:18px;}
+  h1{font-family:"Fraunces", Georgia, serif; font-optical-sizing:auto; font-weight:600;
+    font-size:clamp(30px,4.4vw,44px); line-height:1.08; letter-spacing:-.01em;
+    margin:0 0 14px; text-wrap:balance;}
+  .dek{font-size:17px; color:var(--ink-soft); max-width:64ch; margin:0 0 20px;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:8px 18px; font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px; color:var(--muted);}
+  .meta-row b{color:var(--ink-soft); font-weight:600;}
+  section{margin-bottom:52px;}
+  h2{font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:24px;
+    letter-spacing:-.005em; margin:0 0 6px; text-wrap:balance;}
+  h3{font-weight:600; font-size:15px; margin:26px 0 10px;}
+  .section-note{color:var(--muted); font-size:14.5px; margin:0 0 22px; max-width:70ch;}
+  p{margin:0 0 14px; color:var(--ink-soft); max-width:72ch;}
+  p:last-child{margin-bottom:0;}
+  strong{color:var(--ink); font-weight:600;}
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:16px; box-shadow:var(--shadow);}
+  .stat .n{font-family:"Fraunces",serif; font-weight:600; font-size:30px; line-height:1;
+    font-variant-numeric:tabular-nums;}
+  .stat .l{font-size:12.5px; color:var(--muted); margin-top:6px;}
+  .stat.ok .n{color:var(--ok-ink);} .stat.bad .n{color:var(--bad-ink);}
+  .stat.warn .n{color:var(--warn-ink);} .stat.unk .n{color:var(--unk-ink);}
+  .callout{border:1px solid var(--line-strong); background:var(--surface); border-radius:10px;
+    padding:20px 22px; box-shadow:var(--shadow);}
+  .callout + .callout{margin-top:14px;}
+  .callout.warn{background:var(--warn-bg); border-color:var(--warn-line);}
+  .callout.bad{background:var(--bad-bg); border-color:var(--bad-line);}
+  .callout.ok{background:var(--ok-bg); border-color:var(--ok-line);}
+  .callout .tag{font-family:"IBM Plex Mono",monospace; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:.08em; font-weight:600; margin-bottom:8px; display:block;}
+  .callout.warn .tag{color:var(--warn-ink);} .callout.bad .tag{color:var(--bad-ink);}
+  .callout.ok .tag{color:var(--ok-ink);}
+  .table-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    box-shadow:var(--shadow); background:var(--surface); margin-bottom:10px;}
+  table{border-collapse:collapse; width:100%; min-width:640px; font-size:13.8px;}
+  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+  thead th{font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--muted); background:var(--surface-2); white-space:nowrap;
+    border-bottom:1px solid var(--line-strong);}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:var(--surface-2);}
+  td.num, th.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+    text-align:right; white-space:nowrap;}
+  td.mono{font-family:"IBM Plex Mono",monospace; font-size:13px; white-space:nowrap;}
+  .pill{display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    font-weight:600; padding:3px 9px; border-radius:100px; white-space:nowrap;
+    border:1px solid transparent;}
+  .pill.ok{background:var(--ok-bg); color:var(--ok-ink); border-color:var(--ok-line);}
+  .pill.bad{background:var(--bad-bg); color:var(--bad-ink); border-color:var(--bad-line);}
+  .pill.warn{background:var(--warn-bg); color:var(--warn-ink); border-color:var(--warn-line);}
+  .pill.unk{background:var(--unk-bg); color:var(--unk-ink); border-color:var(--unk-line);}
+  .neg{color:var(--bad-ink); font-weight:600;}
+  .pos{color:var(--ok-ink); font-weight:600;}
+  .small-note{font-size:12.5px; color:var(--muted); margin-top:2px;}
+  ul.plain{margin:0; padding-left:20px; color:var(--ink-soft);}
+  ul.plain li{margin-bottom:8px;} ul.plain li:last-child{margin-bottom:0;}
+  .questions{list-style:none; counter-reset:q; margin:0; padding:0; display:flex;
+    flex-direction:column; gap:12px;}
+  .questions li{counter-increment:q; position:relative; background:var(--surface);
+    border:1px solid var(--line-strong); border-left:3px solid var(--accent);
+    border-radius:8px; padding:14px 18px 14px 52px; box-shadow:var(--shadow);}
+  .questions li::before{content:counter(q); position:absolute; left:16px; top:14px;
+    font-family:"Fraunces",serif; font-weight:600; font-size:17px; color:var(--accent-ink);}
+  .questions p{margin:0; color:var(--ink); font-size:15px;}
+  .resolved{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+  .resolved li{background:var(--surface); border:1px solid var(--line);
+    border-left:3px solid var(--ok-line); border-radius:8px; padding:13px 16px;
+    font-size:14.5px; color:var(--ink-soft);}
+  footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
+    font-size:12.5px; color:var(--muted);}
+  @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr);} header.hero{padding-top:36px;}}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Conciliación C2 · 28ª corrida · 13 nov 2026</span>
+  <h1>Siembra Asociada ADM 26-27</h1>
+  <p class="dek">Cuatro OT nuevas: dos de la actividad y dos de La Palma, que quedan excluidas por ser moha. El cuadro no se mueve porque nada está ejecutado y no entró remitido. Pero por primera vez en la campaña una OT trae el principio activo escrito en la nota, y aparecen dos errores de unidad en el maestro.</p>
+  <div class="meta-row">
+    <span><b>Sucesores de Miguel Amand de Mendieta SRL</b></span>
+    <span>Corte 13/11/2026 · remitido documentado al 30/10</span>
+    <span>Actividad (52) · desde 1 abr 2026</span>
+  </div>
+</header>
+
+<section>
+  <div class="stats">
+    <div class="stat ok"><div class="n">0</div><div class="l">Negativos en toda la campaña</div></div>
+    <div class="stat ok"><div class="n">2 de 2</div><div class="l">OT nuevas que cierran exactas</div></div>
+    <div class="stat warn"><div class="n">14 días</div><div class="l">Atraso del remitido</div></div>
+    <div class="stat warn"><div class="n">113,53</div><div class="l">L de fungicida escalados el 04/11</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Qué entró</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>OT</th><th>Campo</th><th class="num">Ha</th><th>Fecha</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">827</td><td>La Manga</td><td class="num">435,34</td><td>12/11</td><td>Actividad (52) · no ejecutada</td></tr>
+        <tr><td class="mono">828</td><td>Don Federico</td><td class="num">108,00</td><td>12/11</td><td>Actividad (52) · no ejecutada</td></tr>
+        <tr><td class="mono">829</td><td>La Palma</td><td class="num">14,30</td><td>13/11</td><td><span class="pill warn">Excluida — moha</span></td></tr>
+        <tr><td class="mono">830</td><td>La Palma</td><td class="num">14,30</td><td>13/11</td><td><span class="pill warn">Excluida — moha</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Nada más: ni remitos, ni OT anotadas, ni export nuevo. <strong>El remitido sigue cortado al remito 13112 del 30/10 — catorce días.</strong> Sin respuestas por mail.</p>
+  <p class="small-note">El barrido se hizo con ventanas anchas y verificando la fecha de cada archivo, por lo que pasó el 11/11: el filtro de fecha de Drive devuelve cosas fuera del rango pedido. Y la OT 829 está subida <strong>dos veces</strong>, con dos identificadores distintos, el mismo nombre y el mismo tamaño: es un duplicado de carga, no dos OT, y se computa una sola vez.</p>
+</section>
+
+<section>
+  <h2>Por qué las OT 829 y 830 quedan afuera</h2>
+  <p>Las dos son del Campo La Palma, lote LP-P16 de 14,30 ha, y el cultivo es <strong>moha</strong>: la 829 es el barbecho previo y la 830 la siembra. La Palma está excluida de la actividad (52) desde el inicio de este control por corresponder a Ganadería, y la moha es un forraje — <strong>así que la exclusión queda confirmada por el cultivo y no sólo por el establecimiento</strong>. La labor de la 830 es además «siembra propia <em>fina</em> directa».</p>
+  <p>Se registran como excluidas con el motivo escrito, para que la próxima corrida no las vuelva a evaluar y para que nadie las sume al ver MAP y Herbifen en la lista de insumos.</p>
+</section>
+
+<section>
+  <h2>Las dos OT de la actividad cierran exactas</h2>
+  <p>La OT 827 tiene <strong>diez lotes</strong> y seis productos. Recalculada lote por lote:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th class="num">Suma de los diez lotes</th><th class="num">Encabezado</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Clearsol Ontario</td><td class="num">81,1041 kg</td><td class="num">81,10</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Cletodim Campodin</td><td class="num">105,0240</td><td class="num">105,02</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">87,0680</td><td class="num">87,07</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Glifosato Panzer Gold</td><td class="num">143,6850</td><td class="num">143,69</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>S-metolacloro</td><td class="num">189,5700</td><td class="num">189,57</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td>Sulfentrazone 50 %</td><td class="num">66,3495</td><td class="num">66,35</td><td><span class="pill ok">Cierra</span></td></tr>
+        <tr><td><b>Hectáreas</b></td><td class="num"><b>435,34</b></td><td class="num"><b>435,34</b></td><td><span class="pill ok">Cierra</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>La 828 es de un solo lote y también cierra (0,33 · 0,40 · 0,20 L/ha sobre 108 ha). <strong>Y en las dos la labor coincide con el producto</strong>: no se repite el desfasaje de 26 ha de la OT 821.</p>
+</section>
+
+<section>
+  <h2>Un producto nuevo, y por una vez el activo viene declarado</h2>
+  <p><strong>Clearsol Ontario</strong>, 116,74 kg entre las dos OT. Y la nota de la OT lo dice con todas las letras: <strong>«Ontario (imazapir)»</strong>.</p>
+  <p>Es la primera vez en toda la campaña que el principio activo viene escrito en la propia OT. No hay que preguntarlo ni inferirlo por el nombre: lo declara el documento, y así queda mapeado, citando la fuente. El uso además encaja — imazapir es el herbicida del sistema Clearfield, y los lotes donde se aplica son girasol CL (NK 3969 CL, NS 1227 CLAO, Nidera 1117 CL), o sea híbridos tolerantes.</p>
+  <p>Lo que sigue faltando es la <strong>concentración</strong>, que la nota no da.</p>
+</section>
+
+<section>
+  <h2>Dos errores de unidad en el maestro</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th>Unidad cargada</th><th>Unidad correcta</th><th>Por qué</th></tr></thead>
+      <tbody>
+        <tr><td>Cletodim 24 % Campodin EC × 20 LTS</td><td class="num">KG</td><td class="num">L</td><td>El propio nombre dice <b>EC</b> (concentrado emulsionable) y <b>× 20 LTS</b>. En el export de costeo el mismo producto está en litros. Son 148,22 L, no kg.</td></tr>
+        <tr><td>Moha identificada bolsa <span class="small-note">(OT 830, excluida)</span></td><td class="num">LT</td><td class="num">kg</td><td>Es semilla a 35 kg/ha sobre 14,30 ha = 500,50 kg.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Ninguno de los dos afecta el cuadro de principios activos:</strong> las cantidades están bien y la unidad correcta se deduce del producto. Afecta a quien lea el maestro sin contexto. Y de paso: el cletodim está escrito <strong>Campodin</strong>, con N, cuando en el export es <strong>Campodim</strong>, con M — es el mismo producto, así que se agrupa y se avisa del typo en lugar de abrir una fila nueva.</p>
+</section>
+
+<section>
+  <h2>Se verificó la regla Weed-It: no aplica</h2>
+  <p>Las dos OT son de fumigación, así que se leyeron las notas de cada lote antes de decidir:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Aplicación</th><th>Nota del lote</th></tr></thead>
+      <tbody>
+        <tr><td>Preemergente de soja</td><td>«aplicar al finalizar la siembra, 50 impactos/cm²»</td></tr>
+        <tr><td>Postemergente de girasol</td><td>«aplicar desde 2 hojas verdaderas, 120-150 lt agua/ha, tanque bien lavado, no aplicar con pronóstico de heladas»</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Son aplicaciones de área completa, con indicación de cobertura y de volumen de caldo. No hay «Manchoneo» ni superficie parcial. <strong>Son las notas más detalladas de la campaña</strong> —traen el estadio del cultivo, el volumen de agua, la advertencia de heladas y el lavado de tanque— y vienen de una recorrida del agrónomo el 11/11 que la OT cita.</p>
+</section>
+
+<section>
+  <h2>La OT 817 sigue sin confirmarse, pero la 827 dice algo</h2>
+  <p>El 11/11 quedó anotado como el primer chequeo de hoy: la OT 817 (189,57 ha de soja en La Manga, con 7.582,80 kg de Microstar PZ Bio sin remitido) tenía fecha estimada de siembra el 10/11. <strong>No volvió anotada y no hay remito, así que no se imputa nada.</strong></p>
+  <p>Pero la OT 827 trae un dato indirecto. Sus cuatro lotes de preemergente de soja son <strong>exactamente</strong> los cuatro lotes de siembra de la 817:</p>
+  <div class="table-scroll">
+    <table>
+      <tbody>
+        <tr><td>OT 817 · siembra</td><td class="num">38,04 + 30 + 65,79 + 55,74 = <b>189,57 ha</b></td></tr>
+        <tr><td>OT 827 · preemergente</td><td class="num">38,04 + 30 + 65,79 + 55,74 = <b>189,57 ha</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Y la nota dice «aplicar al finalizar la siembra». O sea que al 11/11, cuando el agrónomo recorrió, la siembra de la 817 estaba en curso o inminente: se ordenó el preemergente para cuando termine. <strong>Eso no es prueba de ejecución y no se computa</strong> — es una señal de que la 817 está por caer y de que el Microstar va a necesitar su remito muy pronto.</p>
+</section>
+
+<section>
+  <h2>La proyección de demanda crece</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th class="num">Proyectado 06/11</th><th class="num">OT 827 + 828</th><th class="num">Total</th><th class="num">Sobrante</th><th class="num">Falta remitir</th></tr></thead>
+      <tbody>
+        <tr><td>S-metolacloro</td><td class="num">365,00</td><td class="num">189,57</td><td class="num">554,57</td><td class="num">0,63</td><td class="num neg">553,94</td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">105,40</td><td class="num">108,67</td><td class="num">214,07</td><td class="num">71,66</td><td class="num neg">142,41</td></tr>
+        <tr><td>Sulfentrazone</td><td class="num">54,90</td><td class="num">66,35</td><td class="num">121,25</td><td class="num">−6,10</td><td class="num neg">127,35</td></tr>
+        <tr><td><b>Clearsol Ontario</b> <span class="small-note">(kg)</span></td><td class="num">—</td><td class="num">116,74</td><td class="num">116,74</td><td class="num">0,00</td><td class="num neg">116,74</td></tr>
+        <tr style="opacity:.75"><td>Cletodim</td><td class="num">48,60</td><td class="num">148,22</td><td class="num">196,82</td><td class="num">269,84</td><td class="num pos">cubierto</td></tr>
+        <tr style="opacity:.75"><td>Glifosato Panzer Gold</td><td class="num">324,00</td><td class="num">143,69</td><td class="num">467,69</td><td class="num">512,27</td><td class="num pos">cubierto</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>El S-metolacloro y el sulfentrazone se duplican de golpe: la 827 sola pide 189,57 y 66,35. El Clearsol Ontario entra de cero. <strong>Y el margen del cletodim y del Panzer se consumió</strong>: quedarían 72,02 L y 44,58 L, y en los dos casos buena parte de ese sobrante está comprometida con las OT 770, 771 y 807, que siguen sin ejecutarse.</p>
+  <p>Sigue siendo <strong>proyección, no faltante</strong>. Pero ya son cuatro productos donde el stock no alcanza, más los tres del 06/11 que no tienen un kilo remitido en la campaña (Microstar PZ Bio, Clartex y Clarthex TDS).</p>
+</section>
+
+<section>
+  <h2>La conciliación no cambia</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Bloque</th><th class="num">PA</th><th class="num">Cierran</th><th class="num">Sobrante</th><th class="num">En tránsito</th><th class="num">Negativos</th></tr></thead>
+      <tbody>
+        <tr><td>Conciliado <span class="small-note">(OT ≤754)</span></td><td class="num">—</td><td colspan="3" class="num">cerrado desde el 08/09</td><td class="num pos"><b>0</b></td></tr>
+        <tr><td>755-791</td><td class="num">14</td><td class="num">7</td><td class="num">7</td><td class="num">—</td><td class="num pos"><b>0</b></td></tr>
+        <tr><td>Abierto 792-816</td><td class="num">14</td><td class="num">6</td><td class="num">6</td><td class="num">2</td><td class="num pos"><b>0</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Más el Solmix en +3.746,00 kg y el MAP con 68.912,30 kg aplicados sin remitido. <strong>Siguen vigentes los números del 30/10</strong>: ninguna OT nueva está ejecutada y no entró remitido, así que no hay nada que recalcular.</p>
+  <p>El escalamiento del fungicida aéreo (113,53 L) pasa a <strong>octava corrida abierta</strong> y tercera desde que salió. <strong>No se intensifica:</strong> la reiteración salió el 11/11, hace dos días, y el procedimiento dice que no se insiste sobre un pedido que acaba de salir.</p>
+</section>
+
+<section>
+  <h2>Lo que se pide</h2>
+  <ol class="questions">
+    <li><p><strong>Corregir dos unidades en el maestro:</strong> el cletodim Campodin está en kg y es líquido (el nombre dice EC × 20 LTS), y la semilla de moha de la OT 830 está en litros y son kilos. De paso, el cletodim está escrito «Campodin» con N donde el export dice «Campodim» con M.</p></li>
+    <li><p><strong>La concentración del Clearsol Ontario.</strong> El activo ya lo declara la nota de la OT —imazapir—, así que esto es lo único que falta.</p></li>
+    <li><p><strong>El remitido.</strong> Catorce días desde el último remito, con cuatro productos cuya demanda ya supera el stock y tres sin un kilo remitido. Y el remito del fungicida aéreo, escalado el 04/11 y reiterado el 11/11.</p></li>
+    <li><p><strong>Lo de siempre, que sigue abierto:</strong> la labor de la OT 821 (producto en 114 ha, labor en 88); la formulación del Microstar PZ Bio y el activo del Clartex y del Clarthex TDS; separar la OT 804; volver a subir las OT 794 y 770.</p></li>
+    <li><p><strong>Un detalle de carga:</strong> la OT 829 quedó subida dos veces a Drive. Conviene borrar una para que no se duplique.</p></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Verificación</h2>
+  <p>Diez pasadas. La OT 827 se recalculó sumando sus diez lotes producto por producto: los seis coinciden con el encabezado y las hectáreas también. La 828, de un solo lote, se verificó contra la dosis. En las dos se comprobó además que la labor y el producto van sobre las mismas hectáreas, que es lo que falló en la OT 821.</p>
+  <p>Se verificó la regla de aplicación selectiva leyendo las notas de cada lote antes de descartarla, y se dejó escrito el texto que la descarta.</p>
+  <p>Las OT 829 y 830 no se computaron, pero se leyeron completas para poder justificar la exclusión por el cultivo y no sólo por el establecimiento.</p>
+  <p>El activo del Clearsol Ontario se tomó de la nota de la OT, que lo declara, y no del parecido del nombre. La concentración, que la nota no da, queda como pregunta.</p>
+  <p>El barrido de Drive se hizo con ventanas más anchas que el corte y verificando la fecha de cada archivo, por lo que se detectó el 11/11 con el filtro de fecha. Así se encontró el duplicado de la OT 829.</p>
+</section>
+
+<footer>
+  Conciliación C2 (Remitido vs. Aplicado) · Actividad (52) Siembra Asociada ADM 26-27 · La Palma excluida por corresponder a Ganadería · Ningún archivo de Drive fue editado — trabajo de solo lectura y diagnóstico.
+</footer>
+
+</div>
