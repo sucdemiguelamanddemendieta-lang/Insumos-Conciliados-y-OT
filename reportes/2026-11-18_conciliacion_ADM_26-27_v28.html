@@ -1,0 +1,452 @@
+<title>Conciliación Siembra Asociada ADM 26-27</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#f5f6f1; --surface:#ffffff; --surface-2:#eef0e7;
+    --ink:#242820; --ink-soft:#4b5044; --muted:#767c6b;
+    --line:#dde1d3; --line-strong:#c7cdb8;
+    --accent:#4a6b3d; --accent-ink:#2f4527; --accent-soft:#e3ead9;
+    --ok-bg:#e2efe1; --ok-ink:#2e6b3e; --ok-line:#b7dabb;
+    --warn-bg:#faf0da; --warn-ink:#93641a; --warn-line:#e9cf98;
+    --bad-bg:#fbe6e1; --bad-ink:#a3402c; --bad-line:#eab9ab;
+    --unk-bg:#eceae4; --unk-ink:#6a6657; --unk-line:#d4d0c3;
+    --shadow: 0 1px 2px rgba(36,40,32,.06), 0 6px 20px -8px rgba(36,40,32,.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+      --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+      --line:#343829; --line-strong:#454b34;
+      --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+      --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+      --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+      --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+      --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#181a15; --surface:#20231c; --surface-2:#262a20;
+    --ink:#eceee4; --ink-soft:#c7cbb9; --muted:#93987f;
+    --line:#343829; --line-strong:#454b34;
+    --accent:#8fbf7a; --accent-ink:#bfe0ac; --accent-soft:#2b3624;
+    --ok-bg:#20321f; --ok-ink:#8fd39a; --ok-line:#345435;
+    --warn-bg:#392f16; --warn-ink:#e8c675; --warn-line:#5c4a1f;
+    --bad-bg:#3a201a; --bad-ink:#f0a58f; --bad-line:#5c3226;
+    --unk-bg:#2a2b23; --unk-ink:#b7b39f; --unk-line:#403c30;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 24px -8px rgba(0,0,0,.5);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif; line-height:1.5;
+    -webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001ms !important; transition-duration:.001ms !important;}}
+  .wrap{max-width:980px; margin:0 auto; padding:0 24px 96px;}
+  header.hero{padding:56px 0 32px; border-bottom:1px solid var(--line); margin-bottom:40px;}
+  .eyebrow{font-family:"IBM Plex Mono", monospace; font-size:12.5px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--accent-ink); background:var(--accent-soft);
+    display:inline-block; padding:4px 10px; border-radius:4px; margin-bottom:18px;}
+  h1{font-family:"Fraunces", Georgia, serif; font-optical-sizing:auto; font-weight:600;
+    font-size:clamp(30px,4.4vw,44px); line-height:1.08; letter-spacing:-.01em;
+    margin:0 0 14px; text-wrap:balance;}
+  .dek{font-size:17px; color:var(--ink-soft); max-width:64ch; margin:0 0 20px;}
+  .meta-row{display:flex; flex-wrap:wrap; gap:8px 18px; font-family:"IBM Plex Mono", monospace;
+    font-size:12.5px; color:var(--muted);}
+  .meta-row b{color:var(--ink-soft); font-weight:600;}
+  section{margin-bottom:52px;}
+  h2{font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:24px;
+    letter-spacing:-.005em; margin:0 0 6px; text-wrap:balance;}
+  h3{font-weight:600; font-size:15px; margin:26px 0 10px;}
+  .section-note{color:var(--muted); font-size:14.5px; margin:0 0 22px; max-width:70ch;}
+  p{margin:0 0 14px; color:var(--ink-soft); max-width:72ch;}
+  p:last-child{margin-bottom:0;}
+  strong{color:var(--ink); font-weight:600;}
+  .stats{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
+  .stat{background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:16px; box-shadow:var(--shadow);}
+  .stat .n{font-family:"Fraunces",serif; font-weight:600; font-size:30px; line-height:1;
+    font-variant-numeric:tabular-nums;}
+  .stat .l{font-size:12.5px; color:var(--muted); margin-top:6px;}
+  .stat.ok .n{color:var(--ok-ink);} .stat.bad .n{color:var(--bad-ink);}
+  .stat.warn .n{color:var(--warn-ink);} .stat.unk .n{color:var(--unk-ink);}
+  .callout{border:1px solid var(--line-strong); background:var(--surface); border-radius:10px;
+    padding:20px 22px; box-shadow:var(--shadow);}
+  .callout + .callout{margin-top:14px;}
+  .callout.warn{background:var(--warn-bg); border-color:var(--warn-line);}
+  .callout.bad{background:var(--bad-bg); border-color:var(--bad-line);}
+  .callout.ok{background:var(--ok-bg); border-color:var(--ok-line);}
+  .callout .tag{font-family:"IBM Plex Mono",monospace; font-size:11.5px; text-transform:uppercase;
+    letter-spacing:.08em; font-weight:600; margin-bottom:8px; display:block;}
+  .callout.warn .tag{color:var(--warn-ink);} .callout.bad .tag{color:var(--bad-ink);}
+  .callout.ok .tag{color:var(--ok-ink);}
+  .table-scroll{overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    box-shadow:var(--shadow); background:var(--surface); margin-bottom:10px;}
+  table{border-collapse:collapse; width:100%; min-width:640px; font-size:13.8px;}
+  th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); vertical-align:top;}
+  thead th{font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--muted); background:var(--surface-2); white-space:nowrap;
+    border-bottom:1px solid var(--line-strong);}
+  tbody tr:last-child td{border-bottom:none;}
+  tbody tr:hover{background:var(--surface-2);}
+  td.num, th.num{font-family:"IBM Plex Mono",monospace; font-variant-numeric:tabular-nums;
+    text-align:right; white-space:nowrap;}
+  td.mono{font-family:"IBM Plex Mono",monospace; font-size:13px; white-space:nowrap;}
+  .pill{display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11px;
+    font-weight:600; padding:3px 9px; border-radius:100px; white-space:nowrap;
+    border:1px solid transparent;}
+  .pill.ok{background:var(--ok-bg); color:var(--ok-ink); border-color:var(--ok-line);}
+  .pill.bad{background:var(--bad-bg); color:var(--bad-ink); border-color:var(--bad-line);}
+  .pill.warn{background:var(--warn-bg); color:var(--warn-ink); border-color:var(--warn-line);}
+  .pill.unk{background:var(--unk-bg); color:var(--unk-ink); border-color:var(--unk-line);}
+  .neg{color:var(--bad-ink); font-weight:600;}
+  .pos{color:var(--ok-ink); font-weight:600;}
+  .small-note{font-size:12.5px; color:var(--muted); margin-top:2px;}
+  ul.plain{margin:0; padding-left:20px; color:var(--ink-soft);}
+  ul.plain li{margin-bottom:8px;} ul.plain li:last-child{margin-bottom:0;}
+  .questions{list-style:none; counter-reset:q; margin:0; padding:0; display:flex;
+    flex-direction:column; gap:12px;}
+  .questions li{counter-increment:q; position:relative; background:var(--surface);
+    border:1px solid var(--line-strong); border-left:3px solid var(--accent);
+    border-radius:8px; padding:14px 18px 14px 52px; box-shadow:var(--shadow);}
+  .questions li::before{content:counter(q); position:absolute; left:16px; top:14px;
+    font-family:"Fraunces",serif; font-weight:600; font-size:17px; color:var(--accent-ink);}
+  .questions p{margin:0; color:var(--ink); font-size:15px;}
+  .resolved{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px;}
+  .resolved li{background:var(--surface); border:1px solid var(--line);
+    border-left:3px solid var(--ok-line); border-radius:8px; padding:13px 16px;
+    font-size:14.5px; color:var(--ink-soft);}
+  footer{margin-top:64px; padding-top:24px; border-top:1px solid var(--line);
+    font-size:12.5px; color:var(--muted);}
+  @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr);} header.hero{padding-top:36px;}}
+</style>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="eyebrow">Conciliación C2 · 30ª corrida · 18 nov 2026</span>
+  <h1>Siembra Asociada ADM 26-27</h1>
+  <p class="dek">Entre el corte del 17/11 y hoy no entró documentación nueva, así que esta corrida no rehace la conciliación: la consolida en el repositorio —donde la del 17/11 no quedó registrada— y corrige dos números. El saldo de Cibus Duo omitía un remito de 360 kg y la línea cierra con holgura; y el remito propio del galpón, que ayer quedó sin computar, da vuelta el signo del sulfentrazone.</p>
+  <div class="meta-row">
+    <span><b>Sucesores de Miguel Amand de Mendieta SRL</b></span>
+    <span>Corte 18/11/2026 · remitido documentado al 14/11</span>
+    <span>Actividad (52) · desde 1 abr 2026</span>
+  </div>
+</header>
+
+<section>
+  <div class="stats">
+    <div class="stat ok"><div class="n">0</div><div class="l">Negativos en toda la campaña · 8ª corrida</div></div>
+    <div class="stat ok"><div class="n">4 días</div><div class="l">Atraso del remitido — eran 14 el 13/11</div></div>
+    <div class="stat warn"><div class="n">2</div><div class="l">Números corregidos del 17/11</div></div>
+    <div class="stat warn"><div class="n">1</div><div class="l">Única línea de la campaña que no cierra</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Qué hace esta corrida, y por qué no es un reporte duplicado</h2>
+  <p>La corrida del 17/11 se ejecutó desde una <strong>segunda tarea programada</strong>, creada el 16/11, que corre miércoles y viernes en una sesión nueva cada vez. Hizo su trabajo: publicó el reporte y mandó el mail a las 16:17. Pero <strong>no commiteó nada al repositorio</strong>, así que la memoria durable del control —el runbook, el mapeo, el historial y el estado de escalamiento— no tiene ningún registro de esa corrida.</p>
+  <p>Entre el corte del 17/11 y hoy <strong>no entró documentación nueva a Drive ni hay respuestas por mail</strong>. Por la regla del procedimiento, eso significa no rehacer la conciliación ni publicar un reporte duplicado. Así que el aporte de esta corrida es otro:</p>
+  <ul class="plain">
+    <li><strong>Dejar la corrida del 17/11 escrita en el repositorio</strong>, con su fila de historial, las altas de mapeo y el estado de escalamiento al día.</li>
+    <li><strong>Corregir dos números</strong>, abajo.</li>
+    <li>Agregar tres verificaciones que esa corrida no hizo: la transcripción completa del export validada contra sus propios totales, la auditoría de los 43 precios unitarios, y el control de que el remitido nuevo asignado a los bloques suma el delta exacto del export.</li>
+  </ul>
+  <div class="callout warn">
+    <span class="tag">Para el dueño, no para el control</span>
+    <p>Hay <strong>dos rutinas corriendo la misma conciliación</strong>: la original y la del 16/11. La nueva no puede escribir en el repositorio, y ése es el problema real: si sobrevive sola, cada corrida publica el reporte pero la memoria deja de crecer, y es la memoria la que hace que este control mejore —son 30 corridas de reglas acumuladas. <strong>Hay que quedarse con una.</strong></p>
+  </div>
+</section>
+
+<section>
+  <h2>Los dos números que se corrigen</h2>
+  <h3>1. El Cibus Duo cierra con holgura: faltaba sumar un remito</h3>
+  <p>El reporte del 17/11 calculó el saldo como <span class="mono">700 + 120 − 807,34 = +12,66</span> y, con razón, desconfió: un cierre tan justo contra un remito que no cita OT es el mismo tipo de coincidencia de cantidad que el «Morata = Coverfull» del 28/10. Lo mantuvo en tránsito.</p>
+  <p>Pero <strong>faltaba un remito</strong>. Su propia tabla de documentos lista los dos —el 13217 del 3/11 con 120 kg y el <strong>13548 del 14/11 con 360 kg</strong>, 480 en total— y el saldo sólo tomó los 120.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Cibus Duo</th><th class="num">Remitido</th><th class="num">Aplicado</th><th class="num">Dif.</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Como decía el 17/11</td><td class="num">820,00</td><td class="num">807,34</td><td class="num pos">+12,66</td><td><span class="pill warn">En tránsito</span></td></tr>
+        <tr><td>Con el remito 13548 incluido</td><td class="num">1.180,00</td><td class="num">807,34</td><td class="num pos">+372,66</td><td><span class="pill ok">Sobrante — cierra</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Y la coincidencia sospechosa <strong>desaparece sola</strong>: no había tal ajuste milimétrico, había un remito sin sumar. <strong>La clasificación «en tránsito» del 30/10 se validó:</strong> no era faltante, era atraso documental, y los 480 kg llegaron.</p>
+  <p class="small-note">El sobrante de 372,66 kg —18,6 bolsas— no tiene por ahora destino en ninguna OT emitida: las OT 822 y 824 de cebo usan Clartex y Clarthex TDS, no Cibus Duo. Es stock, no defecto.</p>
+
+  <h3>2. El remito propio del galpón se computa, y el sulfentrazone deja de ser negativo</h3>
+  <p>El <strong>remito propio de ADM 0003-000006</strong>, del 20/10, a nombre de Siembra Asociada y <strong>citando la OT 799</strong>, trae 35 L de S-metolacloro y 11 de sulfentrazone. El 17/11 se leyó por OCR y se decidió no computarlo hasta confirmar las cantidades. <strong>Esta corrida lo computa</strong>, por tres razones: la relectura coincide número por número con la de ayer; la convención ya está establecida con el remito propio 0003-0000005, que cuenta como remitido; y se verificó que no estuviera contado antes, descomponiendo el remitido previo en sus remitos de origen —S-metolacloro 460,00 = 420 del export + 40 del remito de cliente 13098, y sulfentrazone 100,00 = 40 + 60 del export.</p>
+  <div class="callout">
+    <p><strong>El sulfentrazone pasa de −6,10 a +4,90.</strong> Esa línea venía arrastrando un signo negativo que se explicaba como redondeo. <strong>No era redondeo: era un retiro real del galpón, documentado, del 20/10, contra la OT 799.</strong> Es lo mismo que pasó el 30/10 con el S-metolacloro, y la lección es la misma: ante un faltante, la primera hipótesis es un remito pendiente en otro canal, no un defecto del plan ni una teoría propia.</p>
+    <p class="small-note">Los volúmenes lo delataban: 35 y 11 litros no son envase entero, porque el galpón se mide de un envase ya abierto. Igual conviene que Betiana confirme el 11 por escrito: es el único dígito que depende de una sola fuente manuscrita.</p>
+  </div>
+  <p class="small-note">El S-metolacloro pasa de +0,63 a +35,63 en el bloque abierto. Son números del cuadro por bloques, no de la proyección de cobertura del 17/11, que es otro cálculo y no se contradice.</p>
+</section>
+
+<section>
+  <h2>Qué documentación hay sobre la mesa</h2>
+</section>
+
+<section>
+  <h2>Qué entró</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Tipo</th><th>Documento</th><th>Fecha</th><th>Qué dice</th></tr></thead>
+      <tbody>
+<tr><td><span class="pill ok">Export</span></td><td class="mono">Siembras Asociadas ADM 16-11</td><td>16/11</td><td>Cortado al remito 13548 del 14/11 — el atraso pasa de 14 días a 4</td></tr>
+<tr><td><span class="pill ok">11 remitos</span></td><td class="mono">13152 · 13217 · 13321 · 13322 · 13456 · 13457 · 13459 · 13531 · 13537 · 13539 · 13548</td><td>2/11 al 14/11</td><td>2.765,00 unidades de remitido nuevo</td></tr>
+<tr><td><span class="pill ok">Remito propio</span></td><td class="mono">ADM 0003-000006</td><td>20/10</td><td>35 L de S-metolacloro y 11 de sulfentrazone, citando la OT 799</td></tr>
+<tr><td><span class="pill warn">Remito escaneado</span></td><td class="mono">RyC 13371</td><td>10/11</td><td>Anotado «OT 825-826» pero imputado a la actividad (56)</td></tr>
+<tr><td><span class="pill ok">OT anotada</span></td><td class="mono">823 — Santo Domingo</td><td>8/11</td><td>Ejecutada, cita el remito 13321. Cierra con sustitución de marca</td></tr>
+<tr><td><span class="pill ok">OT anotada</span></td><td class="mono">801 — La Manga</td><td>2/11</td><td>Trae consumo real: Panzer 160,00 y TTM 20,00</td></tr>
+<tr><td><span class="pill ok">OT anotada</span></td><td class="mono">799 — La Manga</td><td>22 al 31/10</td><td>Fecha por lote. Confirma ejecución ya imputada</td></tr>
+<tr><td><span class="pill ok">OT anotada</span></td><td class="mono">813 — Ciervo Blanco</td><td>4-5/11</td><td>Cita el remito 13112. Confirma ejecución ya imputada</td></tr>
+<tr><td><span class="pill warn">OT anotada</span></td><td class="mono">821 — La María Cristina</td><td>17/11</td><td><strong>El OCR no la lee.</strong> Tercer intento: se pide el reescaneo</td></tr>
+<tr><td><span class="pill ok">OT nueva</span></td><td class="mono">831 — La Manga</td><td>2/11</td><td>9 ha pendientes de la OT 808. Explica el remito 13152 completo</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+  <p>Más la OT 798 reescaneada. <strong>Todo esto entró entre el 16 y el 17/11 y ya lo recogió la corrida del 17/11</strong>; se relista acá porque es lo que sostiene los cuadros y porque no quedó escrito en el repositorio. <strong>Sin novedades desde entonces y sin respuestas por mail.</strong></p>
+  <p class="small-note">El barrido se hizo con ventanas anchas y verificando la fecha de cada archivo, por lo que pasó el 11/11 con el filtro de fecha de Drive. Y el export viejo volvió a cambiar de fecha y de tamaño sin que cambie el contenido —tercera vez que un atributo de Drive se mueve solo—, pero ya no se usa: lo reemplaza el del 16/11.</p>
+</section>
+
+<section>
+  <h2>El export cuadra a cero, y los precios no regresaron</h2>
+  <p>Se transcribió a 188 líneas y se validó contra los <span class="mono">///TOTALES:</span> del propio archivo:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Control</th><th class="num">Transcripción</th><th class="num">El archivo dice</th><th class="num">Delta</th></tr></thead>
+      <tbody>
+        <tr><td>Cantidad</td><td class="num">42.928,12</td><td class="num">42.928,12</td><td class="num pos">0,00</td></tr>
+        <tr><td>Pesos</td><td class="num">560.100.992,77</td><td class="num">560.100.992,77</td><td class="num pos">0,00</td></tr>
+        <tr><td>Dólares</td><td class="num">373.433,01</td><td class="num">373.433,01</td><td class="num pos">0,00</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Y las 188 líneas cumplen, sin una sola excepción, que los dólares son la cantidad por el precio unitario.</p>
+  <p>Se auditaron las series de precio de los <strong>43 productos</strong>, no sólo los que cambiaron. Once varían, y las once variaciones son chicas, graduales y cronológicamente coherentes: ninguna tiene la firma de un error de carga, que es el salto de un orden de magnitud al precio de otro producto. <strong>Lo que importaba verificar, verifica:</strong></p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th>Precio</th><th>Dónde</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>Coadyuvante TTM</td><td class="mono">16,51 USD/L</td><td>en las 30 líneas, incluidas las 6 nuevas</td><td><span class="pill ok">No regresó</span></td></tr>
+        <tr><td>Veltroma saflufenacil</td><td class="mono">297,00 USD/kg</td><td>en todas desde el 14/09, incluido el remito 12745</td><td><span class="pill ok">No regresó</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small-note">Son el sobrecosto de 27.550,80 USD del TTM y el error de 140,00 del Veltroma. Segunda corrida consecutiva en que las dos correcciones se verifican en su lugar.</p>
+</section>
+
+<section>
+  <h2>La OT 823 cierra con sustitución de marca, y eso es el método entero en una sola OT</h2>
+  <p>La OT 823 —Santo Domingo, 48 ha de maíz— volvió anotada, <strong>fechada 8/11 y citando el remito RyC 13321</strong>. Su consumo real es igual al plan en los cinco productos, pero con dos sustituciones escritas a mano sobre el documento y confirmadas por el remito:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>El plan decía</th><th>Se aplicó</th><th>Principio activo</th><th>Por marca</th><th>Por activo</th></tr></thead>
+      <tbody>
+        <tr><td>2,4-D Herbifen Advance</td><td>2,4-D Controler EH 59 %</td><td>2,4-D éster</td><td><span class="pill bad">No cierra</span></td><td><span class="pill ok">Cierra exacta</span></td></tr>
+        <tr><td>Eudor Cletodim Helm</td><td>Cletodim 24 % Campodim</td><td>Cletodim 24 %</td><td><span class="pill bad">No cierra</span></td><td><span class="pill ok">Cierra exacta</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>El remito no trae un litro de Herbifen ni de Helm. <strong>Agrupadas por marca, las dos líneas quedan descalzadas; agrupadas por principio activo, la OT cierra exacta.</strong> Es la razón de ser de este control, y acá se ve en un solo documento.</p>
+  <p>El remito 13321 está anotado «OT 821-823»: sirve a las dos juntas. Y contra el plan sumado de las dos, <strong>cada línea es un número entero de envases y cada diferencia es menor que un envase</strong> — la columna «Envases» del propio remito lo confirma:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th class="num">Remitido</th><th>Envases</th><th class="num">Plan 821+823</th><th class="num">Dif.</th></tr></thead>
+      <tbody>
+        <tr><td>2,4-D Controler EH</td><td class="num">160,00</td><td class="mono">8 × 20</td><td class="num">163,20</td><td class="num neg">−3,20</td></tr>
+        <tr><td>Cletodim Campodim</td><td class="num">60,00</td><td class="mono">3 × 20</td><td class="num">48,60</td><td class="num pos">+11,40</td></tr>
+        <tr><td>Glifosato Panzer Gold</td><td class="num">320,00</td><td class="mono">16 × 20</td><td class="num">324,00</td><td class="num neg">−4,00</td></tr>
+        <tr><td>Paramer pyroxasulfone</td><td class="num">30,00 kg</td><td class="mono">6 × 5</td><td class="num">29,16</td><td class="num pos">+0,84</td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">30,00</td><td class="mono">3 × 10</td><td class="num">32,40</td><td class="num neg">−2,40</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2>La OT 831 explica el remito 13152 completo, envase por envase</h2>
+  <p>La OT 831 es una OT de completamiento: <strong>9 hectáreas</strong> que habían quedado sin hacer de la OT 808, sobre un lote de 55,74. Su nota lo dice: «Remito 13152 — has pendientes en OT 808».</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th class="num">Pide la OT 831</th><th class="num">Trae el remito 13152</th><th>Envases</th><th class="num">Sobra</th></tr></thead>
+      <tbody>
+        <tr><td>2,4-D Herbifen</td><td class="num">13,50</td><td class="num">20,00</td><td class="mono">1 × 20</td><td class="num pos">+6,50</td></tr>
+        <tr><td>Cletodim Campodim</td><td class="num">9,00</td><td class="num">20,00</td><td class="mono">1 × 20</td><td class="num pos">+11,00</td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">1,80</td><td class="num">10,00</td><td class="mono">1 × 10</td><td class="num pos">+8,20</td></tr>
+        <tr><td>Glifosato Panzer Gold</td><td class="num">18,00</td><td class="num">20,00</td><td class="mono">1 × 20</td><td class="num pos">+2,00</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Es exactamente un envase de cada uno de los cuatro, y cada envase alcanza y sobra.</strong> Los cuatro sobrantes son menores que un envase y son el residuo inevitable de abrir un bidón para nueve hectáreas. Es el remito mejor explicado de la campaña.</p>
+  <p class="small-note">La OT 831 está emitida, no volvió anotada: su plan no se imputa.</p>
+</section>
+
+<section>
+  <h2>El remito 13371 está imputado a otra actividad</h2>
+  <div class="callout">
+    <p>El remito RyC 13371, del 10/11, está anotado a mano <strong>«OT 825-826»</strong> —dos OT de la actividad (52)— pero su encabezado dice <strong>«SALIDA INSUMOS, (56) SOJA MULTIPLICACIÓN ADM 26-27»</strong>. Y por eso no aparece en el export de costeo de la (52).</p>
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Trae el remito 13371</th><th class="num">Cantidad</th><th>Lo piden las OT 825+826</th><th class="num">Plan</th></tr></thead>
+      <tbody>
+        <tr><td>Paraquat Ruralco + Sigma</td><td class="num">640,00</td><td>Paraquat</td><td class="num">730,00</td></tr>
+        <tr><td>Lambdacialotrina Rafter × 1 L</td><td class="num">20,00</td><td>Lambdacialotrina 25 %</td><td class="num">18,25</td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">50,00</td><td>Coadyuvante TTM</td><td class="num">73,00</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Los productos coinciden con lo que piden esas dos OT, que son de Ciervo Blanco y La Celina y se emitieron el 06/11. <strong>O la actividad del remito está mal, o la anotación de las OT está mal.</strong> No se resuelve de este lado: <strong>no se imputa a la (52)</strong> y se pregunta. Mientras tanto, esos 640 L de paraquat, 20 de lambdacialotrina y 50 de TTM se están costeando en otra actividad.</p>
+  <p>Es una clase de hallazgo nueva en esta campaña —lo encontró la corrida del 17/11 y sigue sin respuesta—: no un remito que falta, sino <strong>un remito que existe y está cargado donde no corresponde</strong>. Desde el export es invisible, porque desde el export simplemente no está. Queda registrado en el runbook, que es lo que faltaba.</p>
+  <p class="small-note">Y cambia una tolerancia: el remito trae «Lambdacialotrina 25 % Rafter × 1 litro» donde antes era «4×5 LTS». Mismo producto y misma concentración, pero el envase de esa línea pasa de 5 L a 1 L.</p>
+</section>
+
+<section>
+  <h2>El Clearsol Ontario queda resuelto, y no por una respuesta</h2>
+  <p>El 13/11 quedó abierto que el Clearsol Ontario figura en <strong>kilos</strong> en el maestro. El export lo resuelve solo: lo describe <strong>«CLEARSOL ONTARIO (CAJA 4X5LTS)»</strong> y lo remite <strong>en litros</strong> — 110 L entre el remito 13457 (35) y el 13537 (50 + 10 + 15). Es un líquido en botellas de 5 litros.</p>
+  <p>Las OT 827 y 828 lo cargan en kg. <strong>La cantidad es la misma número a número</strong> —116,74 de plan contra 110,00 remitidos— así que el cuadro por principio activo no se altera, pero la unidad del maestro está mal, igual que la del cletodim Campodim. Es el segundo defecto de unidad del mismo tipo en dos corridas.</p>
+  <p class="small-note">Salvedad que conviene dejar escrita: si el 0,33/ha fuera masa real haría falta la densidad para convertir. Por eso lo que se pide es corregir el maestro, no sólo anotarlo.</p>
+  <p>Las tres líneas de Clearsol del remito 13537 —50, 10 y 15— <strong>no son un duplicado</strong>. El propio export tiene el precedente: el Rizostar aparece tres veces en el remito 11790 (4.000 + 200 + 1.200) y el Compinche cuatro veces en el 11802 (15 + 25 + 5 + 25). Son lotes distintos en un mismo remito, las cantidades son diferentes y el total del archivo cuadra al centavo.</p>
+  <p>Y entró la <strong>cuarta marca de S-metolacloro</strong>: el Chemoclor, 200 L entre los remitos 13459, 13537 y 13539. El activo tiene ya cuatro nombres —Mabua, Symphony, Xian y Chemoclor— y <strong>tres concentraciones sin confirmar</strong>. Se agrupan a valor nominal, y es eso lo que permite que la línea cierre.</p>
+</section>
+
+<section>
+  <h2>La OT 821 no se pudo leer, y es el tercer intento</h2>
+  <p>El archivo está en Drive desde el 17/11 y el OCR devuelve vacío. Se intentó <strong>dos veces</strong>, y antes de darla por perdida se probó una tercera vía: el sistema del Gestor por MCP. <strong>No sirve:</strong> tiene 70 OT, todas «Importado desde Excel», y la más alta es la 790 — las OT de la campaña viva, de la 791 a la 831, no están cargadas ahí.</p>
+  <p>Por la regla de rechequear dos veces y preguntar a la tercera, <strong>se pide el reescaneo y no se imputa nada</strong>.</p>
+  <p>Lo que sí consta: el remito 13321 que la sirve ya entró, y su copia anotada se subió el mismo día que las otras cinco, todas ejecutadas. <strong>Es indicio fuerte, no es prueba</strong>, y queda en tránsito.</p>
+  <p class="small-note">Hallazgo lateral del Gestor: quedó sin borrar una OT de prueba en la campaña viva —«OT_BE079 — PRUEBA - La Manga - Fungicida cebada», del 20/10, estado PLAN, descripción «PRUEBA (eliminar)»— y sus productos son 0,65 L/ha de Coverfull Ace más Transform y TTM, o sea exactamente el fungicida de la línea escalada. No afecta ningún número, pero conviene borrarla y además indica dónde se estaba planificando esa aplicación.</p>
+</section>
+
+<section>
+  <h2>Una lectura propia que se descartó antes de publicar</h2>
+  <p>La OT 813 anotada imprime el saflufenacil a 0,04 kg/ha. Con 324 ha eso da 12,96 kg, que contra el Veltroma del remito 13112 daría −12,61 y contra el HEAT 70 WG más el Veltroma daría −0,01. Parecía el hallazgo de la corrida: dos marcas del mismo activo que por separado se descalzan y juntas cierran.</p>
+  <p><strong>No lo es.</strong> El plan ya estaba registrado en 11,34 kg, porque la dosis real es 0,035 y la columna imprime 0,04 redondeado, y la línea ya cerraba en +1,60 desde el 30/10. La nota sobre el redondeo estaba escrita en el propio archivo del plan.</p>
+  <p>Queda como aviso para las próximas corridas: <strong>la dosis que imprime la OT no es la dosis.</strong> El redondeo fabrica diferencias de orden de magnitud que parecen hallazgos.</p>
+</section>
+
+<section>
+  <h2>Bloque abierto 792-816</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Principio activo</th><th class="num">Remitido</th><th class="num">Aplicado</th><th class="num">Dif.</th><th class="num">Env.</th><th>Estado</th><th>Nota</th></tr></thead>
+      <tbody>
+<tr><td>S-metolacloro</td><td class="num">495,00</td><td class="num">459,37</td><td class="num pos">+35,63</td><td class="num">20</td><td><span class="pill ok">Sobrante</span></td><td class="small-note">+35 L del remito propio 0003-000006</td></tr>
+<tr><td>Biciclopirona</td><td class="num">105,00</td><td class="num">105,70</td><td class="num neg">−0,70</td><td class="num">20</td><td><span class="pill ok">Cierra</span></td><td class="small-note"></td></tr>
+<tr><td>Flumioxazin</td><td class="num">5,00</td><td class="num">7,05</td><td class="num neg">−2,05</td><td class="num">5</td><td><span class="pill ok">Cierra</span></td><td class="small-note"></td></tr>
+<tr><td>Lambdacialotrina</td><td class="num">27,00</td><td class="num">22,97</td><td class="num pos">+4,03</td><td class="num">5</td><td><span class="pill ok">Cierra</span></td><td class="small-note"></td></tr>
+<tr><td>Sulfentrazone 50 %</td><td class="num">111,00</td><td class="num">106,10</td><td class="num pos">+4,90</td><td class="num">10</td><td><span class="pill ok">Cierra</span></td><td class="small-note">era −6,10 · +11 L del remito propio</td></tr>
+<tr><td>Paraquat</td><td class="num">720,00</td><td class="num">707,34</td><td class="num pos">+12,66</td><td class="num">20</td><td><span class="pill ok">Cierra</span></td><td class="small-note"></td></tr>
+<tr><td>Saflufenacil 70 %</td><td class="num">14,35 kg</td><td class="num">12,75</td><td class="num pos">+1,60</td><td class="num">0,35</td><td><span class="pill ok">Sobrante</span></td><td class="small-note"></td></tr>
+<tr><td>Sulfoxaflor</td><td class="num">28,80 kg</td><td class="num">22,99</td><td class="num pos">+5,81</td><td class="num">2</td><td><span class="pill ok">Sobrante</span></td><td class="small-note"></td></tr>
+<tr><td>Coadyuvante TTM</td><td class="num">320,00</td><td class="num">298,62</td><td class="num pos">+21,38</td><td class="num">10</td><td><span class="pill ok">Sobrante</span></td><td class="small-note">consumo real de la OT 801</td></tr>
+<tr><td>Flurocloridona</td><td class="num">500,00</td><td class="num">459,77</td><td class="num pos">+40,23</td><td class="num">20</td><td><span class="pill ok">Sobrante</span></td><td class="small-note"></td></tr>
+<tr><td>Cletodim 24 %</td><td class="num">260,00</td><td class="num">93,78</td><td class="num pos">+166,22</td><td class="num">20</td><td><span class="pill ok">Sobrante</span></td><td class="small-note"></td></tr>
+<tr><td>Glifosato Panzer Gold</td><td class="num">1.320,00</td><td class="num">1.089,56</td><td class="num pos">+230,44</td><td class="num">20</td><td><span class="pill ok">Sobrante</span></td><td class="small-note">consumo real de la OT 801</td></tr>
+<tr><td>Cibus Duo <span class="small-note">(cebo)</span></td><td class="num">1.180,00</td><td class="num">807,34</td><td class="num pos">+372,66</td><td class="num">20</td><td><span class="pill ok">Sobrante</span></td><td class="small-note">era −107,34 · salió de en tránsito</td></tr>
+<tr><td>Fungicida aéreo</td><td class="num">260,00</td><td class="num">373,53</td><td class="num neg">−113,53</td><td class="num">5</td><td><span class="pill warn">En tránsito</span></td><td class="small-note">escalado el 04/11</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+  <p><strong>14 principios activos · 5 cierran · 8 en sobrante · 1 en tránsito · 0 negativos reales.</strong> El 30/10 era 6, 6 y 2: el S-metolacloro pasó a sobrante por el remito del galpón y el Cibus Duo salió de en tránsito.</p>
+  <p class="small-note">Las dos líneas con signo negativo —biciclopirona −0,70 y flumioxazin −2,05— están las dos dentro de un envase, como vienen estando. Y son una menos que antes: el sulfentrazone dio vuelta el signo.</p>
+</section>
+
+<section>
+  <h2>Bloque nuevo 817-831</h2>
+  <p>La única OT ejecutada del bloque es la 823. Todo lo demás es producto entregado por adelantado para OT emitidas y sin ejecutar —821, 822, 824, 825, 826, 827, 828 y 831—, que es la forma sana de un bloque abierto.</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Principio activo</th><th class="num">Remitido</th><th class="num">Aplicado</th><th class="num">Dif.</th><th class="num">Env.</th><th class="num">Piden las OT</th><th class="num">Quedaría</th></tr></thead>
+      <tbody>
+<tr><td>2,4-D</td><td class="num">180,00</td><td class="num">72,00</td><td class="num pos">+108,00</td><td class="num">20</td><td class="num">104,70</td><td class="num pos">+3,30</td></tr>
+<tr><td>Cletodim 24 %</td><td class="num">220,00</td><td class="num">14,40</td><td class="num pos">+205,60</td><td class="num">20</td><td class="num">191,42</td><td class="num pos">+14,18</td></tr>
+<tr><td>Glifosato Panzer Gold</td><td class="num">480,00</td><td class="num">96,00</td><td class="num pos">+384,00</td><td class="num">20</td><td class="num">389,69</td><td class="num neg">−5,69</td></tr>
+<tr><td>Coadyuvante TTM</td><td class="num">170,00</td><td class="num">9,60</td><td class="num pos">+160,40</td><td class="num">10</td><td class="num">206,27</td><td class="num neg">−45,87</td></tr>
+<tr><td>Pyroxasulfone 85 %</td><td class="num">30,00 kg</td><td class="num">8,64</td><td class="num pos">+21,36</td><td class="num">5</td><td class="num">20,52</td><td class="num pos">+0,84</td></tr>
+<tr><td>Biciclopirona</td><td class="num">185,00</td><td class="num">0,00</td><td class="num pos">+185,00</td><td class="num">20</td><td class="num">182,00</td><td class="num pos">+3,00</td></tr>
+<tr><td>Flurocloridona</td><td class="num">240,00</td><td class="num">0,00</td><td class="num pos">+240,00</td><td class="num">10</td><td class="num">237,90</td><td class="num pos">+2,10</td></tr>
+<tr><td>S-metolacloro</td><td class="num">580,00</td><td class="num">0,00</td><td class="num pos">+580,00</td><td class="num">20</td><td class="num">554,57</td><td class="num pos">+25,43</td></tr>
+<tr><td>Sulfentrazone 50 %</td><td class="num">90,00</td><td class="num">0,00</td><td class="num pos">+90,00</td><td class="num">10</td><td class="num">121,25</td><td class="num neg">−31,25</td></tr>
+<tr><td>Imazapir <span class="small-note">(Clearsol Ontario)</span></td><td class="num">110,00</td><td class="num">0,00</td><td class="num pos">+110,00</td><td class="num">20</td><td class="num">116,74</td><td class="num neg">−6,74</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+  <p><strong>10 principios activos, los diez en sobrante, cero negativos.</strong> Y seis de los diez sobrantes caen a uno o dos envases de la demanda pendiente. La columna «quedaría» es proyección, no estado de hoy: ninguna de esas OT está ejecutada.</p>
+  <div class="callout">
+    <p><strong>Control de integridad de la asignación.</strong> El remitido nuevo asignado al bloque 817-831 suma 2.285,00 y el Cibus Duo asignado al bloque abierto suma 480,00: <span class="mono">2.285,00 + 480,00 = 2.765,00</span>, que es exactamente <span class="mono">42.928,12 − 40.163,12</span>. Cada unidad de remitido nuevo queda asignada a un bloque, sin dejar ni duplicar nada.</p>
+  </div>
+</section>
+
+<section>
+  <h2>La campaña completa</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Bloque</th><th class="num">PA</th><th class="num">Cierran</th><th class="num">Sobrante</th><th class="num">En tránsito</th><th class="num">Negativos</th></tr></thead>
+      <tbody>
+        <tr><td>Conciliado <span class="small-note">(OT ≤754)</span></td><td class="num">—</td><td colspan="3">cerrado desde el 08/09</td><td class="num pos">0</td></tr>
+        <tr><td>755-791</td><td class="num">14</td><td class="num">7</td><td class="num">7</td><td class="num">—</td><td class="num pos">0</td></tr>
+        <tr><td>Abierto 792-816</td><td class="num">14</td><td class="num">5</td><td class="num">8</td><td class="num">1</td><td class="num pos">0</td></tr>
+        <tr><td>Nuevo 817-831</td><td class="num">10</td><td class="num">—</td><td class="num">10</td><td class="num">—</td><td class="num pos">0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Más el Solmix en +3.746,00 kg y el MAP con 68.912,30 kg aplicados sin remitido. <strong>Cero negativos en toda la campaña por octava corrida consecutiva</strong>, y el fungicida aéreo queda como <strong>la única línea de la campaña entera que no cierra</strong>.</p>
+</section>
+
+<section>
+  <h2>La proyección del 13/11 se validó sola</h2>
+  <p>Hace cinco días esto era un ejercicio: cruzar las OT emitidas y sin ejecutar contra los sobrantes para decir qué hacía falta remitir. Entre el 7 y el 14 de noviembre entró lo siguiente:</p>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Producto</th><th class="num">Faltaba remitir el 13/11</th><th class="num">Entró</th><th>Estado</th></tr></thead>
+      <tbody>
+        <tr><td>S-metolacloro</td><td class="num">553,94</td><td class="num">580,00</td><td><span class="pill ok">Cubierto — Xian 380 + Chemoclor 200</span></td></tr>
+        <tr><td>Coadyuvante TTM</td><td class="num">142,41</td><td class="num">170,00</td><td><span class="pill ok">Entró más de lo proyectado</span></td></tr>
+        <tr><td>Sulfentrazone</td><td class="num">127,35</td><td class="num">90,00</td><td><span class="pill warn">Sigue corto por 31,25</span></td></tr>
+        <tr><td>Clearsol Ontario</td><td class="num">116,74</td><td class="num">110,00</td><td><span class="pill warn">Sigue corto por 6,74</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Los cuatro productos proyectados recibieron remitido en los ocho días siguientes</strong>, y el más grande —el S-metolacloro, 553,94 L— entró completo y en dos marcas. La proyección anticipó el pedido real.</p>
+  <p>Lo que <strong>sigue sin un kilo remitido en toda la campaña</strong> no se movió: Microstar PZ Bio 24.742,80 kg, Clarthex TDS 546,00 kg y Clartex 182,00 kg.</p>
+</section>
+
+<section>
+  <h2>Lo que se pide</h2>
+  <ol class="questions">
+    <li><p><strong>El remito del fungicida aéreo — 113,53 L.</strong> Escalado el 04/11, reiterado el 11/11 y otra vez el 17/11: <strong>décima corrida abierta</strong>. El Coverfull entra por Remito de Cliente, que no está en el export y depende de que alguien suba el PDF. <strong>Lo que se pide es subir el remito, no explicar un faltante.</strong></p><p class="small-note">No se intensifica: la reiteración salió ayer y el procedimiento dice que no se insiste sobre un pedido que acaba de salir. Lo que sí cambió es que <strong>ahora es la única línea de la campaña que no cierra</strong> —la otra en tránsito cerró— así que si el viernes sigue sin respuesta, corresponde intensificar.</p></li>
+    <li><p><strong>¿La actividad del remito 13371 está bien?</strong> Está anotado «OT 825-826», que son OT de la (52), pero imputado a la <strong>(56) Soja Multiplicación</strong>. Son 640 L de paraquat, 20 de lambdacialotrina y 50 de TTM costeados en otra actividad.</p></li>
+    <li><p><strong>Reescanear la OT 821.</strong> Tercer intento y el OCR sigue devolviendo vacío. Y con ella la 794 y la 770, que siguen pendientes de antes.</p></li>
+    <li><p><strong>Corregir el maestro.</strong> El <strong>Clearsol Ontario está en kg y es líquido</strong> —el export lo describe «CAJA 4×5 LTS» y lo remite en litros—; el cletodim Campodin está en kg siendo líquido, además del typo Campodin/Campodim; y la semilla de moha de la OT 830 está en litros siendo kilos.</p></li>
+    <li><p><strong>Borrar de Drive tres cosas.</strong> El duplicado de la OT 813 (dos archivos con el mismo nombre y el mismo tamaño, 142.224 bytes), el duplicado de la OT 829 que sigue ahí del 13/11, y la OT de prueba <span class="mono">OT_BE079</span> que quedó sin borrar en la campaña viva.</p></li>
+    <li><p><strong>Las concentraciones.</strong> Del Clearsol Ontario, del S-metolacloro Chemoclor, del Xian, del Symphony, del HEAT 70 WG, del Tuken y del Coverfull. El S-metolacloro tiene cuatro marcas y tres sin confirmar.</p></li>
+  </ol>
+  <p class="small-note">Sigue todo lo anterior que no se movió: la formulación del Microstar PZ Bio y el activo del Clartex y del Clarthex TDS; separar la OT 804; la labor de la OT 821 (producto en 114 ha, labor en 88); el porcentaje tratado de la OT 807; el 59 % del Controler EH; el equivalente ácido del Enlist; los 175 L de Viovan y el Caster LV.</p>
+</section>
+
+<section>
+  <h2>Verificación</h2>
+  <ul class="plain">
+    <li>Catorce pasadas. El export se transcribió línea por línea y se validó contra los <span class="mono">///TOTALES:</span> del propio archivo: 188 líneas, delta 0,00 en cantidad, en pesos y en dólares, y las 188 cumplen dólares = cantidad × precio.</li>
+    <li>Se auditaron las series de precio unitario de los 43 productos, no sólo los que cambiaron, y se verificó puntualmente que el TTM sigue en 16,51 y el Veltroma en 297,00: las dos correcciones de octubre no regresaron.</li>
+    <li>La asignación del remitido nuevo entre bloques se validó por suma: 2.285,00 más 480,00 dan 2.765,00, que es el delta exacto del export. Es el control de que no se dejó afuera ni se contó dos veces ninguna unidad.</li>
+    <li>Antes de sumar el remito propio 0003-000006 se verificó que no estuviera ya contado, descomponiendo el remitido previo de las dos líneas en sus remitos de origen.</li>
+    <li><strong>Se descartó una lectura propia antes de publicarla:</strong> el saflufenacil de la OT 813 parecía cerrar en −0,01 contra el HEAT del remito 13112, pero el plan ya estaba en 11,34 kg porque la columna de dosis imprime redondeado. Es el tipo de hallazgo que se cae al verificarlo contra el archivo del plan.</li>
+    <li>La OT 821 se intentó leer dos veces y se probó una tercera vía antes de pedir el reescaneo: el MCP del Gestor, que resultó tener sólo las OT ≤790 importadas de Excel y ninguna de la campaña viva. Queda anotado para no repetir el intento.</li>
+    <li>Las tres líneas de Clearsol del remito 13537 se verificaron contra el precedente interno del propio export —Rizostar tres veces en el 11790, Compinche cuatro en el 11802— antes de descartar que fueran un duplicado.</li>
+    <li>El barrido de Drive se hizo con ventanas más anchas que el corte y verificando la fecha de cada archivo, por lo del 11/11 con el filtro de fecha.</li>
+  </ul>
+</section>
+
+<footer>
+  Conciliación C2 (Remitido vs. Aplicado) · Actividad (52) Siembra Asociada ADM 26-27 · La Palma excluida por corresponder a Ganadería · Ningún archivo de Drive fue editado — trabajo de solo lectura y diagnóstico.
+</footer>
+
+</div>

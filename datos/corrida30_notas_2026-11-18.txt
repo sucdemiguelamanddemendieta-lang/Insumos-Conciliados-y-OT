@@ -1,0 +1,334 @@
+========================================================================================================
+PASADA 1 - BARRIDO DE DRIVE: LA CORRIDA MAS CARGADA DE LA CAMPANA
+========================================================================================================
+  Ventanas anchas y verificacion de la fecha de cada archivo, por lo del 11/11 (el filtro
+  modifiedTime de Drive devuelve archivos fuera del rango pedido).
+
+  EXPORT NUEVO: "Siembras Asociadas ADM 16-11-2026.xlsx", creado el 16/11, cortado al
+    REMITO 13548 DEL 14/11. El atraso del remitido pasa de 14 DIAS A 4.
+  CINCO REMITOS escaneados: RyC 13112 (jpeg), 13321, 13322, 13371 y REMITO PROPIO 0003-000006.
+  SEIS OT VOLVIERON ANOTADAS: 799, 801, 813 (x2, duplicado), 821 (OCR no la lee), 823 (x2,
+    jpeg y pdf), y la 798 reescaneada.
+  UNA OT NUEVA en la carpeta del Gestor: OT 831, Campo La Manga, 17/11.
+  Gmail: SIN RESPUESTAS de Betiana ni de Mercedes. Ultima respuesta recibida: 23/10.
+
+  El export viejo (30-10) volvio a cambiar de fecha y de tamano (modifiedTime 14/11,
+  29.182 bytes donde decia 29.127). Tercera vez que un atributo de Drive se mueve sin que
+  cambie el contenido. Ya no se usa: lo reemplaza el del 16/11.
+
+========================================================================================================
+PASADA 2 - EL EXPORT, TRANSCRITO Y VALIDADO CONTRA SUS PROPIOS TOTALES
+========================================================================================================
+  datos/export_costeo_16-11.csv - 188 lineas de insumos.
+    Cantidad : 42.928,12  contra ///TOTALES: 42.928,12   delta 0,00
+    Pesos    : 560.100.992,77  contra 560.100.992,77     delta 0,00
+    Dolares  : 373.433,01  contra 373.433,01             delta 0,00
+  Y las 188 lineas cumplen dolares = cantidad x precio unitario, sin una sola excepcion.
+  La transcripcion es exacta en los tres controles.
+
+  ONCE REMITOS NUEVOS, 2.765,00 unidades (42.928,12 - 40.163,12):
+    13152  2/11  Campodim 20 · Panzer 20 · TTM 10 · Herbifen 20
+    13217  3/11  Cibus Duo 120 kg
+    13321  7/11  Controler EH 160 · Campodim 60 · Panzer 320 · Paramer 30 kg · TTM 30
+    13322  7/11  Acuron 185 · Flurocloridona 240 · S-METOLACLORO XIAN 380 · Fender 60 · TTM 20
+    13456 12/11  Campodim 40 · TTM 20
+    13457 12/11  CLEARSOL ONTARIO 35 · Campodim 40 · TTM 20
+    13459 12/11  Panzer 140 · S-METOLACLORO CHEMOCLOR 100
+    13531 13/11  Fender 30
+    13537 13/11  Chemoclor 60 · Clearsol Ontario 50+10+15 · Campodim 60
+    13539 13/11  Chemoclor 40 · TTM 70
+    13548 14/11  Cibus Duo 360 kg
+
+========================================================================================================
+PASADA 3 - AUDITORIA DE PRECIOS DE LOS 43 PRODUCTOS: LIMPIA
+========================================================================================================
+  Se auditaron las series de precio unitario de los 43 productos, no solo los que cambiaron.
+  Once productos varian de precio. Las once variaciones son chicas, graduales y cronologicamente
+  coherentes (unos pocos puntos arriba o abajo). NINGUNA tiene la firma de un error de carga,
+  que es el salto de un orden de magnitud al precio de otro producto.
+
+  LO QUE IMPORTABA VERIFICAR, Y VERIFICA:
+    TTM      : 16,51 USD/L en LAS 30 LINEAS, incluidas las seis nuevas. La correccion del
+               sobrecosto de 27.550,80 USD NO REGRESO.
+    VELTROMA : 297,00 USD/kg en todas las lineas desde el 14/09, incluido el remito 12745,
+               que es donde estaba el error de 140,00. TAMPOCO REGRESO.
+  Es la segunda corrida consecutiva que las dos correcciones se verifican en su lugar.
+
+========================================================================================================
+PASADA 4 - LA OT 823 ESTA EJECUTADA, Y CIERRA CON SUSTITUCION DE MARCA
+========================================================================================================
+  OT 823 - CAMPO SANTO DOMINGO - 48,00 ha - maiz ACA 471 VT3Pro - FECHADA 8/11
+  La anotacion dice "Remito Ryc 13321". Consumo real = plan, los cinco productos.
+  PERO CON DOS SUSTITUCIONES DE MARCA, escritas a mano sobre la OT y confirmadas por el remito:
+    plan 2,4-D HERBIFEN ADVANCE  ->  real 2,4-D CONTROLER EH 59%   (el remito no trae Herbifen)
+    plan EUDOR CLETODIM HELM     ->  real CLETODIM 24% CAMPODIM    (el remito trae Campodim)
+  LAS DOS SUSTITUCIONES SON DENTRO DEL MISMO PRINCIPIO ACTIVO, asi que por principio activo
+  la OT cierra exacta. Por marca no cerraria ninguna de las dos lineas.
+  ES EL ARGUMENTO DEL METODO EN UNA SOLA OT: agrupar por activo y no por marca.
+
+  El remito 13321 esta anotado "OT 821-823": sirve a las dos OT juntas. Y contra el plan
+  sumado de las dos, cada linea es un numero entero de envases y cada diferencia es MENOR
+  QUE UN ENVASE. La columna "Envases" del propio remito lo confirma:
+    2,4-D        160,00 = 8 x 20     contra plan 163,20   -3,20
+    Campodim      60,00 = 3 x 20     contra plan  48,60  +11,40
+    Panzer       320,00 = 16 x 20    contra plan 324,00   -4,00
+    Paramer       30,00 = 6 x 5 kg   contra plan  29,16   +0,84
+    TTM           30,00 = 3 x 10     contra plan  32,40   -2,40
+
+========================================================================================================
+PASADA 5 - LA OT 821 NO SE PUDO LEER. TERCER INTENTO: SE PREGUNTA
+========================================================================================================
+  "OT 821 LA MARIA CRISTINA.jpeg" esta en Drive desde el 17/11 y el OCR devuelve VACIO.
+  Se intento DOS VECES con la herramienta de lectura. Por la regla de rechequear dos veces y
+  preguntar a la tercera, SE PIDE EL REESCANEO y NO SE IMPUTA NADA.
+
+  Se probo una tercera via antes de darla por perdida: el MCP del Gestor OT.
+  NO SIRVE. Ese sistema tiene 70 OT, todas "Importado desde Excel", y la mas alta es la 790.
+  Las OT de la campana viva (791 a 831) NO ESTAN CARGADAS AHI. Queda anotado para que
+  ninguna corrida futura vuelva a intentarlo: el Gestor MCP no reemplaza la lectura del PDF.
+
+  LO QUE SI SE PUEDE AFIRMAR SIN LEERLA: el remito 13321 que la sirve ya entro, y su copia
+  anotada existe y la subieron el mismo dia que las otras cinco, todas ejecutadas. Es indicio
+  fuerte, NO ES PRUEBA, y por la regla del 11/11 no se computa. Queda EN TRANSITO.
+
+  Hallazgo lateral del Gestor: hay una OT de PRUEBA sin borrar en la campana viva,
+  "OT_BE079 - PRUEBA - La Manga - Fungicida cebada", del 20/10, estado PLAN, con descripcion
+  "PRUEBA (eliminar)", y sus productos son 0,65 lt/ha de COVERFULL ACE + Transform + TTM, o
+  sea exactamente el fungicida de la linea escalada. No afecta ningun numero -es un plan, no
+  esta ejecutada y esta marcada para borrar-, pero conviene borrarla.
+
+========================================================================================================
+PASADA 6 - EL REMITO PROPIO 0003-000006 DA VUELTA EL SIGNO DEL SULFENTRAZONE
+========================================================================================================
+  REMITO PROPIO DE ADM 0003-000006, del 20/10/2026, a Siembra Asociada, citando la OT 799:
+    35 L de S-metolacloro  ·  11 L de sulfentrazone
+  Es el canal del galpon de ADM, que NO ESTA EN EL EXPORT DE RyC. Por la convencion ya
+  establecida con el remito propio 0003-0000005, CUENTA COMO REMITIDO.
+  Verificado que no estaba contado: el remitido del bloque abierto era S-metolacloro 460,00
+  (= 420 del export + 40 del remito de cliente 13098) y sulfentrazone 100,00 (= 40 + 60 del
+  export). Ninguno de los dos incluia estos litros.
+
+  EFECTO: el sulfentrazone pasa de -6,10 a +4,90.
+  Esa linea venia arrastrando el unico signo negativo del bloque que no era de un envase
+  chico, y se explicaba como redondeo. NO ERA REDONDEO: era un retiro real del galpon,
+  documentado, del 20/10, contra la OT 799. Lo mismo que paso el 30/10 con el S-metolacloro,
+  y la leccion es la misma: cuando falta producto, la primera hipotesis es un remito pendiente
+  en otro canal, no un defecto del plan.
+  Y los volumenes lo confirman: 35 y 11 litros, numeros que no son envase entero, porque el
+  galpon se mide por volumen de un envase ya abierto.
+
+========================================================================================================
+PASADA 7 - EL CIBUS DUO SALE DE EN TRANSITO: LA CLASIFICACION ERA CORRECTA
+========================================================================================================
+  Linea base del 30/10: Cibus Duo remitido 700,00 kg contra aplicado 807,34  =  -107,34
+  Estaba clasificado EN TRANSITO, es decir diferencia explicada por atraso documental y que
+  por definicion no cuenta para escalar.
+  ENTRARON 480,00 kg: remito 13217 del 3/11 (120) y remito 13548 del 14/11 (360).
+  Nuevo saldo: 1.180,00 - 807,34 = +372,66.
+  LA CLASIFICACION SE VALIDO. No era faltante, era atraso, y el papel llego.
+  De las dos lineas en transito del 30/10 queda UNA: el fungicida aereo.
+
+  El sobrante de 372,66 kg (18,6 bolsas) no tiene por ahora destino en ninguna OT emitida:
+  las OT 822 y 824 de cebo usan Clartex y Clarthex TDS, no Cibus Duo. Es stock, no defecto.
+
+========================================================================================================
+PASADA 8 - LA OT 801 TRAE CONSUMO REAL, Y SE USA EN LUGAR DEL PLAN
+========================================================================================================
+  OT 801 - LA MANGA - 105,70 ha de maiz - anotada 02/11.
+  Dos de sus seis productos traen la columna de consumo real llena, y los dos en envase entero:
+    PANZER GOLD  plan 158,55  ->  REAL 160,00  (8 bidones de 20)   +1,45
+    TTM          plan  21,14  ->  REAL  20,00  (2 bidones de 10)   -1,14
+  El operario anota lo que cargo, y carga envases enteros. Se reemplaza el plan por el real,
+  que es la regla. Efecto chico pero es el numero correcto.
+  Los otros cuatro productos no traen real: queda el plan.
+
+  OT 799 - LA MANGA - 245,67 ha de girasol - volvio anotada con FECHA POR LOTE
+  (22/10, 27/10, 29/10, 31/10): confirma la ejecucion que ya estaba imputada. La columna de
+  consumo real esta parcialmente ilegible, asi que no se toca el plan.
+  OT 813 - CIERVO BLANCO - 324 ha - anotada "Remito 13112 RyC" y fechada 4-5/11: confirma la
+  ejecucion ya imputada Y RESUELVE una observacion del 30/10, donde el sobrante de Panzer y
+  flurocloridona se explicaba como "producto recien retirado por los remitos 13098 y 13112
+  sin OT nueva todavia". Ahora se sabe cual era la OT.
+
+  CHEQUEO QUE SE HIZO Y DIO NEGATIVO: la OT 813 anotada imprime el saflufenacil a 0,04 kg/ha,
+  y con 324 ha eso da 12,96 kg, que contra el Veltroma del remito 13112 (0,35) daria -12,61 y
+  contra el HEAT (12,60) + Veltroma daria -0,01. Parecia el hallazgo de la corrida.
+  NO LO ES: el plan ya estaba registrado en 11,34 kg porque la dosis real es 0,035 y la
+  columna imprime 0,04 redondeado, y la linea ya cerraba en +1,60 desde el 30/10. La columna
+  de dosis redondeada ya tenia su propia nota en el archivo del plan. Se descarto antes de
+  publicar. Queda como aviso: la dosis impresa no es la dosis.
+
+========================================================================================================
+PASADA 9 - EL REMITO 13371 ESTA IMPUTADO A OTRA ACTIVIDAD
+========================================================================================================
+  REMITO RyC 13371, del 10/11, anotado a mano "OT 825-826".
+  Su encabezado dice: "SALIDA INSUMOS, (56) SOJA MULTIPLICACION ADM 26-27".
+  NO ES LA ACTIVIDAD (52). Y por eso NO APARECE en el export de costeo de la (52).
+  Trae: Paraquat Ruralco 20 + Paraquat Sigma 620 = 640 L · Lambdacialotrina Rafter 20 ·
+        Coadyuvante TTM 50 L.
+  Las OT 825 y 826 SON de la actividad (52) -Ciervo Blanco y La Celina, emitidas el 06/11- y
+  sus productos coinciden con lo que el remito trae: paraquat 730 L de plan, lambdacialotrina
+  18,25, TTM 73,00.
+  O LA ACTIVIDAD DEL REMITO ESTA MAL, O LA ANOTACION DE LAS OT ESTA MAL. No se resuelve de
+  este lado y NO SE IMPUTA a la (52): esos 640 L de paraquat, 20 de lambdacialotrina y 50 de
+  TTM se estan costeando a la (56). Se pregunta.
+  Es una clase de hallazgo nueva: no es un remito que falta, es un remito que existe y esta
+  cargado a la actividad equivocada. El control no lo habria visto nunca desde el export,
+  porque desde el export simplemente no esta.
+
+  Y CAMBIA UNA TOLERANCIA: el remito trae "LAMBDACIALOTRINA 25% RAFTER X 1 LITRO" donde
+  antes era "4X5 LTS". Mismo producto, misma concentracion, ENVASE DE 1 L: la tolerancia de
+  esa linea pasa de 5 L a 1 L.
+
+========================================================================================================
+PASADA 10 - LA OT 831 EXPLICA EL REMITO 13152 COMPLETO, ENVASE POR ENVASE
+========================================================================================================
+  OT 831 - CAMPO LA MANGA - lote 5 (55,74 ha) - pero SOLO 9,00 ha trabajadas - 02/11
+  Nota: "Remito 13152 - has pendientes en OT 808". Es una OT de completamiento: 9 ha que
+  habian quedado sin hacer de la OT 808 (93,78 ha).
+  Pide: Herbifen 13,50 · Campodim 9,00 · TTM 1,80 · Panzer 18,00
+  El remito 13152 trae: Herbifen 20 · Campodim 20 · TTM 10 · Panzer 20
+  ES EXACTAMENTE UN ENVASE DE CADA UNO DE LOS CUATRO, y cada envase alcanza y sobra:
+    Herbifen  +6,50 · Campodim +11,00 · TTM +8,20 · Panzer +2,00
+  Los cuatro sobrantes son menores que un envase y son el residuo inevitable de abrir un
+  bidon para 9 hectareas. Es el remito mejor explicado de la campana.
+  La OT 831 esta EMITIDA, no volvio anotada: su plan NO SE IMPUTA.
+
+========================================================================================================
+PASADA 11 - DOS PRODUCTOS: UNA MARCA NUEVA Y UNA UNIDAD QUE SE RESUELVE
+========================================================================================================
+  1) S-METOLACLORO CHEMOCLOR X 20 LT (codigo 1.098) - CUARTA marca del activo, despues del
+     Mabua (96% confirmado), el Symphony y el Xian. 200 L entre los remitos 13459, 13537 y
+     13539. La concentracion no viene declarada, como en el Symphony y el Xian: se agrupan a
+     valor nominal, y es eso lo que permite que la linea cierre por principio activo.
+     El activo tiene ya CUATRO nombres y TRES concentraciones sin confirmar.
+
+  2) CLEARSOL ONTARIO - LA UNIDAD QUEDA RESUELTA, Y NO POR UNA RESPUESTA SINO POR EL EXPORT.
+     El export lo describe "CLEARSOL ONTARIO (CAJA 4X5LTS)" y lo remite EN LITROS: 110 L
+     entre el 13457 (35) y el 13537 (50+10+15). Es un LIQUIDO en botellas de 5 L.
+     Las OT 827 y 828 lo cargan en KG. La unidad del maestro esta mal, igual que el cletodim
+     Campodim. La cantidad es la misma numero a numero (116,74 de plan contra 110,00
+     remitidos), asi que el cuadro C2 no se altera.
+     SALVEDAD QUE SE DEJA ESCRITA: si el 0,33/ha fuera masa real haria falta la densidad para
+     convertir. Por eso lo que se pide es corregir el maestro, no solo anotarlo.
+     Pasa a ser el segundo defecto de unidad del mismo tipo en dos corridas.
+
+  Las TRES LINEAS de Clearsol del remito 13537 (50 + 10 + 15) NO SON UN DUPLICADO. El propio
+  export tiene el precedente: RIZOSTAR aparece tres veces en el remito 11790 (4.000 + 200 +
+  1.200) y COMPINCHE cuatro veces en el 11802 (15 + 25 + 5 + 25). Son lotes distintos en un
+  mismo remito, las cantidades son diferentes y el total del archivo cuadra al centavo.
+
+========================================================================================================
+PASADA 12 - LA CONCILIACION
+========================================================================================================
+  BLOQUE ABIERTO 792-816  (linea base del 30/10 + lo nuevo)
+    PA                     Remitido   Aplicado        Dif   Env   Estado
+    S-metolacloro            495,00     459,37     +35,63    20   Sobrante   (+35 remito propio)
+    Biciclopirona            105,00     105,70      -0,70    20   Cierra
+    Flumioxazin                5,00       7,05      -2,05     5   Cierra
+    Lambdacialotrina          27,00      22,97      +4,03     5   Cierra
+    Sulfentrazone 50%        111,00     106,10      +4,90    10   Cierra     (+11 remito propio)
+    Paraquat                 720,00     707,34     +12,66    20   Cierra
+    Saflufenacil 70%          14,35      12,75      +1,60  0,35   Sobrante
+    Sulfoxaflor               28,80      22,99      +5,81     2   Sobrante
+    Coadyuvante TTM          320,00     298,62     +21,38    10   Sobrante   (OT 801 real)
+    Flurocloridona           500,00     459,77     +40,23    20   Sobrante
+    Cletodim 24%             260,00      93,78    +166,22    20   Sobrante
+    Glifosato Panzer Gold  1.320,00   1.089,56    +230,44    20   Sobrante   (OT 801 real)
+    Cibus Duo (cebo)       1.180,00     807,34    +372,66    20   Sobrante   (+480, sale de transito)
+    Fungicida aereo          260,00     373,53    -113,53     5   EN TRANSITO
+    14 PA · 5 cierran · 8 en sobrante · 1 en transito · NEGATIVOS REALES 0
+    (el 30/10 era 6 / 6 / 2: el S-metolacloro paso a sobrante y el Cibus Duo salio de transito)
+
+  BLOQUE NUEVO 817-831  (unica OT ejecutada: la 823)
+    PA                      Remitido  Aplicado       Dif  Env   Piden OT   Quedaria
+    2,4-D                     180,00     72,00   +108,00   20     104,70      +3,30
+    Cletodim 24%              220,00     14,40   +205,60   20     191,42     +14,18
+    Glifosato Panzer Gold     480,00     96,00   +384,00   20     389,69      -5,69
+    Coadyuvante TTM           170,00      9,60   +160,40   10     206,27     -45,87
+    Pyroxasulfone 85%          30,00      8,64    +21,36    5      20,52      +0,84
+    Biciclopirona             185,00      0,00   +185,00   20     182,00      +3,00
+    Flurocloridona            240,00      0,00   +240,00   10     237,90      +2,10
+    S-metolacloro             580,00      0,00   +580,00   20     554,57     +25,43
+    Sulfentrazone 50%          90,00      0,00    +90,00   10     121,25     -31,25
+    Imazapir (Clearsol)       110,00      0,00   +110,00   20     116,74      -6,74
+    10 PA · los 10 en sobrante · NEGATIVOS 0
+    Es la forma sana de un bloque con producto entregado por adelantado para OT sin ejecutar.
+
+  CONTROL DE INTEGRIDAD DE LA ASIGNACION:
+    remitido nuevo asignado al bloque 817-831   2.285,00
+    Cibus Duo asignado al bloque 792-816          480,00
+                                                --------
+                                                2.765,00  = 42.928,12 - 40.163,12  EXACTO
+    Cada unidad de remitido nuevo queda asignada a un bloque, sin dejar ni duplicar nada.
+
+  CAMPANA COMPLETA
+    Bloque conciliado (OT <=754) : cerrado, sin negativos desde el 08/09
+    Bloque 755-791               : 14 PA · 7 cierran · 7 sobrante · 0 negativos  (sin cambios)
+    Bloque abierto 792-816       : 14 PA · 5 · 8 · 1 en transito · 0 negativos
+    Bloque nuevo 817-831         : 10 PA · 10 sobrante · 0 negativos
+    Lineas propias               : Solmix +3.746,00 kg · MAP 68.912,30 kg sin remitido
+    NEGATIVOS REALES EN TODA LA CAMPANA: 0  -  OCTAVA CORRIDA CONSECUTIVA
+    Y el fungicida aereo es AHORA LA UNICA LINEA DE LA CAMPANA QUE NO CIERRA.
+
+========================================================================================================
+PASADA 13 - LA PROYECCION DEL 13/11 SE VALIDO SOLA
+========================================================================================================
+  El 13/11 se proyecto que faltaba remitir, y entre el 7 y el 14/11 entro:
+    Producto           Faltaba 13/11    Entro      Estado
+    S-metolacloro            553,94    580,00      CUBIERTO  (Xian 380 + Chemoclor 200)
+    Coadyuvante TTM          142,41    170,00      cubierto en el bloque, corto en el total
+    Sulfentrazone            127,35     90,00      sigue corto
+    Clearsol Ontario         116,74    110,00      sigue corto, por 6,74
+  CUATRO DE CUATRO PRODUCTOS PROYECTADOS RECIBIERON REMITIDO en los ocho dias siguientes, y
+  el S-metolacloro -el mas grande, 553,94 L- entro completo y en dos marcas.
+  La proyeccion de demanda dejo de ser un ejercicio: anticipo el pedido real.
+  Lo que sigue corto es sulfentrazone (-31,25) e imazapir (-6,74), y no es faltante porque
+  ninguna de esas OT esta ejecutada.
+
+  SIN UN KILO REMITIDO EN TODA LA CAMPANA, sin cambios: Microstar PZ Bio 24.742,80 kg,
+  Clarthex TDS 546,00 kg, Clartex 182,00 kg. Y el MAP con 68.912,30 kg aplicados.
+
+========================================================================================================
+PASADA 14 - ESCALAMIENTO: NO SE INTENSIFICA, Y POR QUE
+========================================================================================================
+  Fungicida aereo, 113,53 L de las OT 803, 804, 811 y 816. Escalado el 04/11, reiterado el
+  11/11 y reiterado otra vez AYER 17/11 por la corrida de la segunda tarea programada.
+  Pasa a DECIMA CORRIDA ABIERTA.
+
+  NO SE INTENSIFICA. Durante esta corrida se habia resuelto intensificar, y se corrigio al
+  verificar que la reiteracion salio AYER: el procedimiento dice que no se insiste sobre un
+  pedido que acaba de salir, y vale igual cuando el pedido lo mando la otra rutina.
+  Lo que SI cambio y queda anotado para el viernes: la otra linea en transito CERRO, asi que
+  el fungicida aereo es ahora LA UNICA LINEA DE LA CAMPANA QUE NO CIERRA. Si el 20/11 sigue
+  sin respuesta, corresponde intensificar con ese fundamento.
+
+  El pedido no cambia: el Coverfull entra por REMITO DE CLIENTE, que no esta en el export y
+  depende de que alguien suba el PDF. LO QUE SE PIDE ES SUBIR EL REMITO.
+  Dato nuevo que ayuda a buscarlo: la OT de prueba OT_BE079 del 20/10 en el Gestor tiene
+  exactamente esos productos sobre los lotes de cebada de La Manga.
+
+========================================================================================================
+RESUMEN - corte 18/11/2026
+========================================================================================================
+  Documentacion nueva  : export al 14/11 · 11 remitos · 6 OT anotadas · 1 OT nueva (831)
+  Atraso del remitido  : 4 DIAS (era 14). El export quedo practicamente al dia
+  Conciliacion         : SE MUEVE, y toda a favor
+                         - sulfentrazone -6,10 -> +4,90 por el remito propio 0003-000006
+                         - Cibus Duo -107,34 -> +372,66: sale de EN TRANSITO
+                         - bloque nuevo 817-831 con 10 PA, los 10 en sobrante
+  Negativos reales     : 0 en toda la campana - octava corrida consecutiva
+  Precios              : 43 productos auditados. TTM en 16,51 y Veltroma en 297,00 SIN REGRESAR
+  Integridad           : export validado a delta 0,00 en cantidad, pesos y dolares;
+                         asignacion de remitido validada a 2.765,00 exacto
+  Altas de mapeo       : S-metolacloro Chemoclor (4a marca del activo)
+  Correcciones mapeo   : Clearsol Ontario KG -> L (lo prueba el envase del export);
+                         Rafter pasa a envase de 1 L y le cambia la tolerancia
+  Hallazgo nuevo       : REMITO 13371 IMPUTADO A LA ACTIVIDAD (56) Y NO A LA (52)
+  Lectura descartada   : el saflufenacil de la OT 813 NO es un hallazgo (dosis redondeada)
+  Defectos de carga    : OT 821 ilegible (3er intento, se pregunta) · OT 813 subida dos veces
+                         (mismo tamano, 142.224) · OT 823 subida en jpeg y pdf · OT de PRUEBA
+                         OT_BE079 sin borrar en la campana viva
+  Gestor MCP           : solo tiene OT <=790 importadas de Excel. NO sirve para la campana viva
+  Escalamiento         : fungicida aereo, 10a corrida abierta. NO se intensifica: la
+                         reiteracion salio ayer. Si el 20/11 sigue sin respuesta, se intensifica
