@@ -237,3 +237,30 @@ La dirección de Mercedes fue **confirmada por el dueño el 03/10/2026**. Hasta 
 **Pendientes sin faltante detrás:** corregir el maestro —el Clearsol Ontario está en kg y es líquido (el export lo describe «CAJA 4X5LTS» y lo remite en litros), el cletodim Campodin en kg siendo líquido más el typo Campodin/Campodim, y la semilla de moha en litros siendo kilos—; borrar de Drive el duplicado de la OT 813 (dos archivos de 142.224 bytes), el de la OT 829 y la OT de prueba OT_BE079; la labor de la OT 821 (producto en 114 ha, labor en 88); las concentraciones del Clearsol Ontario, del S-metolacloro Chemoclor, del Xian, del Symphony, del HEAT 70 WG, del Tuken y del Coverfull; la formulación del Microstar PZ Bio y el activo del Clartex y del Clarthex TDS; separar la OT 804; volver a subir las OT 794 y 770; el porcentaje tratado de la OT 807; el 59 % del Controler EH; el equivalente ácido del Enlist; los 175 L de Viovan y el Caster LV.
 
 **Fuera del cuadro C2:** el MAP acumula **68.912,30 kg** aplicados sin un solo remito en el costeo, y el Microstar PZ Bio que lo reemplaza arranca con el mismo problema.
+
+## 5. Qué rutina ejecuta este control (traspaso del 19/11/2026)
+
+**Desde el 19/11/2026 el control lo ejecuta la tarea programada `trig_01SnxcgEgeLmnkE86fQ6VLVm` — «Conciliación C2 insumos/OT ADM 26-27»**, creada el 16/11, que corre **miércoles y viernes a las 15:55 (hora Argentina) en una sesión nueva cada vez**. Decisión del dueño, tomada el 18/11.
+
+La rutina original —`trig_01TrqdShHde8VqABfVDHPKTv`, creada el 19/08 y atada a una sesión persistente— **quedó desactivada el 19/11**. Ejecutó las corridas 1 a 30, del 19/08 al 18/11. No se borró: si hace falta volver atrás, se reactiva y la sesión retoma con todo su contexto.
+
+### El problema que hay que resolver, y mientras no se resuelva, qué hacer
+
+**La tarea nueva no puede escribir en este repositorio.** Lo probó en la corrida del 17/11: publicó el artifact y mandó el mail, pero no commiteó, y por eso esa corrida no tenía fila de historial hasta que la del 18/11 la reconstruyó. Hace falta **darle acceso de push** a la rama `claude/conciliacion-insumos-ot-7cd274`.
+
+Hasta que eso esté, cada corrida tiene que hacer esto para que la memoria no se congele:
+
+1. **Intentar escribir igual.** Primero `git push`. Si falla por credenciales, probar las tools MCP de GitHub (`create_or_update_file`, `push_files`) antes de darlo por perdido: son otra vía de autenticación y pueden funcionar donde `git` no.
+2. **Si tampoco se puede, el delta va en el mail, literal y listo para pegar.** Al final del mail al dueño, bajo el título «Para pegar en el runbook», las reglas nuevas de 2.bis y la fila de historial de la corrida, en texto plano. Es incómodo pero conserva lo único que no se puede reconstruir después: por qué se decidió lo que se decidió.
+3. **Decirlo en el resumen final, en la primera línea.** Una corrida que no commiteó no es una corrida completa, y el que lea el reporte tiene que saberlo.
+
+**Por qué importa y no es burocracia:** el reporte es el entregable visible, pero lo que hace que este control mejore es el repositorio. Son 30 corridas de reglas acumuladas en 2.bis, cada una escrita después de un error real, y la corrida que las lee es la que no los repite. Si el repositorio deja de crecer, cada corrida arranca desde un runbook congelado en el 18/11 y el control vuelve a tropezar con lo mismo. Ya pasó dos veces por no leer lo escrito (la teoría de redondeo del S-metolacloro, la identidad Morata = Coverfull) y una vez por no escribirlo (el Cibus Duo del 17/11, que se corrigió al día siguiente sólo porque alguien volvió a mirar).
+
+### Estado exacto en el momento del traspaso
+
+- Último commit de la rutina original: corte 18/11/2026, 30ª corrida.
+- Último reporte en `reportes/`: `2026-11-18_conciliacion_ADM_26-27_v28.html`. El artifact va en la Version 29.
+- **La corrida del 17/11 no tiene archivo en `reportes/`**: existe sólo como versión del artifact, y su contenido está resumido en la fila de historial del 17/11.
+- Último pedido en `pedidos/`: `2026-11-18_pedido_betiana_16.docx`.
+- Escalamiento abierto: fungicida aéreo, 113,53 L, **décima corrida**. La próxima corrida (20/11) **debe intensificar** si sigue sin respuesta: el fundamento ya está escrito arriba, en el Estado de escalamiento.
+- Negativos reales en toda la campaña: **0**, octava corrida consecutiva.
